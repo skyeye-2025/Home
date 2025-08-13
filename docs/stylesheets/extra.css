@@ -81,3 +81,25 @@ body {
     font-family: "Outfit", sans-serif;
     font-weight: bold;
 }
+
+body {
+    /* 设置背景图片路径 */
+    background-image: url('../images/bg.webp');
+
+    /* 防止图片重复平铺 */
+    background-repeat: no-repeat;
+
+    /* 让图片覆盖整个页面 */
+    background-size: cover;
+
+    /* 图片居中显示 */
+    background-position: center;
+
+    /* 固定背景，滚动页面时图片不跟随滚动 */
+    background-attachment: fixed;
+
+    /* 确保body占满整个视口高度 */
+    min-height: 100vh;
+    margin: 0;
+    /* 移除默认的margin，避免出现白边 */
+}
