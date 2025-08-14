@@ -88,43 +88,43 @@
 
 ##### Deepseek
 
-![deepseek](../images/Pasted image 20250414193205.png)
+![](https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202508141310680.png)
 
 Deepseek在各个方面表现强势，在风格化文本生成和优化、主题调研、求解题目、中英互译、日常互动等方面表现优异，在国产大模型属于版本T0，超大杯，强烈推荐使用。它的回答相比其他AI更为精简，不适合水字数，而适合生成实用内容。它的语言风格丰富，容易让人眼前一亮。然而它也有不足，主要集中在以下方面。Deepseek不擅长图象处理，对于上传的图象只能提取文字，无法“看见”图片内容；Deepseek生成速度较慢，通常只能进行一次问答，在进行第二次问答的时候容易出现服务器繁忙。通过使用腾讯元宝等第三方平台，一定程度上可以规避第二个问题。
 
 ##### 豆包
 
-![doubao](../images/Pasted image 20250414193258.png)
+![](https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202508141311937.png)
 
 豆包在测评中是表现仅次于Deepseek的AI，在文本创作和优化、内容查询等方面表现不错，写作能力是豆包的强项。豆包适合用于水字数的任务，比如进行规范文字的写作。豆包综合表现略逊于Deepseek，但是胜在生成速度快、具备图象分析能力，综合能力较强，大杯上。
 
 ##### Kimi
 
-![kimi](../images/Pasted image 20250414193340.png)
+![](https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202508141311995.png)
 
 Kimi总的来说表现中规中矩，属于是“能用”类型，没有太亮眼的表现，大杯中。在数学题目求解方面，Kimi表现较好。值得一提的是Kimi是目前PPT生成的最佳选择，其PPT助手不仅免费而且PPT生成能力与其他支持PPT生成的AI持平。Kimi的生成速度略低于豆包，高于Deepseek，且具备“视觉”，处理一般任务是足够的。
 
 ##### 通义千问
 
-![touyi](../images/Pasted image 20250414193419.png)
+![](https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202508141311640.png)
 
 通义千问表现一般，略低于Kimi，在文本生成和优化上没有优势，在交互过程中不够人性化，只是在文言文翻译方面略有优势，综合实力较为一般，中杯，不推荐使用。
 
 ##### 文心一言
 
-![wenxin](../images/Pasted image 20250414193448.png)
+![](https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202508141311343.png)
 
 文心一言表现中规中矩，文本生成能力不突出，但是概括能力较强，交互过程中较为人性化，可以体验，大杯下。
 
 ##### 讯飞星火
 
-![xunfei](../images/Pasted image 20250414193522.png)
+![](https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202508141311679.png)
 
 讯飞星火表现一般，文本生成和优化能力一般，不擅长复杂题目的求解和查询内容，PPT生成功能需要收费，不推荐使用，中杯。
 
 ##### 智谱清言
 
-![zhipu](../images/Pasted image 20250414193546.png)
+![](https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202508141312176.png)
 
 智谱清言表现较差，文本生成、查询、交互、题目求解能力均表现不佳，输出过程可能会出现卡顿，PPT生成能力与Kimi相同却要收费，体验不尽如人意，中杯，不推荐使用。
 

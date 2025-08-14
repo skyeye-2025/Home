@@ -22,7 +22,7 @@ theme:
 
   language: zh # 中文网站
 
-  logo: images/logo.webp # 左上角图标显示的
+  logo: https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202508141305660.webp # 左上角图标显示的
   # favicon: images/头像.jpg
 
   features:
