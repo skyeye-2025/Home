@@ -23,7 +23,7 @@ theme:
   language: zh # 中文网站
 
   logo: https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202508141305660.webp # 左上角图标显示的
-  # favicon: images/头像.jpg
+  favicon: https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202508141305660.webp #标签页的图标
 
   features:
     - announce.dismiss #呈现可标记为由用户读取的临时公告，可以包含一个用于取消当前公告的按钮
