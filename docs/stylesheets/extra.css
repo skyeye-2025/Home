@@ -2,7 +2,7 @@
 
 @import url("https://fontsapi.zeoseven.com/181/main/result.css");
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url("https://fontsapi.zeoseven.com/368/main/result.css");
 
 @font-face {
     font-family: "ZSFT-344";
@@ -71,13 +71,13 @@ body {
 
 .special-text1 {
     font-size: 80px;
-    font-family: "Outfit", sans-serif;
+    font-family: "Outfit Thin", sans-serif;
     font-weight: bold;
 }
 
 .special-text2 {
     color: rgb(14, 202, 240);
     font-size: 80px;
-    font-family: "Outfit", sans-serif;
+    font-family: "Outfit Thin", sans-serif;
     font-weight: bold;
 }
