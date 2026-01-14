@@ -6,7 +6,7 @@ hide:
 ## Smartphone integrated paper sensor and phage-binding proteins for the detection of foodborne pathogens
 
 !!! info
-    这是本人在高一高二期间参加的iGEM（International Genetically Engineered Machine competition，国际基因工程机器大赛），活动时间主要为2022.07-2022.10，队伍网站发布在https://2022.igem.wiki/gyhs/
+    这是本人在高一高二期间参加的iGEM（International Genetically Engineered Machine competition，国际基因工程机器大赛），活动时间主要为2022.07-2022.10，点击访问[队伍网站](https://2022.igem.wiki/gyhs/)
 
 这个项目简单来说就是用纸基传感器（特制试纸）检测食源性致病菌（比如大肠杆菌之类的引起食品中毒的细菌），具体的可以上[队伍网站](https://2022.igem.wiki/gyhs/)去看，这里就不把文件列出来了，主要讲讲我参与的事情。
 
