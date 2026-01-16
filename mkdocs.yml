@@ -1,4 +1,4 @@
-site_name: Homepage of Skyeye # 显示在左上角
+site_name: SKYEYE'S HOMEPAGE # 显示在左上角
 
 nav:
   
@@ -27,6 +27,8 @@ nav:
   - 理论:
     - 理论/大学OVERALLCHECK.md
     - 理论/高考后感言.md
+  - 友链:
+    - link.md
 
 
 theme:
@@ -74,7 +76,7 @@ theme:
     - content.action.view
     - content.code.annotate
 
-edit_uri: edit/main/docs # 编辑按钮跳转的链接
+# edit_uri: edit/main/docs # 编辑按钮跳转的链接
 repo_url: https://github.com/skyeye-2025/Home # 右上角点击跳转的链接
 repo_name: skyeye-2025/Home # 右上角的名字
 
@@ -148,3 +150,4 @@ extra_javascript:
 extra_css:
   - stylesheets/extra.css
   - stylesheets/typewriter.css
+  - stylesheets/flink.css

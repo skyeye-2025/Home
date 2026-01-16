@@ -81,3 +81,7 @@ body {
     font-family: "Outfit Thin", sans-serif;
     font-weight: bold;
 }
+
+.md-content__button svg {
+    display: none !important;
+}
