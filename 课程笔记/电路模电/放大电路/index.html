@@ -1,0 +1,3081 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%99%A8%E4%BB%B6/">
+      
+      
+        <link rel="next" href="../%E4%BF%A1%E5%8F%B7%E5%8F%91%E7%94%9F%E7%94%B5%E8%B7%AF%E5%92%8C%E5%8A%9F%E7%8E%87%E5%8F%98%E6%8D%A2%E7%94%B5%E8%B7%AF/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202508141305660.webp">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>放大电路 - SKYEYE'S HOMEPAGE</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/typewriter.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/flink.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="skyeye" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="SKYEYE&#39;S HOMEPAGE" class="md-header__button md-logo" aria-label="SKYEYE'S HOMEPAGE" data-md-component="logo">
+      
+  <img src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202508141305660.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SKYEYE'S HOMEPAGE
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              放大电路
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/skyeye-2025/Home" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    skyeye-2025/Home
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../%E6%9C%80%E7%AE%80%E7%B3%BB%E5%88%97/%E6%9C%80%E7%AE%80%E9%A9%AC%E5%8E%9F/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  课程笔记
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E5%85%AC%E5%BC%80%E9%A1%B9%E7%9B%AE/SQTP/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  公开项目
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E7%90%86%E8%AE%BA/%E5%A4%A7%E5%AD%A6OVERALLCHECK/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  理论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../link/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  友链
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="SKYEYE&#39;S HOMEPAGE" class="md-nav__button md-logo" aria-label="SKYEYE'S HOMEPAGE" data-md-component="logo">
+      
+  <img src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202508141305660.webp" alt="logo">
+
+    </a>
+    SKYEYE'S HOMEPAGE
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/skyeye-2025/Home" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    skyeye-2025/Home
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程笔记
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最简系列
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    最简系列
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%80%E7%AE%80%E7%B3%BB%E5%88%97/%E6%9C%80%E7%AE%80%E9%A9%AC%E5%8E%9F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最简马原
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%80%E7%AE%80%E7%B3%BB%E5%88%97/%E6%9C%80%E7%AE%80%E5%A4%8D%E5%8F%98/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最简复变
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%80%E7%AE%80%E7%B3%BB%E5%88%97/%E6%9C%80%E7%AE%80%E5%A4%A7%E7%89%A92/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最简大物2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    电路
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    电路
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%9B%B4%E6%B5%81%E7%94%B5%E8%B7%AF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    直流电路
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%AD%A3%E5%BC%A6%E4%BA%A4%E6%B5%81%E7%94%B5%E8%B7%AF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    正弦交流电路
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%BF%87%E6%B8%A1%E8%BF%87%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    过渡过程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模电
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    模电
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%99%A8%E4%BB%B6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    非线性器件
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    放大电路
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    放大电路
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义和规范
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="定义和规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        放大电路的判断和符号
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        辅助分析放大电路的通路
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="辅助分析放大电路的通路">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        直流通路
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        交流通路
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        微变等效电路
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        题目考法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        直流静态工作点计算
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="直流静态工作点计算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bjt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BJT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FET
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        动态指标的计算
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="动态指标的计算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        动态指标的定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bjt_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BJT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fet_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FET
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最大不失真输出电压的计算
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多级放大电路计算
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        运放
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="运放">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        镜像电流源
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        差分放大电路
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="差分放大电路">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        差模输入动态指标
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        共模输入动态指标
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例题
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        中间放大级
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        互补对称输出级
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        运放封装
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        反馈
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="反馈">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        反馈类型的判断
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="反馈类型的判断">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        运放判断
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        分立元件电路判断
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        动态指标的计算
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        经典运放负反馈电路
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        负反馈的作用
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        频率特性
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="频率特性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概念
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一阶RC电路的频率响应
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        全频段放大倍数分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        自激振荡
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%BF%A1%E5%8F%B7%E5%8F%91%E7%94%9F%E7%94%B5%E8%B7%AF%E5%92%8C%E5%8A%9F%E7%8E%87%E5%8F%98%E6%8D%A2%E7%94%B5%E8%B7%AF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    信号发生电路和功率变换电路
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    其他
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    其他
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%85%B6%E4%BB%96/%E4%BF%9D%E7%95%99%E8%AE%A1%E5%88%92/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    保留计划
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    公开项目
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    公开项目
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%85%AC%E5%BC%80%E9%A1%B9%E7%9B%AE/SQTP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%85%AC%E5%BC%80%E9%A1%B9%E7%9B%AE/iGEM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    iGEM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    理论
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    理论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%90%86%E8%AE%BA/%E5%A4%A7%E5%AD%A6OVERALLCHECK/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大学OVERALLCHECK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%90%86%E8%AE%BA/%E9%AB%98%E8%80%83%E5%90%8E%E6%84%9F%E8%A8%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    高考后感言
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    友链
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    友链
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../link/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Link
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义和规范
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="定义和规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        放大电路的判断和符号
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        辅助分析放大电路的通路
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="辅助分析放大电路的通路">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        直流通路
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        交流通路
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        微变等效电路
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        题目考法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        直流静态工作点计算
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="直流静态工作点计算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bjt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BJT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FET
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        动态指标的计算
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="动态指标的计算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        动态指标的定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bjt_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BJT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fet_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FET
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最大不失真输出电压的计算
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多级放大电路计算
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        运放
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="运放">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        镜像电流源
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        差分放大电路
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="差分放大电路">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        差模输入动态指标
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        共模输入动态指标
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例题
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        中间放大级
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        互补对称输出级
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        运放封装
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        反馈
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="反馈">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        反馈类型的判断
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="反馈类型的判断">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        运放判断
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        分立元件电路判断
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        动态指标的计算
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        经典运放负反馈电路
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        负反馈的作用
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        频率特性
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="频率特性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概念
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一阶RC电路的频率响应
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        全频段放大倍数分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        自激振荡
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/skyeye-2025/Home/edit/master/docs/课程笔记/电路模电/放大电路.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/skyeye-2025/Home/raw/master/docs/课程笔记/电路模电/放大电路.md" title="查看本页的源代码" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+  <h1>放大电路</h1>
+
+<h2 id="_1">定义和规范<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">放大电路的判断和符号<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>放大电路是利用BJT管和FET管的放大区实现把小信号放大的电路。放大电路包含直流和交流部分，直流部分负责让BJT管和FET管工作在放大区，交流部分传输待放大的小信号。一个合格的放大电路需要满足以下条件：</p>
+<p>①直流偏置确保BJT/FET管工作在放大区。</p>
+<p>②信号能输入电路，而且不影响BJT/FET管的工作状态。</p>
+<p>③放大后的电路能不失真地从负载上获得。</p>
+<p>这些是判断一个放大电路是否正确以及改错的标准，这种让你改错的题是比较困难的，错误往往不止一处，后面会给例子。</p>
+<p>规定用以下符号表示放大电路中的直流量交流量等，其中<span class="arithmatex">\(I_{BQ}, V_{CEQ}\)</span>中的Q是静态工作点的意思</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202511251515136.png" /></p>
+<p>话说我自己在编写笔记的时候没有严格按照这个来做，因为要写的太多了</p>
+<h3 id="_3">辅助分析放大电路的通路<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>分析放大电路时，需要根据直流通路和交流通路以及微变等效电路来分析，接下来用一个具体的例子说明直流通路，交流通路和微变等效电路怎么画</p>
+<p>一个经典的放大电路是这样的</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512061649516.png" /></p>
+<h4 id="_4">直流通路<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>直流通路就是只看直流，把电容视为开路，把它们所在的那些支路都去掉，就得到了直流通路</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512061650956.png" /></p>
+<p>其实熟练了根本不用画直流通路，因为原电路本身已经能看得出来了</p>
+<h4 id="_5">交流通路<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>交流通路就是只看交流，把电容视为短路，把直流源置零（如果有稳压二极管也置零（如果没说它的动态电阻）），就得到了交流通路</p>
+<p>这种用电容把交直流分开的耦合方式叫做阻容耦合，区别于直接耦合，直接耦合就是没有电容了。直接耦合可以传直流，而且体积小容易集成，后面的运放就是用直接耦合，但是容易零点漂移，各级的静态工作点互相影响。阻容耦合各级静态工作点独立，但是不能传直流，而且电容占位置大不适合集成。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512061652062.png" /></p>
+<p>交流通路长得样子都是这样的，分成两侧，之所以会长成这样是因为直流源置零之后，直流源原先在的那个地方就当成了地，那其实电阻就可以“翻下来”，因为下面也是地，所以就这样画出来了比较好看好分析的交流通路。</p>
+<h4 id="_6">微变等效电路<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p>微变等效电路就是在交流通路的基础上，把BJT管或FET管用低频小信号模型给代替画出来的电路，低频小信号模型只能在低频且信号较小的情况下使用，当然这里的题目是可以用的。</p>
+<p>BJT管的低频小信号模型是这样的</p>
+<p>完整版</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512021339737.png" /></p>
+<p>常用版</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512021337300.png" /></p>
+<p>如果题目给了rce，需要把rce并在ce之间。</p>
+<p>其中</p>
+<div class="arithmatex">\[
+r_{be}=r_{bb'}+\frac {V_T} {I_{BQ}}
+\]</div>
+<p><span class="arithmatex">\(r_{bb'}\)</span>在100到300欧姆，如果没告诉你你就当作是200Ω，<span class="arithmatex">\(V_T\)</span>还是26mV。因为rbe要根据直流工作点确定，所以分析的时候一定是先求直流工作点再分析交流的动态指标。</p>
+<p>常用版是更简单的版本，由于h12很小，rce很大，所以在常规分析中直接把它们分别当作短路和开路，所以就得到了常用的版本。</p>
+<p>无论是NPN还是PNP都是用这个等效电路，只需要注意ib和βib的方向要符合NPN或PNP它本身的特征。NPN的电流是b流向e，c流向e，所以画的时候这个等效电路也要这样画。PNP是e流向b，e流向c，所以画出来的电流方向就要反过来。</p>
+<p>FET管的低频小信号模型是这样的</p>
+<p>完整版</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512021347289.png" /></p>
+<p>常用版就是没有rds，因为rds通常很大，可以当成开路。FET管的对于六种FET都适用，不过要注意，N沟道的电流是从D到S，但是P沟道的就要反过来了</p>
+<p>那么原电路的微变等效电路就是这样的</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512061706297.png" /></p>
+<p>一般微变等效电路是先画好了交流通路再画出来。这里的Rb是Rb1//Rb2，有时会这样就简洁一些。</p>
+<h3 id="_7">题目考法<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>一个综合的计算题会这样设问</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512061625529.png" /></p>
+<p>①直流工作点。题目让你求直流工作点的意思就是要你求<span class="arithmatex">\(I_{BQ}, I_{CQ}, V_{CEQ}\)</span>，这部分其实有了非线性器件部分的基础基本都会做，只是需要你熟悉一下常见电路的求解过程。</p>
+<p>②动态指标。动态指标即放大倍数，输入电阻和输出电阻，后面会介绍。</p>
+<p>③最大不失真输出电压。这部分要分别计算截止失真电压和饱和失真电压取更小的那个值，后面会介绍。</p>
+<p>计算直流工作点时，只需要用到直流通路。计算动态指标时，只需要用到微变等效电路。计算最大不失真输出电压时，直流通路和交流通路都要用到。在IC-VCE图中用直流通路计算静态工作点并画出直流负载线，用交流通路计算交流负载线斜率并画出交流负载线，这部分要用到图解法，后面会介绍。不过其实如果熟练了也可以不画IC-VCE图直接算。</p>
+<h2 id="_8">直流静态工作点计算<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p>这部分介绍常见直流通路的样子和快速计算静态工作点的方式</p>
+<h3 id="bjt">BJT<a class="headerlink" href="#bjt" title="Permanent link">&para;</a></h3>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512061806276.png" /></p>
+<p>第一个叫做基极固定的偏置电路，因为它的IB是固定的，用IBQ=(VCC-VBE)/Rb可以直接求得，至于IC和VCE用KVL也很容易求得。这种偏置电路一个缺点就是会产生温漂，也就是因为温度变化导致的直流工作点漂移，原因是温度变化时三极管输出特性曲线也会变化，输出直流负载线VCE=VCC-ICRC不变，这样交点就会移动（因为静态工作点相当于输出特性曲线和输出直流负载线的交点）</p>
+<p>第二个叫做工作点稳定的偏置电路，因为它温漂很小，可以把工作点维持波动比较小。分析这个电路的核心思想就是先进行戴维宁等效，变成更好分析的电路</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202510032040748.png" /></p>
+<p>求这个戴维宁等效的电压和电阻要非常熟练，直接写出来就行，然后IB的表达式也要熟练到能够直接写出，其实还是电路部分的东西。解释一下为什么它温漂程度小。当温度升高，IC增大，导致IE增大，造成VE增大。而VB=Vb-IBRB, IB太小可以忽略，所以VB近似不变。VB不变，VE增大，则VBE减小（发射结正偏），由输入特性曲线就知道，VBE减小IB就会减小，所以就导致IC也减小，所以这样就实现了IC的稳定，那IB=IC/β也就随之稳定，VCE也就稳定了。</p>
+<p>这里补充一个点，Rc其实对于稳定工作点来说并没有贡献，完全可以把它去掉，基极固定偏置电路的Rc也同样可以去掉。而保留它们的原因会在后面交流部分解释，是为了让输出的两端不至于被短接。</p>
+<p>第三个叫做射极偏置电路，求IB也是比较简单的，就先从地到VEE列一个KVL，表达式就是IB=(VEE-VBE)/(Rb+(1+β)Re)，后面求IC，VCE什么的也是简单的。</p>
+<p>这三个电路的PNP版本，只需要把+VCC改成-VCC，-VEE改成+VEE即可，B,C,E的位置不用改，只是三极管的那个箭头方向变了</p>
+<p>一个错误电路的例子</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512061934808.png" /></p>
+<p>这里是PNP，它的集电极位置就错了，一定记得NPN的转PNP的时候BCE的位置不用改，只是箭头方向变了，箭头仍然是在下面。然后这里还很离谱地E对着VCC，标都标错了。</p>
+<p>改错的话需要把+VCC改成-VCC，把PNP水平翻转，Rc要回到上面才对。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512061939884.png" /></p>
+<p>虽然不如四电阻那样可以稳定工作点，但是至少能用。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512061944161.png" /></p>
+<p>再看一个电路，这里计算IB也是很简单的，VB=VBE+DZ，因为稳压二极管相当于直接告诉你电压，那你直接就求出Rb1和Rb2上的电流，就能用KCL得到IB了</p>
+<h3 id="fet">FET<a class="headerlink" href="#fet" title="Permanent link">&para;</a></h3>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512061949804.png" /></p>
+<p>第一个叫做固定偏压偏置电路，原因是VGS是定值，仅由VDD在Rg2上的分压决定。ID=IDO(VGS/VT-1)^2直接求出IDQ，然后VDS用KVL算出来就行</p>
+<p>第二个叫做自给偏压偏置电路，原因是VGS由Rs上的电压提供，由于Rg很大，认为没有Ig，所以算VGS只需要用Rs上的电压。注意这里是N沟道耗尽型，VGS是负的，这个的计算就需要列方程了，VGS=-IDRs, ID=IDSS(1-VGS/VP)^2解出来VGS和ID，然后VDS也是好求的。</p>
+<p>第三个叫做混合偏压偏置电路，因为VGS既有Rg2的分压，也有Rs的电压。VGS=VDDRg2/(Rg1+Rg2)-IDRs, 这里是N沟道增强型，ID=IDO(VGS/VT-1)^2，也是解方程求出ID和VGS，反正工作量都挺大的。</p>
+<p>P沟道的话，ID方向从下往上，+VDD改成-VDD，写表达式的时候ID还是那个ID，VGS也是正常求，此时VT是&lt;0的</p>
+<h2 id="_9">动态指标的计算<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h3 id="_10">动态指标的定义<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202511281155066.png" /></p>
+<p>一切放大电路都可以简化为这样一个最简模型，Ri为输入电阻，Ro为输出电阻，Voo为空载时的输出电压</p>
+<p>第一个动态指标是电压增益（或称电压放大倍数），定义为<span class="arithmatex">\(A_v=\dfrac {\dot V_o}{\dot V_i}\)</span>，这个东西是一个复数，不过一般只会遇到实数的情况，有正负（描述相位相同和相反）</p>
+<p>这个东西有一些变体，比如开路电压增益<span class="arithmatex">\(A_{vo}=\dfrac {\dot V_{oo}}{\dot V_i}=\dfrac {\dot V_{oo}}{\dot V_o}\dfrac {\dot V_{o}}{\dot V_{i}}=\frac {R_L+R_o}{R_L}A_{v}\)</span>，还有源电压增益<span class="arithmatex">\(A_{vs}=\dfrac {\dot V_{o}}{\dot V_s}=\dfrac {\dot V_{o}}{\dot V_i}\dfrac {\dot V_{i}}{\dot V_{s}}=A_{v}\frac {R_i}{R_s+R_i}\)</span>，通常来说是先求出电压增益，再去求其他的。</p>
+<p>第二个动态指标叫输入电阻，定义为<span class="arithmatex">\(R_i=\dfrac {\dot V_i}{\dot I_i}\)</span>，<span class="arithmatex">\(\dot I_i\)</span>是进入放大电路里从+到-的电流。第三个叫做输出电阻，定义为<span class="arithmatex">\(R_o=\dfrac {\dot V_o}{\dot I_o}\)</span>，<span class="arithmatex">\(\dot I_o\)</span>也是进入放大电路部分从+到-的电流。事实上Ri在微变等效电路里一般有比较明确的对应关系，用电阻串并联的计算容易解决，而Ro其实不太好直接通过电阻串并联来求，而且Voo也没有很明确的对应关系（我们不会直接求Voo），此时常用的做法是用加压求流法，先把负载以外部分的独立源置零，也就是信号源置零，然后受控源部分就变成电流为0了，然后再用加压求流法，就很显然只有右边的一小部分是有电流的，就可以很容易地求出Ro，后面结合具体例子说明。</p>
+<p>动态指标的计算只依赖微变等效电路，做相关题目的时候都要画出微变等效电路来看。</p>
+<p>会遇到的交流通路也和直流通路那样有不同的形状，这部分介绍交流通路的各种类型和快速求动态指标的方式（熟练后可根据交流通路直接写出）</p>
+<h3 id="bjt_1">BJT<a class="headerlink" href="#bjt_1" title="Permanent link">&para;</a></h3>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/20251207163911.png" /></p>
+<p>以上是用同一个直流偏置（四电阻）的三种组态，组态是由交流小信号的输入和输出决定的，和直流偏置没有任何关系。引入一个概念叫做单端信号，原本信号是两个点之间的电压或电流，但是单端信号只看一个点，能这么做的原因是另一端是接地的，就不用管了，这个点的电势已经代表了电压。用单端信号的思路来分析是比较方便的。</p>
+<p>共射组态(CE)的定义是，输入vi从b进，输出vo从c取。共集组态(CC)的定义是输入vi从b进，输出vo从e取。共基组态(CB)的定义是输入vi从e进，输出vo从c取。所以上面三张图并不是三种组态的唯一电路，属于什么组态仅由输入输出的位置决定。</p>
+<p>由于上面三个电路非常经典，我们先分析它们的交流通路和动态指标</p>
+<p>这三个电路的交流通路如下</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512071652723.png" /></p>
+<p>Rb=Rb1//Rb2</p>
+<p>不难发现这几个经典电路的交流通路都有一个特点，就是共什么极这个极就交流接地，这是由原电路里这三个极对应电阻旁边并了一个电容（叫旁路电容）导致的。这里再解答一个疑惑，为什么原电路里CE和CB都是四电阻，但是CC的原电路里只有三电阻？不应该也是四电阻然后并一个旁路电容吗？</p>
+<p>我们在说直流静态工作点的时候讲到，Rc对于直流偏置来说其实是打酱油的，没有什么用，把它变成短路照样可以正常偏置。但是如果没了它，那么从e取输出的电路，也就是CE和CB，由于Rc=0，RL直接被短接了，vo=0，那就没法正常取出输出信号，所以必须有这么一个Rc。而对于CC来说，它就算有Rc，仍然可以正常取vi和vo，因为Rc只会出现在c和地之间，所以你直接把它去掉也没什么影响，还可以简化电路，不用再多并一个电容了，所以就这样了，所以其实它本质还是一个四电阻电路。</p>
+<p>接下来求动态指标，求动态指标有个经验就是用控制量表示所有的量，然后约掉就可以了，对于BJT来说控制量是Ib，对于FET来说控制量是VGS</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512021425151.png" /></p>
+<p>图里的rce可以忽略</p>
+<p>Av=Vo/Vi=-βIb(Rc//RL)/Ibrbe=-β(Rc//RL)/rbe，就结合直流工作点求一个rbe就好了。动态指标的求解有一个特点，就是看起来很复杂但是其实你只需要抓住能够求出来所需要的量的那些支路就好了，比如这里求Vi的时候完全不用考虑Rb1和Rb2，就由rbe上的电流就可以求出来了。</p>
+<p>Ri那就是Rb1//Rb2//rbe，这个和前面介绍动态指标时那个图里的Ri有很好的对应关系</p>
+<p>Ro直接求不好求，我们用加压求流法，先把信号源置零，那其实列一个KVL很容易看出来Ib=0，于是你在Rc两端加电压的时候，只有流过Rc的电流，所以输出电阻就是Rc</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512071940335.png" /></p>
+<p>共集组态的是这样的，比共射要复杂一点，因为不能分成两个分开的电路了</p>
+<p>Av=Vo/Vi=(1+β)(Re//RL)/(Ib rbe+(1+β)Ib(Re//RL))=(1+β)(Re//RL)/(rbe+(1+β)(Re//RL))，这里要利用好发射极电流是(1+β)Ib。当β比较大的时候，其实Av就变得接近1了，也就是输入输出电压差不多，此时它仍算是放大电路，因为它有电流的放大作用。</p>
+<p>Ri的话，因为现在电路不是分开的，不能一眼看出来了。其实Ri就可以当作除了Vs和Rs以外的部分的无源一端口等效电阻。这里一个特别的求解方式就是先求Rb以右的Ri'再去和Rb并联，因为Ri'利用电压电流关系是比较好求的。Ri'=Vi/Ib=(Ib rbe+(1+β)Ib(Re//RL))/Ib=rbe+(1+β)(Re//RL)，其实熟悉的时候就把流过(1+β)Ib的Re当作它的电阻变成了1+β倍就好了。别忘了这个求出来还需要和Rb并联。这里Rb其实相当于Rb1//Rb2</p>
+<p>Ro这里用电压比电流的方式，把交流源置零，把负载开路，然后加压准备求流</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512071955992.png" /></p>
+<p>我们把Re撇开，分析Re以外的部分的等效电阻。Re以外的部分，其实就是一条是Ib流过rbe+Rs//Rb，另一条是βIb的恒流源，那么这部分的V/I就是Ib(rbe+Rs//Rb)/(1+β)Ib=(rbe+Rs//Rb)/(1+β)，那么这个和Re并起来就是输出电阻了。熟练的话，直接当成rbe+Rs//Rb整个缩小了1+β就行</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512091151546.png" /></p>
+<p>这个也是相对复杂一点，不要管那个叉号。然后Av=Vi/Vo注意是要从rbe的那条路来算Vi，得到的就是Vi/Vo=-β(Rc//RL)/(-Ibrbe)=β(Rc//RL)/rbe</p>
+<p>Ri的话，也是把Re当成独立的，去分析剩下部分的等效电阻，也就是从e到地的接口的等效电阻。加压求流，Vi=-Ibrbe，Ii=-(1+β)Ib（注意等效的时候电流应该是和Ie方向相反），所以Ri'=rbe/(1+β)，接下来别忘了还要并联Re才是完整的输入电阻Ri=Re//(rbe/(1+β))。注意这里完全不用管受控源所在的那条路，那条路直接等效就是一个受控源，最根本的还看V/I，既然你rbe都已经能把V求出来了就不用看右边了。</p>
+<p>Ro的话，置零之后Ib=0，于是只有Rc了</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512021424617.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512021427170.png" /></p>
+<p>注意，以上分析的三个经典电路仅仅是交流通路共的极直接接地的经典电路，如果交流通路里面这些共的极不是直接接地的（有电阻），或者有其他改变，不能用这里的公式，而是要重新推，关键还是要掌握推导的方法。对于那些交流时共的极不是直接接地的，称为准XX，比如准共射。</p>
+<p>举个例子</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512091302364.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512091303461.png" /></p>
+<p>这里就是Re1没有被旁路电容交流短接，所以它还在图里面，这个时候虽然是共射大类下面的，但就不如之前分开的电路那么好看了。</p>
+<p>Av=Vo/Vi=-βIb(Rc//RL)/(Ibrbe+(1+β)IbRe1)=-β(Rc//RL)/(rbe+(1+β)Re1)</p>
+<p>Ri=Rb1//Rb2//(rbe+(1+β)Re1)，这里也是把流过电流为(1+β)Ib的Re1当成放大了那么多倍</p>
+<p>Ro=Rc，这个简单。</p>
+<h3 id="fet_1">FET<a class="headerlink" href="#fet_1" title="Permanent link">&para;</a></h3>
+<p>类似地，对于FET，也有三种组态，共源组态(CS)的定义是，输入vi从g进，输出vo从d取。共漏组态(CD)的定义是输入vi从g进，输出vo从s取。共栅组态(CG)的定义是输入vi从s进，输出vo从d取。</p>
+<p>我们也是先研究最经典的三个电路，这三个电路采用相同的直流偏置，都是混合偏压偏置电路，其中Rd也都是打酱油的，但是对于输出从d取的CS, CG来说不可或缺，所以就在这两个里面保留了，而在CD里面删除了。下面是三个经典电路的完整电路图，依次是共源，共漏，共栅</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512091317479.png" /></p>
+<p>这种叫做共源CS，因为信号从G栅极输入，从D漏极取，所以是共源。这里源极交流接地，所以是标准共源，如果交流不是接地那就是准共源</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512091321873.png" /></p>
+<p>这个叫做共漏CD，信号从栅极G进从源极S出，直接把Rd删了</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512091327238.png" /></p>
+<p>这个叫做共栅CG，信号从源极S进从漏极D出，注意这里左边那里是连起来的，和CS和CD的输入不一样换到了右边。</p>
+<p>接下来求动态指标，这里就不画交流通路了直接给微变等效电路，第一个是共源CS</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512141418541.png" /></p>
+<p>注意这里G那边的情况，是Rg串联Rg1//Rg2，之所以会这样是因为那个十字的地方是不交的，Rg1从同一个点直接接地（直流源置零），然后FET的好分析的地方在于G直接断了。</p>
+<p>此处画出来有rds，但是通常rds直接当作开路，这里就不分析它了</p>
+<p>Av=vo/vi=-gmVgs(Rd//RL)/Vgs=-gm(Rd//RL)，这里vi就是Vgs很方便</p>
+<p>Ri=Rg+(Rg1//Rg2)，Rg是一个很大的电阻，用来提高输入电阻</p>
+<p>Ro分析也是让交流源置零，那就只剩下Rd了</p>
+<p>第二个电路是共漏CD</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512141424927.png" /></p>
+<p>这里输入电路还是一样的，但是务必注意的是这里d和s的位置发生了变化。这里仍然是N沟道增强型MOS，电流还是从d到s，但是为了好看（把地放在下面），把受控源的方向翻转了一下，因为d才是交流接地的。</p>
+<p>Av=vo/vi=gmVgs(R//RL)/vi，这里特别注意vi是Vgd而不是Vgs，画这个的时候真的要把g, d, s的位置都标清楚，不然很容易搞错。那这个时候就需要用Vgs把vi给表示出来，因为原则都是用受控量来表示。Vsd就是vo，Vgs=Vgd+Vds=vi-vo，所以就可以得到vi=vo+Vgs，所以</p>
+<p>Av=gmVgs(R//RL)/(gmVgs(R//RL)+Vgs)=gm(R//RL)/(gm(R//RL)+1)</p>
+<p>这里确实比较麻烦，要把vi和vo究竟是什么以及g, d, s的位置区分清楚</p>
+<p>Ri简单，还是一样的Rg+(Rg1//Rg2)。Ro就困难了，因为把交流源置零还是有Vgs，电流不为零。用加压求流，把RL去掉，加一个和vo方向一样的电压Vo'之后Vgs就等于Vgd+Vds=-Vo'（这里Vgd=0），所以gmVgs得到-Vo'gm，是一个向下的电流，R那里得到电流是Vo'/R也是向下，最终Ro=Vo'/Io'=Vo'/(gmVo'+Vo'/R)=1/(gm+1/R)，可以看成R//(1/gm)，就比较奇怪</p>
+<p>第三个电路是共栅CG</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512141440888.png" /></p>
+<p>这个就和先前的很不一样了，注意G交流接地，Rg1和Rg2直接没了，只剩下右边那部分，把输入部分翻折过来就是交流通路的那个样子，这个图也要标清楚g, s, d</p>
+<p>Av=vo/vi=-gmVgs(Rd//RL)/(-Vgs)=gm(Rd//RL)，这里vi=-Vgs，所以计算比较简单</p>
+<p>Ri用加压求流了，R单独保留，看Rd//RL的部分。加压Vgs之后电流就是gmVgs，所以电阻就是gm，和RL，Rd没有关系，所以就是R//gm</p>
+<p>Ro，当交流源为0，Vgs也是0，所以就只剩下Rd，所以Ro=Rd比较简单</p>
+<p>总结一下，其实CS和CE是相似的，CD和CC是相似的，CB和CG是相似的，这样记忆比较方便。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512051006357.png" /></p>
+<p>CE和CS是各个指标都很好，电压增益很大，输入电阻很大（这里尤其注意CS输入电阻达到兆欧），输出电阻中等。CC和CD不具备电压放大功能，但是CC的输出电阻很小，所以带载能力强（不会抢太多负载的电压），通常用它做多级电路的最后一级，这是它的长处。CB和CG的各项指标都是中等水平，但在高频电路里有大用。这个表在多级放大电路的一类题目有大用，这里先讲那一类题型。多级放大电路的特征是总电压增益是各级电压增益的乘积，输入电阻是第一级的输入电阻，输出电阻是最后一级的输出电阻</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512051025632.png" /></p>
+<p>第一题，放大倍数很大，那只能两个都取CE/CS里的。而要求Ri较小，因为CS的Ri到兆欧级别，所以就选CE了。注意其实CS的放大倍数只有几到几十，真到了上万级别还是只能用CE，CE才是最能放大的。</p>
+<p>第二题，输入电阻到兆欧，只有CS和CD符合条件，但是CD放大倍数太小了，光凭第二级放大达不到500，所以第一级只能是CS。放大倍数要到几百，第二级别还是得要有一定的放大倍数的，所以就选CE或CS了</p>
+<p>第三题，Ri要求几百千，只有共集CC是符合这个区间的，就选CC。放大倍数约为100，那第二级放大倍数必须得到上百了因为CC放大倍数大概是1，所以就CE。总之肯定优先用CE的</p>
+<p>第四题，Ri这么大肯定是CS，Ro很小那就是CC</p>
+<p>第五题，Ro很小那就是CC，要求获取较大输入电流那就是输入电阻要小，CB符合要求。</p>
+<p>总结：</p>
+<p>Ri部分（确定第一级）：Ri上兆，只能是CS或CD，如果放大倍数大那就是CS。Ri很小（输入电流大），选CB。Ri几百千，选CC。</p>
+<p>Ro部分（确定最后一级）：Ro很小，必选CC，其他没有什么约束条件。</p>
+<p>Av部分：大的优先用CE</p>
+<h2 id="_11">最大不失真输出电压的计算<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<p>这个放在直流和交流后面是因为算这个要用到直流和交流。首先介绍图解法的视角里静态工作点是怎么确定下来的。图解法就是在IC纵坐标，VCE横坐标的图里把三极管输出特性曲线画出来，再画“输出回路直流负载线”</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512021321309.png" /></p>
+<p>这个直流负载线和相应IB的那个曲线的交点就是直流静态工作点。不过这不重要，你实际做题的时候不会用这个方法求，而是用KVL直接求出VCE。你做最大不失真输出电压的题的时候，已经完成了直流静态工作点的求解，拿着ICQ和VCEQ，才来做这个题，所以你不用再进行直流分析了，不用看直流通路，只需要看交流通路。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512141544703.png" /></p>
+<p>在确定了这个工作点之后，把“交流负载线”画出来。这个交流负载线和VCE轴有一个交点，然后你去比较VCEQ到这个交点的距离，和VCEQ到VCES的距离哪个更短，更短的那个就是VCE的最大不失真输出电压，后面经过处理，可以得到Vo的最大不失真输出电压。</p>
+<p>那么问题就是这个关键的交流负载线怎么画出来。这个交流负载线是过静态工作点的，所以它只需要确定斜率就行。这个交流负载线的本质就是交流通路中从CE往外看的等效电阻的特性曲线，在这张图里，是电流做纵坐标，所以这张图里的斜率就是CE往外看的等效电阻的阻值的倒数。我解释一下为什么是CE往外看的等效电阻，因为这条线本质上就是画出IC取若干值的时候，VCE等于多少。</p>
+<p>已经画出这条线之后，你真正关心的就是那两个距离。这里就涉及到“不失真”的原因了。你加了交流信号之后，VCE是会在直流工作点VCEQ的基础上上下波动的，IC也在动，都沿着这条交流负载线在移动。不过这里我们不关心输入的大小，只关心输出出来的这个变化量的最大距离。如果VCE变得太小，到达0.7V，就会进入饱和区，不再线性，这就是饱和失真。如果IC变得太小，到了接近0，那就进入了截止区，发生截止失真，也不再线性。所以考察VCE最大不失真的波动范围，就是要看这两个点各自到VCEQ的距离，取更短的那个，才能保证两边都不失真。输入信号的上半周会导致饱和失真，下半周会导致截止失真。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512141603075.png" /></p>
+<p>这道题已知已知ICQ=1.43mA，VCEQ=4.85V，交流通路已经知道，现在要求最大不失真输出电压。</p>
+<p>交流负载线斜率是CE往外看的等效电阻，是R=Rc//RL=1.5kΩ。这时其实你没必要真的算斜率什么的，你只要根据定义得到截止失真那部分的最大不失真输出电压就行。这个图里斜率的定义是di/dv=1/R=ICQ/V1，在右下角的小直角三角形里符合这样的关系，所以直接求出截止失真时的V1=RICQ=2.15V。饱和失真最简单了，直接用VCEQ-0.7=4.15V就得到了，两个比较2.15V更小，所以VCE最大不失真输出电压就是2.15V，由于Vo=VCE，所以Vo最大不失真输出电压也是2.15V。</p>
+<p>经过这题我们已经可以发现，饱和失真对应的VCE最大不失真输出电压就是VCEQ-VCES，截止失真对应的VCE最大不失真输出电压就是ICQRCE，RCE是CE往外看的等效电压</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512181828723.png" /></p>
+<p>我们考察这三个电路的最大不失真输出电压。对于(a)，已知VCEQ=-5.65V(这个是PNP)，ICQ=3.65mA。这里RCE=Rc=2kΩ，对于VCE，饱和失真5.65-0.7=4.95，截止失真ICQRc=7.3V，所以先饱和失真。由于VCE=Vo，所以Vo最大不失真输出电压是4.95V</p>
+<p>对于(b)，已知VCEQ=9.5V，ICQ=0.9mA，这里Rc=5.1k，RL=5.1k，Re=1k。为了求CE端口外的等效电阻，我们对CE加压求流。由于Ib太小，我们直接忽略，相当于就是Re+Rc//RL。那么截止失真对应VCE=VCEQ-0.7=8.8V，ICQ(Re+Rc//RL)=3.195V，先出现截止失真，失真对应VCE=3.195V。这里Vo=Rc//RL分得的电压，所以是VCE(Rc//RL)/(Re+Rc//RL)=2.295V，所以最大不失真输出电压是2.295V。从这里可以看出其实可以直接忽略Ib那条路</p>
+<p>对于&copy;，Re=RL=3k，ICQ=2mA, VCEQ=9V。这个显然等效电阻就是Re//RL，同样地可以直接忽略Ib。所以饱和失真VCE=VCEQ-VCES=8.3V, 截止失真VCE=ICQ(Re//RL)=3V,截止失真，而且VCE就是Vo，所以就是3V了</p>
+<p>为了得到更大的不失真输出电压，显然VCEQ应该在大概中间的位置比较好，这样就能充分利用两边的距离。但是VCEQ改了ICQ也会改，它们在直流负载线上，所以也需要结合图判断</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512141622156.png" /></p>
+<p>比如这里如果能把Q移动到Q'，最大不失真电压就可以增大。为了达到这一点让Q移动，因为直流负载线不动的，所以你要改IB，这样IC就会变了，具体来说就是调整直流通路里的基极那边的电阻来改变基极电压。</p>
+<h2 id="_12">多级放大电路计算<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<p>多级放大电路用到“级联”的概念，这个概念的意思是一个放大电路的输出作为另一个放大电路的输入。</p>
+<p>多级放大电路的要求就是每一级都能都能在合适的静态工作点，而且信号能正常地一级一级传递</p>
+<p>多级放大电路分析的时候拆开一级一级各自分析动态指标。下一级的输入电阻是上一级的负载，上一级的输出电阻是下一级的信号源内阻</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512051014306.png" /></p>
+<p>但是实际上我们在分析的时候，完全不用考虑信号源内阻，只是在求放大倍数的时候要考虑下一级的输入电阻。因为我们求的永远是带载（下一级电路的输入电阻）情况下输出的那个信号和输入信号的比值，这个比值求出来之后就不用再去管什么信号源内阻了。</p>
+<p>我们自己对整个电路分析的时候从来不会考虑什么Voo，除非它给了Avo，下面就是一道唯一用到Voo的例题，要求的是总体的Avs，这才需要考虑信号源内阻什么的乱七八糟的东西。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512141716642.png" /></p>
+<div class="arithmatex">\[
+\begin{align}
+A_{vs}=\frac {v_o}{v_s}&amp;=\frac {v_o} {v_{o2}}\frac {v_{o2}}{v_{o1}}\frac {v_{o1}}{v_i}\frac{v_i}{v_s}\\
+&amp;=\frac {v_o} {v_{oo3}}\frac {v_{oo3}}{v_{o2}}\frac {v_{o2}}{v_{oo2}}\frac {v_{oo2}}{v_{o1}}\frac {v_{o1}}{v_{oo1}}\frac {v_{oo1}}{v_{i}}\frac{v_i}{v_s}\\
+&amp;=\frac {R_L} {R_{o3}+R_L}A_{vo3}\frac {R_{i3}}{R_{o2}+R_{i3}}A_{vo2}\frac {R_{i2}}{R_{o1}+R_{i2}}A_{vo1}\frac {R_{i1}}{R_{S}+R_{i1}}\\
+\end{align}
+\]</div>
+<p>这里最主要的问题就是给的是Avo而不是带载的Av，如果直接给带载的Av的话，除了最后那里从vi转到vs的要转换一下，其他的都可以省掉了。</p>
+<p>真正遇到的题就是把各种组态的电路拼在一起要你分析总的动态指标。拿到一个题目首先是判断各一级各自是什么组态，尤其关注信号从哪里出从哪里取，然后画微变等效电路，微变等效电路可以分开画，这样不至于看得感觉一脸懵。如果画成一个整体的微变等效电路，需要标出vo1=vi2这些衔接的地方。</p>
+<p>其实我也好奇尝试过画出微变等效电路直接去求Av，就是看成一个整体，然后用KCL得到不同的控制量之间的关系再去求，我发现这样得出的结果其实是一样的，最开始的表达式可能有点差异，但是把//给展开之后就会长成一样的了。而且你直接用各一级的控制量分析各一级的Av是更加容易的，不用管控制量之间的关系了，就把下一级当作一个负载就行。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512051033076.png" /></p>
+<p>这样就是分开写的方式，把第一级的Av里面的RL替换为Ri2，然后你再另外写一个Ri2。如果题目不要求你计算只要求写表达式，写成这样就行，不用带进去展开。注意这里输出电阻的求解，千万不要直接套单级放大电路的结论，而是从原始定义出发，就是加压求流。你可以先不看Re2，后面再并它，剩余部分其实就是rbe2+Rc1//Rb，它们在ib2之路上，总电流是(1+β)ib2，所以相当于缩小了1+β倍。</p>
+<p>这部分真的只有多看多练了，很多容易犯错的其实都是因为写的时候偷懒了忽略了其他级的输入电阻</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512141901137.png" /></p>
+<p>Av1=vo1/vi=-gm(Rd//Ri2), Ri2=Rb1//Rb2//(rbe+(1+β)Re1)</p>
+<p>Av2=-β(Rc//RL)/(rbe+(1+β)Re1)</p>
+<p>Ri=Rg+Rg1//Rg2</p>
+<p>Ro=Rc</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512141905884.png" /></p>
+<p>这题很重要，要看懂vo到底是什么。vo是中间抽头到地的电压，所以vo取的只是Rp的一半，但是Rp是一整个参与电路的，这给动态指标的计算带来了新的易错点。这里vo没有RL，所以说明是开路取电压。</p>
+<p>这题的直流部分也值得研究，这里T2是作为恒流源存在的，并不是放大电路，vo其实是直接从T1的E取的电压，而不是经过T2放大得到的。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512141908287.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512141908393.png" /></p>
+<p>恒流源你就直接把它当断路就行了</p>
+<p>&frac12;就源于vo只是取了一半，好好自己算一下，很容易错，求输入电阻的时候，RL'其实就是Rp，这里我也不太清楚为什么要换</p>
+<p>值得一提的是，放大电路里面有这种恒流源电路，在直流通路提供恒流，在交流通路成为大电阻，在常用模型里面（就是rce视为开路），这个恒流源直接可以视为开路</p>
+<p><img alt="44baeb7a6597470e24bef8f99fd3b5e.jpg" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512142010584.jpg" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512181625569.png" /></p>
+<p>有一个巨大的疑问，R4究竟算是第二个放大电路的还是第三个放大电路的，就是它究竟要不要参与第三个放大电路的输入电阻的求取？</p>
+<p>我要借这题讲明白多级放大电路求解的时候一个重要的点，那就是下一级的输入电阻其实可以任你选择，但是选了之后，表达式就是固定的，包括你前一个放大倍数里替代RL的Ri也要相应地变化</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512181712540.png" /></p>
+<p>你首先要把各一级的输出是哪个点给标出来，如果这个点在之后的电路无论串了还是并了别的电阻，这个多出来的电阻你可以把它算进下一级电路的输入电阻，也可以不把它算进下一级的输入电阻。但是你算进去和不算进去，写出来的这一级的Av的带Ri的表达式并不一样。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512181729323.png" /></p>
+<p>所以你选一种就行，最终的表达式一定是相同的，这个电阻要么出现在这一级的Av，要么出现在下一级的Ri，不可能两个都出现，明白这点就行。</p>
+<p>不过虽然这样，但是你再去求下一级的Av的时候，你对它Ri的选择并不影响下一级Av的表达式，不能因为说R5没有算进Ri2，所以你写Av2的时候就直接把R5忽略了，这是不行的，因为vi2并不是从R5右边来的，所以你画还是要画上。但是对于并联的那种，比如R4，其实求Av的时候它没有影响</p>
+<p>题目的解答，就是对于R5把它算进了Ri2，但是对于R4没有算进Ri3，不得不说有点误导人，需要像我这样写清楚了才行。我觉得自己做的时候可以就把输出的那个端口直接作为输出，剩下的不管是并联了还是串联了别的电阻统一算到下一级的输入电阻，这样可能统一一些。</p>
+<h2 id="_13">运放<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<p>运放是运算放大器的简称，它具有高输入电阻，低输出电阻和高放大倍数的特征，为了实现这些特征，设计了这样的内部结构</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512091329758.png" /></p>
+<p>运算放大器是集成电路，为了缩小体积，就没有用电容了，它是直接耦合的方式。这也就意味着它可以放大交流也可以放大直流。</p>
+<h3 id="_14">镜像电流源<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p>其中偏置电路通常是用镜像电流源提供，可以直接为多个级提供恒流源，不用一个一个配</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512181905211.png" /></p>
+<p>这是一个基本的镜像电流源电路，由于各自的B和E都连在一起，所以他们两个VBE都是相同的。然后这两个管子也是参数一样的，所以输入特性曲线一样，那相同的VBE也就有相同的IB，然后IC也就相同了，然后连下来的这条线上的电流就是两倍的IB，分到左右两边。这个电路的目的是让IREF和IL尽量接近（IC和IL是相等的）。IREF=2IB+IC1=(2+β)IB，IL=IC=βIB，比值就是β/(2+β)，当β很大就能视为相同了</p>
+<p>改进一些变成这样</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512181912491.png" /></p>
+<p>下面虚线的Re3是有连起来的。三个管子参数都一样，下面两个管子和之前的效果一样，电流是相同的，T3管的IE是2IB，其实是很小的。一个特殊的点是，RREF两端的电压是固定的，因为经过T3和T1的VBE就到地了，所以VREF=VCC-2*0.7。然后Re3说是为了提高镜像精度设置的，这里可以当成断路因为它电阻比较大。</p>
+<p>然后由于IB3=IE3/(1+β)=2IB1/(1+β)，所以IREF=IB3+IC1=2IB1/(1+β)+βIB1，这样就和IL=βIB1很接近了，β稍大一些就已经可以很接近</p>
+<p>如果要提供更多相同的输出就是连成这样，分析其实是很简单的</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512181919953.png" /></p>
+<h3 id="_15">差分放大电路<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p>差分放大电路是运放的第一级，具备“放大差模，抑制共模”的作用，如果在一个多级放大电路里有差分放大电路，只需要考虑它的差模增益。对于两个信号ΔvI1和ΔvI2的输入，ΔId=ΔvI1-ΔvI2就是差模信号，ΔIe=(ΔvI1+ΔvI2)/2就是共模信号。注意这里ΔvI1，ΔvI2并不表示做差而是表示变化的信号。</p>
+<p>原信号可以表达为ΔvI1=ΔIe+ΔId/2，ΔvI2=ΔIe-ΔId/2，有点像分成奇函数和偶函数，但是并不是两个都是除了2，差模信号就是直接减。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512181922875.png" /></p>
+<p>直流部分是完全对称的，如果输入都是0的话，从两端取到的vo也是0</p>
+<p>输入从B输入，输出通常从C取，分差模信号和共模信号分别讨论放大倍数，这里使用了叠加原理分开讨论。理论上有四种输入输出方式，比如双端输入或单端输入，单端输入就是一端接地只有另一端，但这其实可以看成双端输入的特殊情况，不过这不重要。主要是输出方式要注意区分。如果是在vO1和vO2之间接一个负载，这样叫做双端输出。如果只从vO1接一个电阻到地，vO2就不管了，这样也是可以的，这样就叫做单端输出。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201329909.png" /></p>
+<h4 id="_16">差模输入动态指标<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512181933097.png" /></p>
+<p>对于差模输入来说交路通路是这样的，需要理解的是e那个点相当于直接接地。简单的理解就是这是一个对称的结构，左边从正开始，后边到负结束，中间的都是0。画出来比较容易分析的小信号等效电路就是右边这样的。熟悉一下这个图，注意上下的标出来极性是相反的，但是其实求的时候是直接加，因为下面的输入信号是负的，所以像是ΔvOd=ΔvOd1-ΔvOd2，其实就是2ΔvOd1，下面的放大倍数，带d的意思是差模输入的放大倍数，如果二是带e或者c的是共模输入的放大倍数</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201341403.png" /></p>
+<p>如果双端输出，在那个微变等效电路里看是从最上面是正，最下面是负。如果单端输出，是从远端到中间的地作为输出的，方向不太一样。而且注意，最终除的都是完整的差模输入电压，而不是只有ΔvI1或ΔvI2</p>
+<p>如果双端输出接负载，负载中间位置还是地，要一分为二</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201345955.png" /></p>
+<p>单端输出时，RL相当于直接并在了一个输出电阻上面</p>
+<p>怎么说，其实就和最基本的共射差不多，你可以直接背，不用判断极性搞得那么麻烦</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201346646.png" /></p>
+<p>输入电阻就是2rbe，输出电阻看情况。对于双端输出的话输出电阻就是2Rc，单端输出输出电阻就是Rc，加压求流时另一个电阻上没有电流</p>
+<p>有些时候还会在输入前面加一个电阻，是为了增大输入电阻，限制基极电流。这个电阻和rbe在同一个支路上</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201355121.png" /></p>
+<p>这样输入电阻就成了2(Rb+rbe)</p>
+<h4 id="_17">共模输入动态指标<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
+<p>对于共模输入来说，Re就不能当成没有了，此时用的一个方法就是把它当成两个2Re的并联，然后由于两侧的输入是一样的，所以其实沿着竖对称轴来说每个点都是自然等位点，就可以分开了</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201358395.png" /></p>
+<p>理想状态下共模输入的双端输出就是0，因为左边和右边的电路完全一样，那个位置没有电位差，不过当然实际由于管子的特性会有细微的不同所以还是有远小于1的放大倍数。不会让你求双端输出的共模增益的，因为理论分析出来就是0，最多让你求一下单端输出的共模增益然后算一下共模抑制比。</p>
+<p>如果是单端输出的话就不是0了</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201401565.png" /></p>
+<p>由于两边电路是一样的，所以求出来的两个放大倍数也是一样的，这个放大倍数下标也可以写成</p>
+<p>对T1和T2管影响相同的外界干扰信号,如电源电压波动,环境温度变化等都可以认为是共模信号，那差分放大电路的共模增益接近0就抑制了共模信号的干扰。定义共模抑制比<span class="arithmatex">\(K_{CMR}=20\lg|\dfrac {A_{vd}}{A_{vc}}|\)</span>，单位是dB</p>
+<h4 id="_18">例题<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<p>通过以上方法求出Avd，Avc之后就可以求出Δvo，也就是加信号之后的输出电压相比静态时变化了多少，表达式就是Δvo=AvdΔvId+AvcΔvIc，所以题目给了你vI1和vI2之后你先表示出差模信号和共模信号，然后求出两种输入的增益，就可以得到输出电压相对静态值变化了多少</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201412284.png" /></p>
+<p>静态工作点的求解在前面介绍过了，其实差分放大电路就是两个射极偏置电路拼在一起，直流求解的方法都是从输入到-VEE列KVL求出IBQ，然后再从VCC到-VEE列一个KVL求出VCEQ</p>
+<p>这里由于是单端输出，所以共模电压增益就要老老实实求了，求也简单，因为共模电压增益其实就相当于一个三极管放大电路的电压增益。注意输入电阻在求的时候不要只看一边</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201421157.png" /></p>
+<p>第四问有点意思，c2的变化用差模和共模的合成一下就能得到，但是e的电压增益还要另外考虑。这里再解释一个问题，这个输入是直流吗，是直流，差分放大电路本来就可以放大直流，因为它里面没有用电容。e的电压增益其实也可以当作输出，然后求差模和共模的电压放大倍数。对于差模来说，e相当于接地，差模输入对它的电压没有贡献，所以Avd=0。对于共模来说，e作为输出其实相当于是准的CC，答案里直接说它是射极跟随器，所以共模信号的量就是e的变化量，但是老师讲还是应当写出CC的放大倍数的表达式，再写它约等于1这样</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201426539.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201441033.png" /></p>
+<p>这题很难，难在①电路复杂，多个三极管②要求直流交流③考虑rce，此处re是re3</p>
+<p>下面那个电路是一个恒流源，本质上是四电阻电路，处理方法就是把B和VEE之间的R1和R2的部分等效成Vb和Rb，再来求解</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201445212.png" /></p>
+<p>三个箭头是标注求VCE3,1,2的时候列KVL的方向。注意RC和RL那边用了戴维宁等效，在VCE2的式子里，本质上是求了一个Vc，求了一个Ve，再相减</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201450907.png" /></p>
+<p>后面rbe的计算比较简单,rbe1=rbe2=1.5k, rbe3=0.86k</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201453339.png" /></p>
+<p>差模输入，T1和T2输出电流的交汇点就是电势为0的点</p>
+<p>差模电压增益的表达式不用背，就是看输出端到上面的地的电压，比上ΔvId，这里分母是从左边ΔvId/2列到下面的地的电压，因为这个表示出来只是ΔvId的一半，所以还乘了二分之一。记住Avd2出来是正的</p>
+<p>共模输入，Re不能忽略。下面本质上可以看成一个电流源并联一个Ro3，对于差模来说直接当成接地，但是共模来说电流源是置零了，但是Ro3还在，所以要先求Ro3</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201504881.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201505994.png" /></p>
+<p>共模抑制比求出来是90.85dB</p>
+<p>差模输入电阻和输出电阻就看差模交流通路就行</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201507382.png" /></p>
+<h3 id="_19">中间放大级<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<p>中间放大级其实新东西不多，主要就是共射放大电路做一些改变，因为目的就是搞到最大的电压增益。</p>
+<p>为了提高电压增益，把共射的Rc换成恒流源，这样就有大电阻，因为共射分子是β(Rc//RL)。然后β要加大，换成达林顿管，增加β</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201512846.png" /></p>
+<p>说一下达林顿管，达林顿管可以等效，等效的三极管和原来更靠近B的管极性相同，放大倍数变成β1β2，输入电阻变成rbe1+(1+β1)rbe2</p>
+<h3 id="_20">互补对称输出级<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201651866.png" /></p>
+<p>基础的互补对称输出电路是这样的，本质上是两个CC拼在一起，一个是NPN一个是PNP，参数相同。</p>
+<p>先分析静态（输入为0），静态时VBE没有压降，所以没有电流，输出为0。</p>
+<p>当输入了正的信号，对T1，VBE&gt;0，超过0.7V后导通，对T2，VBE&gt;-0.7V，而对于PNP是要VBE&lt;-0.7V才能导通，所以T2不导通，认为它断路，不用管它。此时就是信号通过T1，经过CC组态输出到vo。当输入负的信号，T1截止，T2导通，也是CC组态输出到vo。</p>
+<p>这个电路的特点是，在0到piT1导通，T2不导通，在pi到2piT1不导通，T2导通。对于每个管子来说，它能够导通的角度范围称为导通角，这个电路的导通角就是pi，这样的称为乙类放大。之前的管子里面，因为有直流工作点驮载，所以能保证在2pi里都导通，这样的称为甲类放大。</p>
+<p>但是这个电路有个问题，就是你输入信号达不到绝对值超过0.7V就输出不了，还是截止区，所以就会有失真，称为交越失真</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201658542.png" /></p>
+<p>为了解决这样的问题，设计了更好的电路</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201659465.png" /></p>
+<p>这样D1和D2在静态的时候就已经导通，使得还没输入信号的时候，T1和T2就已经在临界放大的状态。在交流信号输入进去的时候，这两个二极管视为交流短路，信号就可以直接从T1或T2输出，而且没有死区。T1导通的时候，T2处于截止，T2导通的时候，T1处于截止，和之前类似，只是现在解决了交越失真问题。</p>
+<p>除了用两个二极管，还有用恒压源来提供偏置消除交越失真的方法，需要满足静态时VCE3达到1.4V，这个比较少见，它在交流里面是小电阻，注意区别于恒流源的大电阻。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201706354.png" /></p>
+<p>这个T3恒压源就是把B看成断路，那么左边R1和R2相当于串联</p>
+<p>现在这个电路称为甲乙类放大，因为导通角大于pi，不过这不重要，重要的是怎么分析它的动态指标之类的</p>
+<p>对于这种电路的最大不失真输出电压，直接记结论就是VCC-VCES</p>
+<p>求动态指标的时候，直接把另一个管子当作截止来分析，因为工作状态任意时刻只有一个管子在工作，这样其实就跟之前分析的方法一样。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201722258.png" /></p>
+<p>来一道很综合的题</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201723757.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201723530.png" /></p>
+<p>第一级是差分放大电路，从vo1输出，第二级是T3构成的CE，从c输出，第三级是T4和T5构成的互补对称输出电路，而且带二极管偏置。</p>
+<p>这题虽然电路复杂，但是分析起来是要比前面差分放大的那个例题简单的，因为不需要你求直流部分的东西了，直接让你求交流，那你就画交流通路依次分析就行</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201729323.png" /></p>
+<p>由于10欧相比千欧太小了，所以它直接省略了，我这里补上了。注意这里8.2k是直接拉到右边去了，因为它事实上另一端就是接地，可以看成和RL的并联。</p>
+<p>然后求放大倍数就一级一级求就行了</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201942952.png" /></p>
+<p>这里差分电路放大倍数只算了差模信号的放大倍数，对于多级的这种来说不用管共模了，也就专门考差分放大电路的明确要求你求共模增益或共模抑制比才需要算共模增益。</p>
+<p>其实我发现差分放大电路的直接背就行，如果单端输出，在1的放大倍数就是负的，在2的就是正的，然后呢单端的话都要除以二分之一，如果双端的话就不用除，双端的话也是负的。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201942810.png" /></p>
+<p>注意这里互补对称输出电路的部分，它的放大倍数写出来应该是(1+β)(8.2k//1k)/(rbe4+(1+β)(10+8.2k//1k))，考试的时候不能直接写1。然后呢输入电阻和输出电阻也要注意，它因为是CC，所以输入电阻也会涉及到输出回路，输出电阻也要考虑到前面6.8k的那个电阻。</p>
+<h3 id="_21">运放封装<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<p>前面都是把运放里的结构拆开了讲，到了很细微的部分，和前面放大电路的部分结合得更加紧密。但是运放作为一个组件单独分析的话，就大可不必这么麻烦，只需要关注它整体的参数就行</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512201956328.png" /></p>
+<p>这是集成运放的特性曲线和它封装起来的样子，可以画成这样矩形的也可以画成三角形的。运放都是用来放大差模信号的，所以这里输入也是用差模信号来表示。+表示同相输入端，-表示反相输入端。如果你的差模信号的+是从同相输入端进，那么输出的电压也是同相的，也就是放大倍数不会是-多少这样。如果你的差模信号的+是从反相输入端进，那么放大倍数就会是-多少。运放其实还有两个脚是电源供电，这里没画出来。运放虽然放大倍数很大（10的4次方以上），但是输出电压再怎么大也不会大于供电的两个电压。又由于它放大倍数很大，所以其实线性区（就是中间那段斜的）很窄，在这样的使用方式下只能在很小的输入范围内使用线性区，这就不太好。如果引入了负反馈（后面会讲），就能限制它在各种输入下也能做到工作在线性区，这样就比较方便，但是代价就是牺牲了增益。非线性区就是两段平的。运放在任何状态下都满足输入电流近似为0的条件，也就是所谓的虚断，但是只有在线性区才满足虚短，也就是vId近似为0。所以只有判断运放工作在线性区了，才能使用虚短条件。</p>
+<p>理想运放的输入电阻是无穷大，输出电阻是0</p>
+<p>运放还需要了解的就是关于失调的，因为实际运放即使在没有输入的情况下仍然可能会有输出，可能因为里面元件特性不能做到完全对称</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512202008546.png" /></p>
+<p>除了电压失调还有电流失调</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512202011058.png" /></p>
+<p>输入端其实是差分放大电路，静态时是有微量的IB的。为了减小这个电流对于输出的影响，结论就是输入端接的两个R应该一样，知道这个结论就行</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512202016269.png" /></p>
+<p>集成运放只有引入负反馈才能工作在线性放大区内。</p>
+<h2 id="_22">反馈<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h2>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512202049840.png" /></p>
+<p>在没有反馈网络的时候，信号源输入Xs就是净输入量Xi，经过放大得到输出量Xo，Xo/Xi定义为开环增益A。</p>
+<p>引入反馈网络后，将输出Xo的一部分或全部以反馈量Xf的形式传回到输入端，Xf/Xo定义为反馈系数F。反馈量和输入量同量纲，经过KVL或者KCL的关系结合形成新的净输入量Xi。如果新的净输入量比原来的要大，称为正反馈，如果新的净输入量比原来的要小，称为负反馈。引入反馈稳定下来的Xo/Xs定义为闭环增益Af。正反馈使得闭环增益大于开环增益，负反馈使得闭环增益小于开环增益。</p>
+<h3 id="_23">反馈类型的判断<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<h4 id="_24">运放判断<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
+<p>反馈从是否增大放大倍数，可以分为正反馈和负反馈；从反馈时取样的物理量类型，可以分为电压反馈和电流反馈；从反馈接入的方式，可以分为串联反馈和并联反馈。</p>
+<p>判断的时候，先判断是串联反馈还是并联反馈，因为这最简单也最没有疑问，然后判断是正反馈还是负反馈，最后判断是电压反馈还是电流反馈，因为判断电压反馈还是电流反馈有时候需要用到虚短，这要先判断出是负反馈才能使用。</p>
+<p>怎么判断是串联反馈还是并联反馈？这个的判断已经非常成熟，就是看反馈传回来的那根线是直接接信号源所在支路，还是接到了其他支路。如果是直接接信号源支路，那就是并联反馈，如果是其他支路，那就是串联反馈</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512202102481.png" /></p>
+<p>左边的图，Rf接到了反相输入端那边，但是信号源从同相输入端输入，因此是串联反馈。右边的图，Rf接到了反相输入端，信号源也在同相输入端，所以是并联反馈。串联反馈反馈量是电压，并联反馈反馈量是电流。你看左图净输入就是同相输入端到反相输入端的电压，信号输入是Vs，反馈量是R1上的电压。Vi=Vs-Vf（Vf也是从上到下）。右图净输入是Ii，信号输入是Is，反馈量是Rf上的电流If，Ii=Is-If（If是从左到右）。</p>
+<p>判断好了是串联反馈还是并联反馈，也就搞懂了反馈量、输入量、净输入量是电压还是电流，这非常关键，是后续分析的基础。</p>
+<p>第二步，怎么判断是正反馈还是负反馈？这个要用到一个叫做瞬时极性法的东西。瞬时极性法就是根据放大电路输入和输出之间的关系来判断相对电势关系的方法。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512202146739.png" /></p>
+<p>这个是串联反馈，反馈量是电压。首先你假设有一个+的输入，也就是同相输入端那里的+，然后因为这个是同相输入端，所以输出端也是+。然后根据虚断，vo在Rf和R1串联上面分压，分到R1上的电压也是+的。Vi=Vs-Vf，原来的Vi是Vs，经过反馈后的Vi是Vs-Vf，Vf是+的，所以净输入量Vi减小了，所以是负反馈。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512202151431.png" /></p>
+<p>这一个是并联反馈，反馈量是电流。首先你也是假设有一个+的输入，这个输入在了反相输入端，所以vo就是-的。Rf左+右-，电流往右流，所以Id=Is-If，这样就导致引入反馈后净输入量Id相比没有引入反馈的减少，所以是负反馈。</p>
+<p>确定了这个电路存在负反馈之后，就可以用虚短了，为什么？因为如果不满足净输入量近似为0，输出量就都会直接被放大到上限的电压，那和之前没有区别，继续减小净输入量。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512202102481.png" /></p>
+<p>已知负反馈拿到了虚短，也确定了反馈量是什么，才好去判断是电压反馈还是电流反馈。电压反馈的特征是，把负载两端短接，反馈量就变成0，如果短接后反馈量不为0，则为电流反馈。左图负载短路后，vo=0，Rf和R1上没有电压。这里用到了虚断，反相输入端那条线直接忽略，所以就相当于Rf和R1两端都是地，所以没有电压，反馈量为0，因此是电压反馈。可以发现这个图并没有用到虚短特性，说明判断电压反馈有时候不经过虚短也可以判断，但是右边这个图就不一样。</p>
+<p>右图负载短路后，vo=0。我们已经判断了它满足负反馈，所以可以用虚短。对于同相输入端，因为认为电流为0，所以同相输入端的电位和地的电位是一样的，都是0，此时称为“虚地”。由于有了虚短特性，可以得到反相输入端也是电势为0。既然Rf两端电位都是0，那么反馈量If自然也就是0了，所以满足电压反馈。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512202241363.png" /></p>
+<p>再看这两个图。首先判断串联还是并联。左图显然是串联，反馈量是R1两端的电压。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512202244145.png" /></p>
+<p>接下来标极性，反馈后Vf是+，Vi相比原来减小（减小了Vf），所以是负反馈。然后将RL短接，此时虽然Vo=0，但是Io并不是0，不要觉得Vo/RL=0，此时RL已经是导线了。然后Vf此时还是有的，就是运放的输出电压，所以反馈量并没有变成0，是电流反馈。</p>
+<p>右图是并联，反馈量是Rf上的电流</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512202247724.png" /></p>
+<p>这里瞬时极性法要补充一个重要的内容，就是在非反馈网络的部分，跨过电阻之后极性仍然相同，这里跨过RL之后，右边的极性仍然是-。那么Rf左+右-，电流往右流，净输入量Id减少，所以是负反馈。之所以强调非反馈网络的部分，是因为如果你只说跨过电阻之后极性仍然相同，那Rf两侧的极性就不一样，导致疑惑。瞬时极性法很容易让人学不明白的就是，可能你从不同路径按照你觉得的准则判断出来的同一个点极性是不一样的，就会造成困惑。我的建议是不要深究到底原理是什么，你就按照能推出来正确结果的方法去做就行。接下来让RL=0，Rf还是左+右-，还是有电流，所以反馈量没有变成0，是电流反馈。</p>
+<p>其实就简单理解为，对于串联反馈，如果反馈量和输入量符号相同，就是负反馈，符号相反就是正反馈。对于并联反馈，Rf两端符号不同，就是负反馈，反之则为正反馈。</p>
+<h4 id="_25">分立元件电路判断<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h4>
+<p>分立元件相比运放更加复杂，因为里面存在多级的判断，在选择路径的时候，注意要以输入输出为最主要的依据来判断是+还是-，然后结合对于一般的电阻来说经过之后相位不变，就基本可以标完了。</p>
+<p>判断反馈类型的时候，直接在原电路上标就行，没必要先画交流通路再标</p>
+<p>分立元件其实可以把其中一部分封装成运放的三个引脚。比如对于差分放大电路来说，两个B就是一个是同相输入端一个是反相输入端，至于谁是同相谁是反相，需要结合后续电路来判断。比如下面这个电路b1是同相输入端，因为单端输出是从e2取的，相位相同（我们之前推过对于差分放大电路，单端输出的时候如果接在2那里放大倍数是+的，接在1是-的），然后后面的CC同样是同相，所以最后到Vo也是同相。如果换一下，R3左边接e1，那么就变成b1是反相输入端了。对B是可以用虚断的。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512271801438.png" /></p>
+<p>然后这里注意反馈网络是Rf那里接到b2的位置。这里由于b1和b2认为是输入端，所以由虚断可以认为b2那里没有电流，所以反馈到反相输入端的是R2两端的电压，相当于Rf从Vo取了电压，然后分压到R2，所以R2的信号相位也是+。由于Rf没有接回信号输入的b1那块，所以这里是串联反馈，反馈量是电压。如果Vo接0，R2和Rf两端接地，反馈量为0，所以是电压串联负反馈。负反馈就是因为这里是串联的，然后返回来的信号是+的。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512271813400.png" /></p>
+<p>接下来看这个电路，Rf接到信号输入的b1，所以这是并联反馈，反馈量是电流。然后呢这里第二级是CE，所以T3输出了一个-的电压。接下来需要先判断负反馈，这里是并联反馈而且Rf两端相位不同所以是负反馈。有了负反馈就用b2是虚地，所以b1也是虚地，如果RL调零那么Rf上没有电流，反馈量为0，所以是电压反馈。总体是电压并联负反馈。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512271820552.png" /></p>
+<p>再看三极管的电路。对于三极管来说，be就是一个是同相输入端一个是反相输入端，至于谁是哪一个，还需要结合后续的电路判断。这里他画了交流通路来看，输入一个+的到T1的b，由于是CE，输出是一个-的，然后第二级也是CE，所以输出的是一个+的，然后Rf把这个+的拉回e，这是串联反馈。当Vo=0(RL短路)，Vf=0，是电压反馈。由于Re1上电压（也就是反馈量）和输入的相位相同，所以这是负反馈。这里也是认为了Ib1=Ie1=0，用了虚断</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512271830614.png" /></p>
+<p>再看这个电路，输入一个+，第一级放大得到-，第二级放大之后到Vo(RL)那边是+，但是对于Re2那边是-，就是对于三极管来说B和E的相位相同（CC），B和C的相位相反（CE），但是这不适用于存在接地的地方，比如这里的e1，就没有+-可言，它就是0，好的所以Re2那里得到的是一个-。Rf拉回了输入的地方，是并联反馈，反馈量是电流。由于Rf两侧的相位不一样且是并联反馈，所以是负反馈。接下来让V0=0，但是这对于Re2没有任何影响，因为它是由输入的IB决定的，所以Rf不会受到影响导致反馈量变成0，所以这是电流反馈。总结来说就是电流并联负反馈。</p>
+<h3 id="_26">动态指标的计算<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
+<p>为运放引入负反馈后，闭环增益（一般是要求电压增益）就无需依靠那个具体的很大的开环增益求了，此时我们不再使用微变等效电路来分析。正反馈会让闭环增益大于开环增益，负反馈会让闭环增益小于开环增益。只会让你算深度负反馈之后的闭环增益和输入输出电阻之类的东西，先介绍一下闭环增益的表达式是怎么来的</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512271842137.png" /></p>
+<p>负反馈的反馈量是一个和输入信号量纲相同，相位相反的量，Xi=Xs-Xf，这里Xf只是它的模。如果按照向量，确实是<span class="arithmatex">\(\overrightarrow X_s+\overrightarrow X_f=\overrightarrow X_i\)</span>，但是由于Xf和Xs方向相反，所以写成模长表达式就是Xi=Xs-Xf</p>
+<p>闭环增益Af(f表示闭环)=Xo/Xs=AXi/(Xi+Xf)=AXi/(Xi+FXo)=AXi/(Xi+FAXi)=A/(1+AF)。</p>
+<p>这里要进一步明确各个物理量的名称，A是开环增益，F是反馈系数，AF是环路增益，1+AF是反馈深度。</p>
+<p>深度负反馈的意思是1+AF远大于1，当题目说了深度负反馈，1+AF可以认为等于AF，于是闭环增益Af变成A/AF=1/F。因此题目让你求的闭环增益，和A没有任何关系，更不需要像之前那样用β什么的来算。但是实际上，对于不同的组态来说，F的含义不一样，只有电压串联负反馈里，1/F才能表示Avs，其余的表达的都是其他的意思，因此最通用的求动态指标的方法仍然是用虚短虚断直接去求。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512272254556.png" /></p>
+<p>这些不太重要，主要是要说明，深度负反馈的增益不要用1/F去求，我们也不需要熟悉电压串联负反馈以外的那些F的含义。</p>
+<p>深度负反馈时，各种组态的输入输出电阻有这样的关系：</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512271933549.png" /></p>
+<p>解答一个疑问，运放不是输入电阻很大，输出电阻很小吗，怎么这里输入电阻可以是0，输出电阻可以是无穷大？原因是这里讲的是加了负反馈之后的整体的输入和输出电阻。这里Rif，Rof里的f就是加了负反馈的意思。</p>
+<p>串联反馈让输入电阻增大，并联反馈让输入电阻减小。电压反馈让输出电阻减小，电流反馈让输出电阻增大</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512271820552.png" /></p>
+<p>来分析前面提到的这道题的动态指标计算。首先判断出反馈组态是电压串联负反馈，这样就可以用虚短（vb=ve)和虚断(ib=0, ie=0)。这个题目课本在写解答的时候求的是Av而不是Avs，有些奇怪，Av就是用Vo/Vi了，这里Vi就是b的电压，由be电压相同，所以Vi=Vf，然后Vf是Re1上电压，Vo是Rf串联Re1的电压（因为e当作开路了），这样就求出Vo/Vi=1+Rf/Re1。如果算的是Avs，那么还要有一个Vi/Vs的项，这个是Rb1/(Rb1+Rs)，如果题目没说明我觉得求哪个都可以，严谨的题目会说明白是哪个。串联反馈的输入电阻是无穷大，这个输入电阻是包含反馈网络的输入电阻，也就是A和地两端这样往右的输入电阻。而如果是从信号源的B点看，就还有一个Rb1，Rb1并无穷还是Rb1。电压反馈的输出电阻是0，这是对于从Vo的两端来说的。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512271813400.png" /></p>
+<p>这个电路是电压并联负反馈。这里b2和b1是虚地，认为电位是0。然后(Vs-0)/R1=(0-Vo)/Rf,就可以解出Vo/Vs=-Rf/R1。并联反馈，输入电阻就是0。电压反馈，输出电阻也是0</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512271830614.png" /></p>
+<p>电流并联负反馈。这题也是要注意一点，我觉得其实先算输入输出电阻再去求电压放大倍数的顺序更合理。这里由于是并联反馈，输入电阻是0，所以Rb1可以认为没有电流了，因为电流直接走If了。是电流反馈，所以输出电阻是无穷大</p>
+<p>b1和e1都是虚地，所以你用Vs/R2就是Ii，别忘了Ib1=0（虚断）和Rb1上没有电流（输入电阻为0），所以Ii=If，If=(0-Ve2)/Rf，这样可以进一步求出Ve2。然后由Rf和Re2是并联到地（Rf另一端接b1也是地）的关系，所以可以求出Ie2=Ve2/(Rf//Re2)，然后Ic2=Ie2，就可以表示出Vo，这个流程很固定。</p>
+<p>Vs/Rb2=Ii=If=(0-Ve2)/Rf, Ve2=-VsRf/Rb2, Ie2=Ve2/(Rf//Re2)=-Vs(Rf+Re2)/Rb2Re2=Ic2, Vo=Ic2RL, Avf=Vo/Vs=-(Rf+Re2)RL/Rb2Re2</p>
+<p>所以你会发现，在这种深度负反馈条件下求动态指标的题目里，具体的参数不重要了，只剩下电阻的运算，有些放大级甚至可以直接忽略，所以实际上计算是轻松很多的。这里动态指标的计算最关键就是知道哪里是同相反相输入端，判断组态，然后对于串联反馈就是用虚短把电压转移，对于并联反馈就是用虚断得到虚地，对于电压反馈就是用分压关系得到Vo，对于电流反馈就是用并联关系得到总电流，再用c和e的电流近似相等来得到负载上的电压Vo。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512281110935.png" /></p>
+<p>列式其实是简单的，关键是你要先得到组态从而可以用虚短虚断，然后结合串并联的分流分压关系得到。这里需要注意e图的R2被短接了，因为整个运放输入电阻0（并联反馈），所以电流就不通过它</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512281358506.png" /></p>
+<h3 id="_27">经典运放负反馈电路<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<p>其实自己推也能推出来，就熟悉一下</p>
+<p>反相比例放大器</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512281433388.png" /></p>
+<p>同相比例放大器</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512281433458.png" /></p>
+<p>这两个老熟人了，注意熟悉一下电压跟随器的样子，是vo直接接回-然后不连到地</p>
+<p>减法电路</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512281439838.png" /></p>
+<p>反相求和电路</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512281440231.png" /></p>
+<p>同相求和电路</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512281442288.png" /></p>
+<p>双端输入求和电路</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512281444155.png" /></p>
+<p>这个电路相对麻烦一些，需要一个一个输入地算vo是什么，结合前面同相比例放大电路和反相比例放大电路的结论来求</p>
+<p>积分电路</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512281446948.png" /></p>
+<p>注意拉回来的是一个电容的就要想到是积分的，这是用ic=Cduc/dt得到的</p>
+<p>微分电路</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512281447867.png" /></p>
+<p>把R和C换一下位置就行</p>
+<p>电流源变电压源</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512281449849.png" /></p>
+<p>注意这里特别的是这和负载没有关系，只和R有关系，vo既是RL的电压也是R的电压，因为运放输出端那里可以有电流，所以io不等于is，而iR=is</p>
+<p>电压源变电流源</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512281450303.png" /></p>
+<p>也是和RL无关。不过这个电路的缺陷是负载不能接地，但是实际上很多负载接地，所以要另外设计一个</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512281451840.png" /></p>
+<p>还有一种叫仪用放大器</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202601011928018.png" /></p>
+<p>我解释一下vo那个式子怎么来的，</p>
+<p>(vo-v+)/R4=(v+-vo1)/R3</p>
+<p>(vo2-v-)/R3=(v-)/R4</p>
+<p>v+=v-</p>
+<p>用vo2表示v-再代到第一个表达式就可以得到了</p>
+<h3 id="_28">负反馈的作用<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h3>
+<p>负反馈的作用这块有一些需要记忆的属性。</p>
+<p>负反馈提高闭环增益的稳定性，有表达式<span class="arithmatex">\(\dfrac {dA_f}{A_f}=\dfrac 1 {1+AF}\dfrac {dA}{A}\)</span>，反馈深度（1+AF）越大，放大倍数稳定性越好。另外，在F不变的前提下（这句话有些时候被省略），负反馈放大电路那个基本放大器的放大倍数（A）越大，闭环放大倍数就越稳定，这也是对的。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512271916810.png" /></p>
+<p>用了d的那个表达式和Avf=AF/(1+AF)</p>
+<p>负反馈可以改善放大过程中的非线性失真（但是对输入的非线性没法解决），可以增加通频带带宽（增益和带宽的乘积是一个定值，直接记忆）。负反馈可以抑制反馈系统内部的温漂，噪声和干扰信号，不过对于输入信号里已经有的干扰和反馈之外的干扰是无能为力的。负反馈只能该善反馈环路中的放大性能，对反馈环路之外无效。</p>
+<p>负反馈是采什么稳什么的，如果是电压反馈，就稳定采的那个电压，如果是电流反馈，就稳定采的那个电流。如果负载不变，为了让放大倍数稳定，可以引入电压负反馈也可以引入电流负反馈，因为你都固定了负载不变了所以流过RL的io不变，vo也是不变的。</p>
+<h2 id="_29">频率特性<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h2>
+<h3 id="_30">概念<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h3>
+<p>前面分析的大多是中频率的增益，忽略了三极管的结电容和极间电容（当成了开路）以及电路中的耦合电容和旁路电容（当成了短路），现在需要分析全频段的增益变化。在低频时，耦合电容和旁路电容的容抗增加，不可忽略。在高频时，三极管的结电容和极间电容变小，不可忽略。</p>
+<p>考虑电容之后引入了阻抗，所以增益变成了一个复数，用模长和辐角表示，模长随频率的改变称为幅频特性，辐角随频率的改变称为相频特性</p>
+<p>中频段的增益可以看作一个常数，来到低频和高频的时候，增益的模长会下降。下降到中频增益的0.707倍时的两个频率，称为上限截止频率<span class="arithmatex">\(f_H\)</span>和下限截止频率<span class="arithmatex">\(f_L\)</span>。定义一个东西叫做通频带BW，其实就是带宽band width，用<span class="arithmatex">\(f_H\)</span>-<span class="arithmatex">\(f_L\)</span>求就是了，H是high，L是low</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512191131043.png" /></p>
+<p>如果输入信号含多种频率的成分，有低中高频，由于在各个频率下的增益不同，就会导致信号失真。由模长不同导致的失真称为幅频失真，由辐角不同导致的失真称为相频失真，这两种都属于线性失真。之前的截止失真和饱和失真属于非线性失真。</p>
+<h3 id="rc">一阶RC电路的频率响应<a class="headerlink" href="#rc" title="Permanent link">&para;</a></h3>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512281533416.png" /></p>
+<p>求幅频特性也就是求Av的模长，就分母实数化得到a+bi，然后根号a方+b方就行，这里省略了过程。相频特性就是求辐角，就是arctan(b/a)，得到的就是下面的两个表达式。我解释一下为什么这是低通，当频率低的时候，电容可以当成开路，此时由于没有电流，Vo=Vi，信号完整传输。在高频的时候，电容相当于短路，所以Vo就没了。低通也就是频率低能通过，频率高的通不过。</p>
+<p>对数伏频特性定义为20lg|Av|，单位是dB</p>
+<p>采用对数坐标表达（因为幅频特性相频特性都是带f/fH的），幅频特性和相频特性画出来是这样的，这种图叫波特图</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512281539303.png" /></p>
+<p>需要关注，到达fH的时候，20lg|Av|下降3dB，φ比原来-45°</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512281541269.png" /></p>
+<p>相同的做法，此时是R上取电压。低频时电容开路，R上没电流也就没有电压，高频时电容短路就能完整得到Vi</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512281543351.png" /></p>
+<p>高通的图画出来是这样的，也是关注fL时-3dB，相位+45°</p>
+<p>严谨地画出来是曲线，但是为了方便，我们自己画的时候都是近似画成折线，下面的图虚线的是实际的，实线是我们自己画的样子。截止频率就是斜率突变的那个点，相位方面就是截止频率乘10和除10的地方是突变的点。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512281545523.png" /></p>
+<p>需要注意的是，这个图左边那个是高通电路，右边的是低通电路。高通电路说是低频段波特图，是因为它有下限截止频率，所以只画低频段的部分，高频就都是一条直线了。低通电路说是高频段波特图，因为它有上限截止频率，只画截止频率那部分，低频也是一条直线。</p>
+<p>有一个知识点是BJT和FET的高频小信号模型，保留了它里面存在的电容，但是这根本不重要，不会让你用这个模型算，因为太复杂了，频率响应这块考的都很简单很少。</p>
+<p>BJT的</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512281552371.png" /></p>
+<p>FET的</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512281553572.png" /></p>
+<h3 id="_31">全频段放大倍数分析<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h3>
+<p>这块理论推导很复杂，实际做题很简单。需要掌握的就是根据题目提供给你的全频段放大倍数表达式来画波特图，有时还会要你写写幅频特性或相频特性，波特图画的就是幅频特性和相频特性。</p>
+<p>对于单级放大电路，全频段放大倍数是<span class="arithmatex">\(A_v=A_{vm}\dfrac {j\frac f {f_L}}{1+j\frac f {f_L}}\dfrac 1{1+j\frac f {f_H}}\)</span></p>
+<p>Avm就是中频放大倍数，可正可负。一般这个全频段放大倍数都会直接给。两个频率，小的那个是fL，大的那个是fH，你就把题目的表达式整理成这个样子，确定fL和fH，就可以画波特图了。<span class="arithmatex">\(\dfrac {j\frac f {f_L}}{1+j\frac f {f_L}}\)</span>是由耦合电容和旁路电容造成的，<span class="arithmatex">\(\dfrac 1{1+j\frac f {f_H}}\)</span>是由结电容和极间电容造成的，你就记住高频的时候耦合电容相当于短路不用考虑，所以不是带来fH的因素，是带来fL的因素。</p>
+<p>对数幅频特性表达式<span class="arithmatex">\(20lg|A_v|=20lg|A_{vm}|+20lg(f/f_L)-20lg(\sqrt{1+(f/f_L)^2})-20lg(\sqrt{1+(f/f_H)^2})\)</span></p>
+<p>相频特性表达式<span class="arithmatex">\(\varphi=(-180\degree+)90\degree-\arctan(f/f_L)-\arctan(f/f_H)\)</span>，如果中频放大倍数是负的那就多个-180°，正的就不用</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512281838168.png" /></p>
+<p>表达式也可以熟悉一下，虽然考的不多但是如果遇上写不出来就麻烦了。这题是比较好心直接帮你配好了jf/50Hz，有些题没有配成这样，分子直接给个常数乘jf，那你就要找分母里面比较小的那个作为fL，然后配成这个样子。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512281846165.png" /></p>
+<p>对于幅频特性，都是先算中频的，得到20lg|Avm|，就是中间那条平的，然后到了两个截止频率的地方就往下，然后还要标出斜率也就是+的或-的20dB/十倍频，下限那边是+的，上限那边是-的</p>
+<p>对于相频特性，也是先要画出中频部分是-180°还是0°，然后呢在两个截止频率左右各十倍频的地方（等距，都是一个刻度的长度）有-45°/十倍频，这都是固定的。</p>
+<p>对于多级放大电路，全频段放大倍数是</p>
+<div class="arithmatex">\[A_v=A_{vm}\prod\limits_{k=1}^n\dfrac {j\frac f {f_{Lk}}}{1+j\frac f {f_{Lk}}}\prod\limits_{i=1}^m\dfrac 1{1+j\frac f {f_{Hi}}}\]</div>
+<p>和之前一样，上下都有jf的那个是低频的，只有分母有jf的那个是高频的，n是耦合电容和旁路电容的个数，m是结电容和极间电容的个数。不过题目都是直接给表达式，不难。</p>
+<p>多频的由于有多个项，所以波特图稍微复杂一点，不过都是叠加形成的，画出来不难的</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512281857596.png" /></p>
+<p>首先分子没有f，说明没有分子分母都有jf的那个项。注意看的不是有没有j，因为偶数个j乘起来也会变成实数，而且你也不知道Avm是正还是负，所以根本的还是看分子有几个f来确定有几个fL，然后再去找分母里前几个作为fL。不过这题分子没有f，那就全都是fH了，那就简单了，其实已经配好了，分两个1出来就行。然后确定好Avm，fL，fH之后就可以开始画图了，不用先写表达式。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512281903760.png" /></p>
+<p>这里它还花了虚线来说明叠加的过程，但是你自己做的时候完全没必要画虚线，你就知道每到一个转折频率斜率就增加-20dB/十倍频。然后相频特性也是，你就知道转折频率左右10倍频的地方就有-45度/十倍频的斜率，如果多个在一起那也是斜率叠加，大致画一下就行，不难</p>
+<p>这题还问上限频率fH，这个是整体的上限频率。由于表达式里其实有多个上限频率，这就有规则。如果最小的和第二小的相差大于等于十倍，那就取最小的那个作为上限频率。如果在十倍以内，根据以下规则计算，注意上限的和下限的计算规则不一样。对于下限频率，如果最大的比第二大的大十倍，那就取最大的，否则也是要按照规则来算。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512281906952.png" /></p>
+<p>另外，放大电路级数越多，高频附加相移越大，因为高频部分是由极间电容和结电容影响的，你级数越多，那这些电容的数量就越多，fH就会增加，就会有更负的φ</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512281911146.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512281911213.png" /></p>
+<p>我再补充一个可能的考点，就是问你要改善低频特性应当优先增大哪个电容</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512282110627.png" /></p>
+<p>低频特性是由耦合电容和旁路电容约束的，fL=1/(2pi RC)，有几个这样的C就有几个fL，比如这张图里C1，C2，CE都是带来FL的电容。而fL=1/(2pi RC)中的R，其实是在输入置零情况下，各个电容两端看出去的等效电阻。为了改善低频特性，也就是让最终的那个fL减小，应当让fL最大的那个减小。fL最大的那个，也就是RC最小的那个。由于C1，C2和CE的C都是一样的，所以我们考虑它们的R。对于C1来说，R是Rs+Ri1，对于C2来说，R是Ro1+Ri2（前面这两个都是CE组态）。对于CE来说，R是T2管CC组态的输出电阻，而CC组态的输出电阻是最小的，几十到几百，所以CE的RC是最小的，应当优先增大CE。实际上做题你就看谁是接到E的旁路电容就行了，这部分也不会怎么考的难。</p>
+<h3 id="_32">自激振荡<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h3>
+<p>自激振荡发生的原因是原本是负反馈，但是随着频率的改变，相位逐渐和中频段相差180°，导致从负反馈变成正反馈，这时即使没有输入，也可以继续产生波形。自激振荡发生在通频带以外</p>
+<p>自激振荡最根本是AF+1=0，这里A，F都是复数，换算成模长和相位就是|AF|=1，φ=(2k+1)pi，相位实际上就看-180°的地方就行，这是自激振荡稳定的条件。满足这两个条件就意味着输出传回来之后可以生成相同的输出。自激振荡的起振条件是一开始|AF|&gt;1，φ=(2k+1)pi，因为这样才能让输出信号越来越大。</p>
+<p>定义一下稳定裕度和相位裕度两个概念</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512302008318.png" /></p>
+<p>a图，当相位到达-180度时，对应的|AF|&gt;1,因此会发生自激振荡。</p>
+<p>b图，当lg|AF|=0时，相位还没到-180度，那么此处的相位距离-180度的角度就是相位裕度，通常要求相位裕度大于等于45度。当φ=-180度时，对应的20lg|AF|就是增益裕度，是一个负值，通常要求Gm小于等于-10dB（小于负值指的是应当更负）</p>
+<p>实际考题通常是给开环增益的表达式，这也可以用来判断自激振荡，因为默认反馈网络是纯电阻，F是一个实数，不会改变相位。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512302024745.png" /></p>
+<p>只给开环增益不给F，这就和前面lg|AF|和φA+φF的波特图不一样了。前面那个波特图是可以直接根据波特图判断会不会发生自激振荡，只给lg|A|就需要讨论对于不同的F会不会发生自激振荡，默认F是实数，所以相位部分是没问题的。</p>
+<p>上面画的20lg|1/F|的水平线叫做反馈线，这条线和20lg|A|的交点就是|AF|=1时的情况，交点的横坐标就是满足|AF|=1的频率，做个垂线下来就是此时AF的相移。如果这个相移没到-180度，那就不会发生自激振荡，如果等于或超过180度，那就会发生自激振荡。图中F1=10^(-4), F2=10^(-3), F3=10^(-2)。F2时对应恰好就是相移-180度，这时叫做临界自激。可以看到，当F越大，反馈线就越靠下，就越容易发生自激振荡。记忆表述：F越大，即反馈越深，电路越容易产生自激振荡</p>
+<p>我要解释作业里一种问题，问你中频闭环增益应取什么，我一直不清楚这个中频闭环增益和题目给的开环增益有什么关系，现在我算是明白了</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512302053732.png" /></p>
+<p>解答一个疑问：临界自激震荡时闭环增益不是无穷大吗？哪来的闭环增益减少到多少分贝之说？</p>
+<p>这里说的闭环增益并不是临界自激震荡时的闭环增益，频率都不一样。这里说的闭环增益是通频带以内的，是A/(1+AF)简化为1/F的，而自激振荡发生在通频带之外，满足|AF|=1, φ=-180度。在这两个状态下，F是不变的，因为反馈网络是纯电阻，和频率无关。自激振荡时的开环增益|A|，和中频闭环增益是相同的，都是|1/F|。</p>
+<p>这两道题，把波特图画出来是容易的。7.12第二问，其实就是问你临界自激震荡时的开环增益的模|A|，做法就是找到-180度的频率，做个垂线看上面的|A|是多少即可。第三问，有45度相位裕度，也就是φ达到-135度，也是往上做垂线求出|A|，也就等于|Amf|</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512302102223.png" /></p>
+<p>自己画的时候没必要把刻度线画出来，但是你要求出对应点的频率，因为斜率都是知道的，可以以十倍频为单位。</p>
+<p>7.13也是一样的，给你|Avf|也就是给你|A|，作垂线即可</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512302104652.png" /></p>
+<p>对于放大电路来说，自激振荡是需要避免的，避免的方法就是破坏自激振荡的条件，用相位补偿法，也就是在放大电路里加入RC电路</p>
+<p>第一种叫做电容滞后补偿，把一个电容接在时间常数最大的回路中，这可以让临界自激线下移（相应的F增大，所以反馈可以更大），但是这也会让上限截止频率变小，通频带变窄。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512311420375.png" /></p>
+<p>第二种叫做RC滞后补偿，把电容和电阻的串联一起接在时间常数最大的回路，也可以让临界自激线下移，通频带也会变窄，但是变窄的幅度相对电容之后补偿要小一点</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512311421629.png" /></p>
+<p>前面两种要用的电容都是大电容，体积比较大，在集成电路中常用第三种叫做密勒效应补偿，只需要小电容就可以产生明显效果</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202512311423061.png" /></p>
+<p>这几种方法大概知道就行，没怎么展开讲。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%99%A8%E4%BB%B6/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 非线性器件">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                非线性器件
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../%E4%BF%A1%E5%8F%B7%E5%8F%91%E7%94%9F%E7%94%B5%E8%B7%AF%E5%92%8C%E5%8A%9F%E7%8E%87%E5%8F%98%E6%8D%A2%E7%94%B5%E8%B7%AF/" class="md-footer__link md-footer__link--next" aria-label="下一页: 信号发生电路和功率变换电路">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                信号发生电路和功率变换电路
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/skyeye-2025" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<skyeye2022@163.com>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M61.4 64C27.5 64 0 91.5 0 125.4c0 .9 0 1.7.1 2.6H0v256c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V128h-.1c0-.9.1-1.7.1-2.6 0-33.9-27.5-61.4-61.4-61.4zM464 192.3V384c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192.3l154.8 117.4c31.4 23.9 74.9 23.9 106.4 0zM48 125.4c0-7.4 6-13.4 13.4-13.4h389.2c7.4 0 13.4 6 13.4 13.4 0 4.2-2 8.2-5.3 10.7L280.2 271.5c-14.3 10.8-34.1 10.8-48.4 0L53.3 136.1c-3.3-2.5-5.3-6.5-5.3-10.7"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://space.bilibili.com/441014286" target="_blank" rel="noopener" title="space.bilibili.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92c-26.4-.8-48.2-9.8-65.3-27.2S.7 396.5 0 368.2V169.8c.8-26 9.7-47.6 26.7-65.7C43.8 87.8 65.5 78.8 92 78h29.4L96 52.2c-5.7-5.7-8.6-13-8.6-21.8S90.3 14.3 96 8.6 109 0 117.9 0s16.1 2.9 21.9 8.6L213.1 78h88l74.5-69.4C381.7 2.9 389.2 0 398 0s16.1 2.9 21.9 8.6c5.7 5.7 8.6 13 8.6 21.8s-2.9 16.1-8.6 21.8L394.6 78h29.3c26.4.8 48 9.8 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96c-9.6.4-17.4 3.7-23.6 9.8-6.1 6.1-9.4 13.9-9.8 23.5v194.4c0 9.2 3.3 17 9.8 23.5s14.4 9.8 23.6 9.8h320.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["announce.dismiss", "navigation.tracking", "navigation.tabs", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "navigation.expand", "navigation.indexes", "content.tabs.link", "content.tooltips", "content.code.copy", "content.action.edit", "content.action.view", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/typewriter.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.staticfile.org/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

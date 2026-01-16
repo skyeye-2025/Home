@@ -1,0 +1,2696 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../%E6%9C%80%E7%AE%80%E7%B3%BB%E5%88%97/%E6%9C%80%E7%AE%80%E5%A4%A7%E7%89%A92/">
+      
+      
+        <link rel="next" href="../%E6%AD%A3%E5%BC%A6%E4%BA%A4%E6%B5%81%E7%94%B5%E8%B7%AF/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202508141305660.webp">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>直流电路 - SKYEYE'S HOMEPAGE</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/typewriter.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/flink.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="skyeye" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="SKYEYE&#39;S HOMEPAGE" class="md-header__button md-logo" aria-label="SKYEYE'S HOMEPAGE" data-md-component="logo">
+      
+  <img src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202508141305660.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SKYEYE'S HOMEPAGE
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              直流电路
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/skyeye-2025/Home" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    skyeye-2025/Home
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../%E6%9C%80%E7%AE%80%E7%B3%BB%E5%88%97/%E6%9C%80%E7%AE%80%E9%A9%AC%E5%8E%9F/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  课程笔记
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E5%85%AC%E5%BC%80%E9%A1%B9%E7%9B%AE/SQTP/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  公开项目
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../%E7%90%86%E8%AE%BA/%E5%A4%A7%E5%AD%A6OVERALLCHECK/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  理论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../link/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  友链
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="SKYEYE&#39;S HOMEPAGE" class="md-nav__button md-logo" aria-label="SKYEYE'S HOMEPAGE" data-md-component="logo">
+      
+  <img src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202508141305660.webp" alt="logo">
+
+    </a>
+    SKYEYE'S HOMEPAGE
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/skyeye-2025/Home" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    skyeye-2025/Home
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程笔记
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最简系列
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    最简系列
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%80%E7%AE%80%E7%B3%BB%E5%88%97/%E6%9C%80%E7%AE%80%E9%A9%AC%E5%8E%9F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最简马原
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%80%E7%AE%80%E7%B3%BB%E5%88%97/%E6%9C%80%E7%AE%80%E5%A4%8D%E5%8F%98/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最简复变
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%80%E7%AE%80%E7%B3%BB%E5%88%97/%E6%9C%80%E7%AE%80%E5%A4%A7%E7%89%A92/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最简大物2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    电路
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    电路
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    直流电路
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    直流电路
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        电路及其模型化
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="电路及其模型化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实际电路与电路模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        电路元件和电路基本定律
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="电路元件和电路基本定律">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常用物理量
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        电路元件及其特性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基尔霍夫定律
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性电阻电路分析方法和定理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="线性电阻电路分析方法和定理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        等效变换法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="等效变换法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        无源一端口网络的等效变换
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        有源一端口网络的等效变换
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        电路分析法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="电路分析法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        拓扑术语
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        支路电流法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        回路电流法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        网孔电流法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        节点电压法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        电路定理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="电路定理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        叠加定理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="叠加定理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性定理
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        替代定理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        戴维宁定理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="戴维宁定理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        开路短路法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        加压求流法和加流求压法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        诺顿定理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        特勒根定理*
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="特勒根定理*">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        互易定理
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%AD%A3%E5%BC%A6%E4%BA%A4%E6%B5%81%E7%94%B5%E8%B7%AF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    正弦交流电路
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%BF%87%E6%B8%A1%E8%BF%87%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    过渡过程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模电
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    模电
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%9D%9E%E7%BA%BF%E6%80%A7%E5%99%A8%E4%BB%B6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    非线性器件
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%94%BE%E5%A4%A7%E7%94%B5%E8%B7%AF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    放大电路
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%BF%A1%E5%8F%B7%E5%8F%91%E7%94%9F%E7%94%B5%E8%B7%AF%E5%92%8C%E5%8A%9F%E7%8E%87%E5%8F%98%E6%8D%A2%E7%94%B5%E8%B7%AF/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    信号发生电路和功率变换电路
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    其他
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    其他
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%85%B6%E4%BB%96/%E4%BF%9D%E7%95%99%E8%AE%A1%E5%88%92/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    保留计划
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    公开项目
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    公开项目
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%85%AC%E5%BC%80%E9%A1%B9%E7%9B%AE/SQTP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%85%AC%E5%BC%80%E9%A1%B9%E7%9B%AE/iGEM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    iGEM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    理论
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    理论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%90%86%E8%AE%BA/%E5%A4%A7%E5%AD%A6OVERALLCHECK/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大学OVERALLCHECK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%90%86%E8%AE%BA/%E9%AB%98%E8%80%83%E5%90%8E%E6%84%9F%E8%A8%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    高考后感言
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    友链
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    友链
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../link/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Link
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        电路及其模型化
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="电路及其模型化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实际电路与电路模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        电路元件和电路基本定律
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="电路元件和电路基本定律">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常用物理量
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        电路元件及其特性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基尔霍夫定律
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性电阻电路分析方法和定理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="线性电阻电路分析方法和定理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        等效变换法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="等效变换法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        无源一端口网络的等效变换
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        有源一端口网络的等效变换
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        电路分析法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="电路分析法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        拓扑术语
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        支路电流法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        回路电流法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        网孔电流法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        节点电压法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        电路定理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="电路定理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        叠加定理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="叠加定理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性定理
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        替代定理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        戴维宁定理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="戴维宁定理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        开路短路法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        加压求流法和加流求压法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        诺顿定理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        特勒根定理*
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="特勒根定理*">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        互易定理
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/skyeye-2025/Home/edit/master/docs/课程笔记/电路模电/直流电路.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/skyeye-2025/Home/raw/master/docs/课程笔记/电路模电/直流电路.md" title="查看本页的源代码" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+  <h1>直流电路</h1>
+
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>这是《电路与模拟电子技术》课程的第一部分：电路。我是sd老师的学生，这是我根据老师的PPT和板书进行整理后的笔记，供大家学习或复习。其中有很多我自己学习过程中产生的疑惑和相应的解答，希望可以帮到有困惑的大家。</p>
+</div>
+<h2 id="_1">电路及其模型化<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">实际电路与电路模型<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>用理想元件的组合表示实际电路元件</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509161404326.png" /></p>
+<p>集总参数电路模型的使用条件：电路线度l&lt;λ/30=<span class="arithmatex">\(\nu\)</span>/30f，<span class="arithmatex">\(\nu\)</span>是光速。因此频率越高，能用集总参数电路模型的电路尺寸就越小。本质上是因为传输的时候有延时，当频率太高的时候，时差造成的相位差会大大增加到不可忽略的地步，于是就不能用集总参数模型粗略认为传输的时候电压是相同的了。除此以外还有系统磁链守恒，电荷守恒的要求。</p>
+<p>U_1, U_2是长为l的导线两端的电压</p>
+<div class="arithmatex">\[
+\begin{align}
+U_1(t)&amp;=U_m\sin\omega t\\
+U_2(t)&amp;=U_1(t-\frac l \nu)=U_m\sin 2\pi f\cdot(t-\frac l \nu),\ 相位差为\frac {2\pi fl} \nu
+\end{align}
+\]</div>
+<h2 id="_3">电路元件和电路基本定律<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="_4">常用物理量<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>某点的电位φ定义为把单位正电荷从该点移动到参考点（电位为0的点）电场力做的功。电位是代数量，正表示比参考点电位高，负表示比参考点低</p>
+<p>两点间的电压<span class="arithmatex">\(U_{AB}=\varphi_A-\varphi_B\)</span></p>
+<p>电压的方向从高电位指向低电位，电压是代数量有正有负。</p>
+<p>电压的参考方向是任意假定的电压正方向，求出电压为负表示实际方向与参考方向相反</p>
+<p>电动势是单位正电荷从电源负极移到正极过程中非电场力做的功，电动势的大小等于电路的开路电压。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509161431546.png" /></p>
+<p>电动势不是代数量，方向从低电位指向高电位，从负极板指向正极板</p>
+<p>电流的正方向定义为正电荷运动的方向，大小为dq/dt，电流也有参考方向，电流为负表示实际方向与参考方向相反</p>
+<p>分析前选定参考方向并保持不变，做题的时候要在电路图上标注好电压电流的参考方向。</p>
+<p>功率是代数量，在直流中用U×I计算。</p>
+<p>关联参考方向是U和I的方向相同，反之则为非关联参考方向。</p>
+<p>用关联参考方向的时候，功率为正的时候表示消耗功率，负的时候表示产生功率，比如说电源两端就是乘起来是负的，产生功率</p>
+<p>用非关联参考方向的时候，P&gt;0表示产生功率，P&lt;0表示吸收功率</p>
+<p>之所以要搞出关联和非关联，是因为对于电阻来说关联参考方向是符合实际的，而对于电压源电流源来说，非关联参考方向是符合实际的，所以非关联参考方向是有其现实意义的，并不是没事找事。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509161445051.png" /></p>
+<p>用箭头来表示电流的参考方向，用正负号来表示电压的参考方向</p>
+<h3 id="_5">电路元件及其特性<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>电阻是用来体现耗能的</p>
+<p>电阻R的单位是欧姆Ω，电阻的倒数是电导G，电导单位是西门子S</p>
+<p>用伏安特性曲线描述电阻，可以根据是否时变，是否线性分为四类。时变是针对伏安特性曲线是否随时间变化来说的。如果U/I是定值，也就是伏安特性曲线是直线，则为线性时不变电阻，如果U/I变化那就是非线性时不变电阻。</p>
+<p>对于非时变线性电阻，如果是关联参考方向就U=RI，非关联就是U=-RI，不过平时都是用关联参考方向就是了</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509161451022.png" /></p>
+<p>这几个例子非常关键，用来解释使用KVL的时候应该如何快速写出。首先整体是有一个大的方向的，也就是表的横跨两端的那个U。那个U的方向一旦确定，那么一个虚拟的电流就确定了，就是从那个U的+开始，到-结束。然后你就顺着这个流向看下去，遇到电阻的时候，看电阻的电流的参考方向是否与这个虚拟的电流一致，如果一致那就写成IR，不用加负号，如果不一致，那就加负号。而对于电压源，需要看是否沿着这个电流发生压降，如果是压降，也就是从+到-，那么就是＋Us，如果是从-到+是升压，那就要取负号。压降为正，升压为负。</p>
+<p>然后在习题里面遇到了一道题当时困扰我</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509201325157.png" /></p>
+<p>题目是要求UL，在分析这个电路的时候要给右边那个矩形绕一圈写KVL，然后我就遇到了问题。我首先是假设电流参考方向是逆时针的，因为那个受控源的流向是这样的，而由于R，RB，受控源在同一支路，所以它们的电流是一样的。那么开始写，ΣUs=ΣIR，μUgk=IRB...，然后写到RL那里我就傻眼了，因为我发现如果按照逆时针方向的电流的话，那么它是非参考方向，那就不能用我理解的方式去直接写出来了，需要考虑正负号了。但是后来我发现，其实不管它的UL选的是什么方向，我只要确定了参考电流方向都能直接写出。原理是这样的，首先RL的电流参考方向是从下往上的，和电压参考方向并不关联。在写KVL的时候，实际写出来的是电压，此处是升压，所以应该是-UL，但是由于这里是非关联参考方向，所以UL应当是-IRL，所以最后展开之后，仍然是μUgk=IRB+IRL，如果UL选的方向是反过来的，那就不用负负得正地这么绕一圈了，所以其实写KVL的时候不用管电阻的电压参考方向是怎么选的，只用看参考电流方向就可以了。</p>
+<p>非线性电阻比如说有二极管，正向导通，反向截止。理想二极管是忽略二极管的压降，认为导通就相当于短接导线，截止就是开路导线</p>
+<p>分析理想二极管的时候，首先假设二极管两侧断路，然后用拓展的KVL求出其两端的电压是多少，如果正向电压多于0.7V，那么就认为是正向导通的，就可以把它当成导线了。如果正向电压少于0.7V，或者为负，那么就是开路了</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509161543868.png" /></p>
+<p>电感是用来体现磁场储能的</p>
+<p>电感的单位是亨利H，常用的是mH等更小的</p>
+<p>电感也可以按照是否线性，是否时变分为四类</p>
+<p>对于非时变线性电感的电压<span class="arithmatex">\(u=\frac {d\varPsi}{dt}=L\frac {di}{dt}\)</span>，因为L是不变的（韦安特性曲线的斜率），所以可以从求导中提出来</p>
+<p>在直流中由于di/dt=0，所以等同于短接导线，因此它是动态元件</p>
+<p>电感不是电阻那样的即时元件而是记忆元件</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509201359073.png" /></p>
+<p>电感有通直流阻高频的作用，有感抗</p>
+<p>电容C和电感L是对偶的，电容是体现电场储能的</p>
+<p>对于线性非时变电容，即库伏特性曲线的斜率恒定</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509161509536.png" /></p>
+<p>容抗和频率是成反比的</p>
+<p>以上的都是对于关联参考方向来说的，如果是非关联就要加负号了</p>
+<p>理想电压源是电压大小固定不随外界负载变化，电压是固定的，电流由外界决定，没有内阻</p>
+<p>理想电压源不能被短路</p>
+<p>用电阻和理想电压源的串联表示实际电压源</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509161521821.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509161524174.png" /></p>
+<p>电压源电压为0时视为短接导线，内阻为0的时候是理想电压源</p>
+<p>理想电流源是电流大小固定的，电压由负载决定</p>
+<p>理想电流源不能开路</p>
+<p>对于电压源要选电流的参考方向，对于电流源要选电压的参考方向</p>
+<p>用电阻和理想电流源的并联表示实际电流源</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509161523746.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509161523259.png" /></p>
+<p>电流源电流为0时视为开路，内阻无穷大时是理想电流源</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509161527964.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509161531805.png" /></p>
+<p>简单介绍运算放大器</p>
+<p>运算放大器的特点是，当正极输入电压大于负极的时候，输出电压就会是电源正极输入的电压，如果负极大于正极，输出电压就会是电源负极输入的电压。</p>
+<p>运算放大器有深度负反馈的特点，就是当Up和Uout直接相连的时候，Un=Uout，那么如果此时Up&gt;Un，就会迫使Uout往5V那里走，进而带动Un升高，当升高到Un&gt;Up时，又会使得Uout往0V偏，带动Un降低，最终会维持在Un差不多等于Up的一个状态，也就是图上那一小段斜线。这个过程是很快的，就是连好了电路之后就直接Un=Up了。</p>
+<p>不过我还是不明白为什么Up和Uout中间有别的东西的时候，也就是Up和Uout已经不一样了，还能保证Up=Un，不过现在就先暂时用着</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202510031420502.png" /></p>
+<p>对于运算放大器分析的时候用“虚短虚断”的方法。运算放大器有两个输入一个输出。虚断的意思是，由于运算放大器两个输入端的阻抗被设计成了无穷大，因此实际上输入的那两条路可以当作没有电流，也就是断路。而虚断的意思是，当输出端和负的那个输入相连的时候，两个输入端的电位是相同的，这是因为运算放大器有“深度负反馈”，可以即时把负的那个输入和输出的电压关联起来相等。</p>
+<p>可以参考这个视频</p>
+<p>https://www.bilibili.com/video/BV1VeQdYUELe</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509161545336.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509161545953.png" /></p>
+<h3 id="_6">基尔霍夫定律<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>支路：若干个二端元件串联成的不分支的电路。</p>
+<p>节点：三条及以上支路的连接点</p>
+<p>回路：若干条支路组成的闭合路径</p>
+<p>网孔：内部没有支路的回路</p>
+<p>KCL：任意节点上电流的代数和为0，流出的取正号，流进的取负号。</p>
+<p>KCL本质上是电流连续性原理，节点不能储存电荷</p>
+<p>KCL可以拓展为电路中任意封闭面上电流代数和为0，把这个封闭面内的节点的KCL相加就得到了</p>
+<p>KVL：任意闭合回路中各支路电压的代数和为0。</p>
+<p>分析的时候，对于电阻通常就用关联参考方向，就只用标电流不用标电压了</p>
+<p>绕行的时候，压降为正号，对电阻来说电流参考方向和绕行方向同向为正，对于电源来说，从正到负的方向和绕行方向相同即为正号。</p>
+<p>写KVL的时候可以把电压源单独放一边，但是此时因为移项了，所以电压源的符号就和之前不一样了，此时应当理解为压降=压升</p>
+<p>KVL可以拓展为，任意两点间的电压等于两点间任一路径经过的各元件电压的代数和，哪条路方便就用哪条路，得出的结果一样。</p>
+<p>短接支路的电压是0，电阻是0，因此无法用KVL来求短接支路的电压，只能用KCL</p>
+<p>电压源所在支路上的电流和短接支路电流一样，都要用KCL求出</p>
+<p>电流源两端的电压也一定要用KVL求出</p>
+<p>在两个封闭面之间只连一根导线，这条导线上一定电流为0，因为对于其中任意一个封闭面来分析，它只有一个流出或者流入，那么用KCL只能得到是0</p>
+<p>受控电路先求控制量，然后求受控量。受控源的大小确定后列KCL，KVL时和独立源一样</p>
+<p>对于电压源，电流源通常用非关联参考方向</p>
+<p>不同元件可以选不同的参考方向类型，因此各有各的U和I，但是应当遵守同一支路上的参考方向是同向的，比如串联两个电阻，那I的参考方向就应当都朝向一边，没必要搞得还要加正负号。</p>
+<p>非线性器件先判断工作状态</p>
+<p>KVL完整应该写为</p>
+<div class="arithmatex">\[
+\sum U_{其他}+\sum U_R=\sum U_S
+\]</div>
+<p>在做练习的时候遇到的最大的问题就是不知道应该挑哪条回路或节点列方程。理论上来说把n-1个节点和b-n+1个回路全部列一次就能全部解出来，但是事实上如果只要求题目要求的物理量，只需要一小部分就可以了，于是就会在寻找应该列哪条更好上面遇到困难。</p>
+<p>我发现可以通过几个原则来确定应该怎么列更好。我觉得首先列一个式子就能直接解出的是很好的，这需要KCL或KVL里只有一个未知量。然后呢因为你要求题目要求的物理量，所以包含那些物理量的KCL或KVL肯定是要有的。然后呢我还发现电阻所在支路上的电流是好求的，因为你只要找到一个回路里面除了那个电阻之外其他全都是电压源，那么列KVL求出它的电压就能用欧姆定律直接求出它的电流。因此列KVL的时候尽量找有电压源的支路，列KCL的时候尽量找有电流源的支路</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509191632368.png" /></p>
+<p>例如这样挑选回路就可以直接求出上面两个电阻所在支路的电流。</p>
+<h2 id="_7">线性电阻电路分析方法和定理<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h3 id="_8">等效变换法<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<h4 id="_9">无源一端口网络的等效变换<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<p>无源的意思是不含独立源，可以含受控源</p>
+<p>一端口网络是指一个封装起来的电路伸出来两个端钮，一端口=二端钮</p>
+<p>等效变换的条件：两个内部结构不同的一端口网络，如果他们端口上的电压电流之间的伏安特性完全相同，则称二者等效。（外特性的等效）</p>
+<p>自然等位点是指，两个点之间无论是短接还是断路还是接任意电阻时这两点的电位都相同，则称这两点为自然等位点。</p>
+<p>如果在一个电路里面如论怎么改变某一块，其两端的电压不变，就说明这一块两端是自然等位点，或者是其他部分可以等效为理想电压源（可以戴维宁等效，不能诺顿等效）</p>
+<p><img alt="320faa7bbb828aac7ff6faa06dc23ce.jpg" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202511141101423.jpg" /></p>
+<p>这题R以外可以等效为理想电压源，如果只是解题，你把I设出来，把U列出来，然后呢为了让U为一个定值就让I的系数为0就行解出R3。</p>
+<p>电阻的串并联等效成一个电阻就是等效变换的体现。</p>
+<p>分析复杂的电阻连接的时候，可以标号，用导线直接连起来的两个点是同一个点，然后就可以改画电路结构，其实就是初中竞赛讲过的东西。</p>
+<p>电桥就是呈一个工字的，中间那一竖就是桥，然后另外四条叫做桥臂</p>
+<p>若桥和桥臂形成的两个交点是自然等位点，则对臂电阻相乘相等，这个电桥称为平衡电桥。这种情况下桥就可以当成短路也可以当成断路，这两个分析出来结果是一样的，可以在电路分析中简化</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509202222418.png" /></p>
+<p>另外还可以把等电势的点当成同一个点，从而重新画电路使得更容易分析。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509191107236.png" /></p>
+<p>下面这个题没有改变电路的结构，而是画成了更加好看的方式，找到了里面的电桥结构（两个点之间连一个电阻，然后伸出去四个桥臂）。其实要画这个不是那么直观的，你如果把CD和AB一样竖着放，那么你画出来的还是交错地看不明白，把CD横着放才能看的明白是一个电桥的结构。我觉得首先要明确电桥是一个五个电阻的结构，下面这个题变出来的不是一般的电桥，因为一般的电桥是工字的，但是这里它两边粘起来了，当然也可以分开地画成矩形。更为直接的是找到两个点，分别连了三个电阻，而且其中一个电阻就在他们两个的连线中间，这样就可以确定电桥结构了。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509191107253.png" /></p>
+<p>下面就是用的更加极致了，其实就是把等电势点当作连起来的点，就可以看成同一个点了</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509191119082.png" /></p>
+<p><img alt="4066780148e97edde29d8216bea71b3.jpg" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509202233783.jpg" /></p>
+<p>翻出以前的笔记</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509202237706.png" /></p>
+<p>Y-Δ变换</p>
+<p>用GU=I和KCL可以分别得到Y电路和Δ电路中用φ和G来表示I的方程。为了让二者等效，让系数（G的那个项）相同，进而导出R的关系。最后的那个等式描述了端口特性相同的Y和Δ电路的R之间满足的关系。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509191130021.png" /></p>
+<p>记住等效的时候三角形的电阻更大</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509191130351.png" /></p>
+<p>Y-Δ变换通常用来解决不平衡电桥，改变它的形状从而让电路更简单</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509191133820.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509202300802.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509202300110.png" /></p>
+<p>第二个这个变换妙，因为三个电阻都是一样的所以结果就很容易写出来</p>
+<p>Δ的本质是三个点两两之间连了一个电阻，而Y的本质是三个点和中间一个点连</p>
+<p>另外还要准备一种“无穷进一”类型的题目，就是要你分析一个无穷下去的电阻拼起来的总体的电阻。这个时候要找出其中的重复单元，然后分析这个单元和剩下的无穷的是怎么连接的，然后设无穷的电阻为一个未知数，然后呢根据x和这个单元连起来的电阻等于x，然后解出来x</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509202303362.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509231339698.png" /></p>
+<p>对于含有受控源的无源一端口，需要用加流求压或加压求流法（在端口上加一个电流源求电压，或加一个电压源求电流），这里右边支路的R可以直接等效没有，然后用KCL得到2Ω上的电流是4I，那么它两端的电压是8I，那么U/I=8就得到等效电阻是8Ω。如果是2Ω右边那个支路当作一端口网络来分析，那么求电压还是要靠2Ω两端的电压是8I，但是注意这里I就变成了-3I，注意方向，那么求出来的等效电阻是-8/3Ω。而与这个2Ω并联后，算出来的阻值仍然是8Ω，这说明含有受控源的等效电阻可能是负值，而且同样符合并联的规律。</p>
+<h4 id="_10">有源一端口网络的等效变换<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<p>就是有独立源的。典型的有电压源串联变成一个电压源，电流源并联变成一个电流源。电压源相等的话并联变成一个电压源，但是和之前的电压源不一样，电流的大小不一样</p>
+<p>电压源和电阻并联，仍然是一个电压源，但是电压源上的电流不一样，这是因为等效只看外电路的特性</p>
+<p>电流源和电阻串联还是可以当成一个电流源</p>
+<p>电流源和电压源串联就等效于电流源，电流源和电压源并联就等效于电压源。谁和电流源串就等效于电流源，谁和电压源并联就等效于电压源</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509191150593.png" /></p>
+<p>要关注方向，电流流出的方向相同，然后满足那些关系才能等效。</p>
+<p>注意实际电压源电流源的等效完之后还是有电阻的，不要以为就只剩下理想电压源或电流源了</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509191153131.png" /></p>
+<p>短路和开路的特性也是一样的</p>
+<p>理想电流源和理想电压源无法相互转换</p>
+<p>此变换也适用于受控源，但是要注意哪里是变化的哪里是不变的，但是受控源的特性是控制量定了才能定，受控源变换的时候不能把控制量给变没有了。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509191158783.png" /></p>
+<p>从上面这题可以看出受控源的那个系数是有讲究的不能乱取，否则电路会出问题</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509221957583.png" /></p>
+<p>这样只有两个节点的图用后面学的节点电压法很快</p>
+<p>多电源的时候注意可以变换</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509191159767.png" /></p>
+<p>注意变换后的电路里就没有I_1了，只有外电路的结果是正确的，如果要得到I_1，需要回到变换前的电路，用已经求出的I_2来求出I_1</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509191204381.png" /></p>
+<p>注意遇到那种没有画全的，在某些点标了电压，但是电路没有串好的，需要补画好电压源才能继续分析</p>
+<p>另外如果两部分电路都是接地的，那么实际上他们接地的地方相当于是连起来的。</p>
+<h3 id="_11">电路分析法<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<h4 id="_12">拓扑术语<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<p>拓扑图是只保留电路图的节点和支路，把元件都去掉的样子</p>
+<p>连通图是任意两个节点至少存在一条连通的路径。</p>
+<p>不可分图是对于任意两个节点，至少存在一条回路。</p>
+<p>平面图是指讲一个图铺在平面上的时候，能至少找到一种方式使得没有那种电线交叉（跨过去）但不是节点的点。</p>
+<p>子图是某个图的所有支路和节点均为原图的支路和节点，只有一个节点的图也算是原图的子图。</p>
+<p>回路满足：①连通图的子图②连通③每个节点关联支路数恰好为2</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509191215707.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509191216886.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509231353389.png" /></p>
+<p>网孔和基本回路有交集，但是也有不相等的部分</p>
+<p>网孔数和基本回路数相同，但是推导方式不一样，要用到那个欧拉定理，顶点数-棱边数+面数=2。网孔数是面数-1，而面数=棱数-顶点数+2，所以网孔数就是棱数-顶点数+1，棱看成支路，顶点看成节点，就是b-n+1</p>
+<p>独立回路有两种，一种是网孔，一种是单连支回路</p>
+<p>单连支回路对应KVL</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509231353959.png" /></p>
+<p>做一个封闭面，如果把这个面交到的所有支路都移走，剩下两个子图，这两个子图仍然连通，那么这个面交到的那些支路就叫一个割集。只有一个点的也叫连通的子图</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509231354262.png" /></p>
+<p>基本割集数=树枝数=n-1</p>
+<p>单树支割集对应KCL</p>
+<h4 id="_13">支路电流法<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<p>先给节点标记，然后任取n-1个节点列KCL，然后对所有网孔列KVL</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509231409458.png" /></p>
+<p>如果有电流源，电流源所在回路的KVL可以不列</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509231419188.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509231419763.png" /></p>
+<p>除非题目就是要你求电流源的电压，否则不需要经过电流源列KVL</p>
+<p>如果电路里有短路的支路，就把它两端的节点看成同一个节点，这样整体电路的节点就可以认为减少了，相应的KCL也可以少列。除非你要求短路支路的电流</p>
+<p>然后选KVL的回路的时候，尽量把电流源所在支路放在连支上面</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509231429399.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509231429530.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509231430524.png" /></p>
+<p>如果含受控源，可以把受控源当作独立电源和前面的原则相同来列，然后还要补充附加方程用未知量表示控制变量。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509231434540.png" /></p>
+<p>1）支路电流法是以支路电流为变量，对n-1个独立节点列KCL方程（可得n-1个独立方程），对b-n+1个独立回路列KVL方程（可得b-n+1个独立方程），共得b个线性方程，然后求解此方程组，从而得到b个支路电流变量的求解方法。</p>
+<p>2）如果电路中含有电流源，则先选树（尽量将电流源支路选为连支），对不含电流源的基本回路，列写KVL方程。</p>
+<p>3）如果存在受控源，先将受控源当作独立电源，然后列写附加方程，建立受控源的控制变量与支路电流之间的关系</p>
+<p>坏处：如果支路太多，其实没有必要把所有的都解出来。支路电流法就是全解出来的，比较麻烦，相对简单一点的电路（比如就三个网孔），可以用，不过呢往往也没有回路电流法和节点电压法方便。</p>
+<h4 id="_14">回路电流法<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<p>相较于支路电流法，回路电流法只把连支电流当作未知量。</p>
+<p>首先你要在电路图里选择一个树，保证这个树的树支不包含任何电流源。</p>
+<p>然后呢对于所有单连支回路，各自设一个回路电流（包括方向和大小）。</p>
+<p>这些回路电流叠加起来，确定了这些回路经过的支路的电流。</p>
+<p>本质上就是公式套公式</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509261525762.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509261525991.png" /></p>
+<p>带进去就是这样子。主回路电流×自电阻的原因是KVL就是这样的，而相邻回路电流×互电阻的原因是你这个回路里面有些实际的电流是要用多个连支电流表达的，把叠加的分开，就产生了所谓的“相邻回路电流×互电阻”，第三项和KVL完全一样。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509231513673.png" /></p>
+<h4 id="_15">网孔电流法<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<p>网孔电流法和回路电流法的不同在于这次是选择网孔作为基本回路，然后这些网孔各有各的电流，然后叠加决定流经的各支路的电流。</p>
+<p>网孔电流本质上是外围支路电路</p>
+<p>然后对于这些网孔都列KVL（列的时候KVL选同一个方向）</p>
+<p>然后把用网孔电流表达式代入KVL，每一个KVL会呈现出几个部分：主网孔电流×自电阻，相邻网孔电流×互电阻，主网孔电压的代数和。（由于列KVL的时候选的同为逆时针或顺时针，因此相邻网孔电流一定和主网孔电流是反向的，所以这样就可以无脑写负）</p>
+<p>所谓主网孔就是你之前写KVL的时候选的那个网孔，有几个网孔就会出现几次选择的主网孔。</p>
+<p>如果有受控源，还需要补充附加方程，把控制变量用网孔电流和已知量（比如电阻）来表示</p>
+<p>网孔电流法的未知量个数通常是网孔数量，因为认为网孔电流是未知量，但是如果需要经过电流源来列KVL，会引入新的未知量，这个时候就需要加一个补充方程。</p>
+<p>应该这么说，如果多个网孔经过同一个电流源，那么你就需要多设一个电流源两端的U并且加一个这些网孔电流叠加出来得到这个电流源的电流。但是如果没有多个网孔经过同一个电流源，那么经过电流源的那个网孔的KVL就不用写了，就直接写那个电流源等于网孔电流</p>
+<p>到了比较熟的时候，就直接把已知的电流作为网孔电流了，没必要再多设一个Im几</p>
+<p>综合来说，（还要补一步就是如果电路图没画全需要先补全）先分析要求的物理量的求解思路，然后用等效简化电路，然后考虑用回路或支路电路法来求，其中要熟练掌握的是电压源和电流源相关的等效。要注意的就是变换的时候不能把受控源的控制量给变没。</p>
+<p>回路电流法和网孔电流法本质上是KVL</p>
+<p>对于非平面电路，不能用网孔电流法，因为网孔是在平面定义的。有那种绕过去的电线的就算是非平面了</p>
+<h4 id="_16">节点电压法<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<p>节点电压法本质上是KCL，公式套公式</p>
+<p>节点电压法需要在电路中选择一个参考节点，其余节点相对此参考点的电压就是节点电压，节点电压就是节点电压法的未知量。</p>
+<p>对参考节点之外的独立节点列KCL</p>
+<p>通过n-1个节点电压，可以表示出所有I，就用欧姆定律来表示就可以了</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509261020265.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509261024933.png" /></p>
+<p>第一个式子是以①为主节点</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509261027470.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509261027049.png" /></p>
+<p>当整个电路只有两个节点，就不会出现左边第二项，因为没有互电导了，那么就可以一个式子全部写出来。遇到这种情况优先用节点电压法</p>
+<p>只要一个电阻与电流源串联，一定不会出现在节点电压法的表达式里，因为节点电压法本质上是KCL，只看I</p>
+<p>如果含受控源，当作独立源列方程，然后补充用节点电压表示控制变量的附加方程</p>
+<p>对于有纯电压源的支路然后节点又少的电路来说，用节点电压法很方便。但是如果有超过一个电压源，要分情况考虑，如果电压源的支路是接首尾相连的，那么用节点电压法也很好，因为几个节点电压直接知道了。但是如果有些电压源是孤立的，列KCL的时候会出现问题，因为没办法纯用电压来表示电流了，应对方法就是把这个电压源等效成电流源，这样就好列了。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509261124246.png" /></p>
+<p>本质上就是把它的电流给设出来了然后补充了电压的条件</p>
+<p>回路电流法、网孔电流法和节点电压法的本质都是减少了变量的个数，用更少的变量来代入方程。而如何实现更少的变量，本质上还是依靠了KVL/KCL，就是和他们最后要代的那个方程不同类型的一组方程，比如回路电流法最后是要用KVL，那么就用了KCL来减少变量个数，节点电压法最后要用KCL，就先用KVL来减少变量个数，所以我说他们本质都是公式套公式，就是支路电流法的变形。</p>
+<h3 id="_17">电路定理<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<h4 id="_18">叠加定理<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<p>如果电路中有若干独立源，则支路（线性电阻）电流或电压等于各个==独立源==单独作用产生的电流电压的代数和。所谓单独作用，就是使得其余独立电压源和独立电流源置零。对于电压源来说，置零相当于U=0，即相当于短路；对于电流源来说，置零相当于I=0，相当于开路。对于受控源，不置零，相当于整个电路此时只剩下一个独立源和若干受控源，那接下来还是和之前一样的分析，相当于减少了独立源的个数。</p>
+<p>在用的时候，可以单个单个研究也可以一组地研究，怎么好分析怎么来</p>
+<p>叠加定理只适用于==线性电路==求==电压和电流==，功率不能叠加，必须把电流或电压求出来（这一步电路和电压可以用叠加定理），然后用功率的公式。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509281402339.png" /></p>
+<h5 id="_19">线性定理<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h5>
+<p>如果线性电路中所有独立源都变成原来k倍，则所有支路的电压电流都变成原来的k倍</p>
+<p>当电路仅含一个独立源，那么各支路的电流电压就都正比于该源的大小。</p>
+<p>那用叠加定理一个一个源地分析的时候，那你就可以对于每一个源单独用线性定理了，综合起来就是这样的表达式</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509281403046.png" /></p>
+<p>解多种情况（具体数值）的适合用叠加定理</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509281403807.png" /></p>
+<p>对于不变的部分，当成一个量就可以了。讲起来比较复杂但是列式的时候非常简单，就把独立源的都写进去就行。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509281405981.png" /></p>
+<p>反正遇到这种黑盒子的未知内部结构的，一般就是要用线性叠加定理了，然后往往还要和替代定理结合起来用。</p>
+<h4 id="_20">替代定理<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
+<p>如果一条支路的电流或电压确定，就可以用一个等于原来数值的电流源或电压源替代，对于其他部分的来说没有影响。使用前提是不能破坏电路的唯一性。</p>
+<p>替代定理对线性非线性无源有源都适用。</p>
+<p>对于简单电路，替代定理容易破坏唯一性，比如出现电压源的并联会出现无穷多解，因此不允许出现电压源并联和电流源串联的情况。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509281431161.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509281433262.png" /></p>
+<p>已知比例的适合用替代定理。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509281438384.png" /></p>
+<p>这里是以1，左下0.5，右上0.5为树列了以1，0.5，0.5，0.5为主回路的回路电流方程。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509281444592.png" /></p>
+<p>Uab是Rx两端的电压，用广义KVL列了，要求Rx就要求它两段的电压比电流。感觉这道题并没能体现替代定理的作用，你就直接列回路电流方程也是能解出来的，感觉不太恰当。替代定理还是和叠加定理合起来用才比较有用。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509281445715.png" /></p>
+<p>先把有源一端口和RL都用电流源等效。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202510031941854.png" /></p>
+<p>然后根据叠加原理，分别分析单个独立源作用，别的独立源置零的时候RL两端的电压，加起来就是最终的电压。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509281445450.png" /></p>
+<p>还有一类很常见的多端口黑盒子给你几种情况的电压电流，要你求另一种情况的题目，可以把变化的电阻用独立源替代（可以是电压源也可以是电流源），然后用叠加定理求解</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509281451657.png" /></p>
+<p>I2=g1US+g2U1，用两个方程解出g1和g2，然后就直接求U1了</p>
+<h4 id="_21">戴维宁定理<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
+<p>大多数==线性==有源一端口网络可以等效变换成一个电阻和一个电压源串联</p>
+<hr />
+<p>举个例外的例子</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509301439676.png" /></p>
+<p>对左边网孔列KVL</p>
+<p>I1(R1+R2)+(I1+βI1)R3=US，已知所有量则可以求出I1。</p>
+<p>要求戴维宁等效的等效电压，需要求开路电压。此时可以获得R3两端的电压，但是无法获得受控源βI1两端的电压，因为电流源两端的电压只能用KVL求，这里求不出来。</p>
+<p>如果想求短路电流，由于和受控源串联，所以电流等于βI1</p>
+<p>只能获得短路电流，无法获得开路电压，开路短路法无法得到等效电压和电阻，尝试用加压求流法。</p>
+<p>把US置零，放个电压源到R4那里，此时左边网孔的KVL右边就是0了，那么就有I1=0（这里不考虑β=-(R1+R2+R3)/R3的特殊情况，认为β是任给的），那么加压求流的那个电流由于是βI1还是0，那求出来的等效电阻是无穷大。</p>
+<p>一个开路电压求不出，可以得到短路电流，然后等效电阻（独立源置零）为无穷大的东西，只有理想电流源的端口特性是符合的，因此R4以左的电路等效为理想电流源，由于理想电流源无法转换成电压源和电阻的串联，所以也就无法用戴维宁等效。因此戴维宁等效不适用于任意线性有源一端口网络。</p>
+<p>不难发现，这里出问题的地方都在于那个受控源，就是受它影响电压求不出，电流变成0，所以受控源经常带来例外。</p>
+<hr />
+<p>电压源的电压是这个一端口网络的开路电压，且正极和开路端口高电位点对应。电阻是令该有源一端口网络内所有独立源均为零时所构成的无源一端口网络的等效电阻。</p>
+<p>注意如果有受控源要保留。</p>
+<p>求解等效电压和等效电阻的方法</p>
+<h5 id="_22">开路短路法<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h5>
+<p>先开路求出电压，然后短路得到短路电流，开路电压/短路电流等于等效电阻。这个过程中内部的电压源电流源都要保留分析，和下面的求戴维宁等效电阻的方法要区分开。</p>
+<h5 id="_23">加压求流法和加流求压法<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h5>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509281518746.png" /></p>
+<p>等效的电压就开路得到了。然后这种方法要先把内部的独立源置零</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509281523679.png" /></p>
+<p>用了节点电压法Uc</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509281523254.png" /></p>
+<p>其实除了开路电路法和加压求流加流求压法，如果把要等效的部分和一个电阻串联，然后得到这个电阻的两个阻值时的电压和电流，那么也可以列两个方程求出Ud和Rd，这就是由伏安特性得到的。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509281530925.png" /></p>
+<p>把上面那条当作自然等位点断掉了，这样就不是三端钮而是二端钮了。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202510032040748.png" /></p>
+<p>首先分析左边那块的戴维宁等效电压和等效电阻，没有考虑右边的东西，得到Ub和Rb</p>
+<p>然后对于对于左边的网孔列KVL，IE和Ube都是已知的，那么就可以解出IE了</p>
+<p>有受控源的无源一端口网络，不能用电阻串并联规律来搞，只能用短路或者加压求流加流求压法求等效电阻。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509281538960.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509281538445.png" /></p>
+<p>含有受控源的有源一端口，尽量把控制量放在同一侧，求等效的时候控制量在另一边会比较麻烦，需要你改变受控量，重新表示受控量。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509281544619.png" /></p>
+<p>左边将ab开路，第一个式子是对左边网孔列KVL，I是左边网孔的电流，2Uab是因为Uab=1.5U1，那么3U1就是2Uab</p>
+<p>右边将ab短接Id的表达式是这样的，由于Uab=0，所以左边那个受控源就没有了，那么干路电流就是12V电压源受2//3+1的电阻影响，然后呢要求ab电流就求2Ω的分流就行。</p>
+<p>这里演示的是硬要分开两侧来等效该怎么搞，更加合理的是把U1也归到左边的电路里，也就是2Ω单独作为一端。</p>
+<p>如果给了一端口网络的伏安特性曲线，如果是直线，直接就能进行戴维宁等效，有些时候还会出现Us和R为负的情况</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202510101015461.png" /></p>
+<p>不过前提是在U, I是非关联参考方向的时候，如果改了方向，那么结论就不一样。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509281546885.png" /></p>
+<p>供电网络确定的时候，可以等效为电压源和电阻串联，那么如果要问负载多少的时候功率最大，就是当负载和电阻一样的时候就是最大的，这个是之前的结论。</p>
+<p>当负载参数固定，它的电流或电压最大的时候，它的功率最大</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509301340224.png" /></p>
+<p>首先把K以右那部分的给等效，再把除了RL以外的部分都等效，根据最大功率得到等效电阻。然后再根据这个第二层等效的关系，求出N的等效，最后就分析只剩下N和RL的情况了。</p>
+<p>总之凡是这种给出了最大功率的题目，就把最大功率的那个东西以外的东西进行戴维宁等效，那么等效电阻就是那个东西的电阻。</p>
+<h4 id="_24">诺顿定理<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
+<p>就是可以把线性有源一端口网络等效为电流源和电阻的并联，电流源等于短路电流，电阻是把有源一端口的所有独立源都置零的时候的等效电阻，这个电阻和戴维宁是一样的。</p>
+<p>等效电阻的计算方法，如果要等效的部分全部已知，可以直接用无源一端口网络的等效变化的分析方法来做。如果不知道，就也可以用加压求流法或加流求压法，或者开路短路法。</p>
+<p>含受控源的时候，等效电阻用开路电压/短路电流来求。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509301355100.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509301356030.png" /></p>
+<p>问到最小功率的时候，就认为电压或电流为0</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509301407139.png" /></p>
+<p>第一第二问简单，第三问要用到替代定理和线性叠加，首先把R替换为电压源，然后呢认为由U和Is确定U2，用两个方程求出当U2=0时的U，然后再回到戴维宁等效的部分然后再求出R</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509301420601.png" /></p>
+<p>法一：</p>
+<p>认为R所在支路的电阻由R和一个ΔR构成，已知ΔR=0和10的时候的情况，求ΔR=-10的时候的情况，然后用电压源替代ΔR</p>
+<p>I1=g1(ΔR I1)+IA（IA表示线性有源网络的固定的贡献）</p>
+<p>由已知条件可以得到g1=-1/30，IA=2，然后由此可以得到当ΔR=-10，I1=3A</p>
+<p>对于I2，类似地列I2=g2(ΔR I1)+IA</p>
+<p>法二：</p>
+<p>可以把R或ΔR以外的部分用戴维宁等效，然后用两个方程求出Ud和Rd，之后求I1也很容易了</p>
+<p>对于I2，还可以换一种方法来做，此时不用电压源来替代R，而是用电流源来替代R部分。</p>
+<p>I2=βI1+IA</p>
+<p>然后也是两个方程求出来就行。</p>
+<p>我在自己探索的时候遇到了问题，因为我总是把R当成一个整体，而没有分成R和ΔR，这就导致我如果要列线性叠加以及戴维宁等效的时候会遇到困难，会遇到多一个变量的情况，这就不好了。因此收获的启示是，只对于变化的那部分来做替换，至于已经不变的部分，就不要管它了。</p>
+<p><img alt="c02cd37eb6706e7cd49bc3b14cf0f7e.jpg" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509301433893.jpg" /></p>
+<p>可以看到对于戴维宁等效那部分，其实做一下倒数的变换，然后把R和Rd当成整体来处理，还是可以解决I1的，但是如果要处理I2的时候，g还会和10单独乘，然后还有一个gR，这就搞出来三个东西，没法解了</p>
+<h4 id="_25">特勒根定理*<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h4>
+<p>特勒根定理电路期末考不考</p>
+<p>特勒根定理和之前的不同点在于特勒根是对于一整个电路来说的，之前都是研究部分电路的特性</p>
+<p>适用于集总参数模型，因为完全用的KVL，KCL</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202510021933478.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202510021933936.png" /></p>
+<p>注意所有的都要选为关联参考方向，这就意味着对于有源的支路，和我们平时用的就不一样，需要转变为关联的。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509301448987.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509301452017.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509301455785.png" /></p>
+<p>用特勒根定理的时候，开路和短路都可以视为支路。同一个电路的两种工作状态，要想到特勒根定理</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509301510687.png" /></p>
+<p>这题没法全用戴维宁等效，因为开路的话，对于Ud和Rd是无法提供第二条方程的</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509301513130.png" /></p>
+<p>这里乘的是-2是因为这里选参考方向的时候，都是非关联的，但是列特勒根的时候要换成关联的，所以也就得要加负号了</p>
+<p>另外这里对于N的处理，也就是把里面ΣUI当成相等的两式消掉，正是后面互易定理的推导，所以其实直接用互易定理就行</p>
+<p>用特勒根定理的好处是，得到了U2-hat就相当于得到了开路电压，也就是戴维宁等效电压，然后之后就再代回第一个条件的情况就能解出等效电阻。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202509301523724.png" /></p>
+<p>还有一道题</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202510101028748.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202510101028418.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202510101031199.png" /></p>
+<h5 id="_26">互易定理<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h5>
+<p>互易定理适用于线性无源（无独立源也无受控源）二端口网络的电压电流关系</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202510021942318.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202510021942972.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202510051437095.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202510051437849.png" /></p>
+<p>这题看起来很抽象，但其实就是一个特勒根定理的事情，虽然看起来a的支路少一个，但是开路也算支路，所以直接列就行。在列的时候，电流因为有两条路，所以记得加起来，而电压是共用同一个的</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202510051439181.png" /></p>
+<p>之后就直接用U2-hat ×IRL表示出功率，是一个二次函数，直接求极值。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../../%E6%9C%80%E7%AE%80%E7%B3%BB%E5%88%97/%E6%9C%80%E7%AE%80%E5%A4%A7%E7%89%A92/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 最简大物2">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                最简大物2
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../%E6%AD%A3%E5%BC%A6%E4%BA%A4%E6%B5%81%E7%94%B5%E8%B7%AF/" class="md-footer__link md-footer__link--next" aria-label="下一页: 正弦交流电路">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                正弦交流电路
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/skyeye-2025" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<skyeye2022@163.com>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M61.4 64C27.5 64 0 91.5 0 125.4c0 .9 0 1.7.1 2.6H0v256c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V128h-.1c0-.9.1-1.7.1-2.6 0-33.9-27.5-61.4-61.4-61.4zM464 192.3V384c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192.3l154.8 117.4c31.4 23.9 74.9 23.9 106.4 0zM48 125.4c0-7.4 6-13.4 13.4-13.4h389.2c7.4 0 13.4 6 13.4 13.4 0 4.2-2 8.2-5.3 10.7L280.2 271.5c-14.3 10.8-34.1 10.8-48.4 0L53.3 136.1c-3.3-2.5-5.3-6.5-5.3-10.7"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://space.bilibili.com/441014286" target="_blank" rel="noopener" title="space.bilibili.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92c-26.4-.8-48.2-9.8-65.3-27.2S.7 396.5 0 368.2V169.8c.8-26 9.7-47.6 26.7-65.7C43.8 87.8 65.5 78.8 92 78h29.4L96 52.2c-5.7-5.7-8.6-13-8.6-21.8S90.3 14.3 96 8.6 109 0 117.9 0s16.1 2.9 21.9 8.6L213.1 78h88l74.5-69.4C381.7 2.9 389.2 0 398 0s16.1 2.9 21.9 8.6c5.7 5.7 8.6 13 8.6 21.8s-2.9 16.1-8.6 21.8L394.6 78h29.3c26.4.8 48 9.8 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96c-9.6.4-17.4 3.7-23.6 9.8-6.1 6.1-9.4 13.9-9.8 23.5v194.4c0 9.2 3.3 17 9.8 23.5s14.4 9.8 23.6 9.8h320.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["announce.dismiss", "navigation.tracking", "navigation.tabs", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "navigation.expand", "navigation.indexes", "content.tabs.link", "content.tooltips", "content.code.copy", "content.action.edit", "content.action.view", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/typewriter.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.staticfile.org/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
