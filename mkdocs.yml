@@ -8,25 +8,30 @@ nav:
     
   - 课程笔记:
     - 最简系列:
-      - 课程笔记/最简系列/最简马原.md
-      - 课程笔记/最简系列/最简复变.md
-      - 课程笔记/最简系列/最简大物2.md
-    - 电路:
-      - 课程笔记/电路模电/直流电路.md
-      - 课程笔记/电路模电/正弦交流电路.md
-      - 课程笔记/电路模电/过渡过程.md
-    - 模电:
-      - 课程笔记/电路模电/非线性器件.md
-      - 课程笔记/电路模电/放大电路.md
-      - 课程笔记/电路模电/信号发生电路和功率变换电路.md
-    - 其他:
-      - 课程笔记/其他/保留计划.md
+      - Notebooks/simplest/marx.md
+      - Notebooks/simplest/complex.md
+      - Notebooks/simplest/phy2.md
+    - 专业课程:
+      - 电路:
+        - Notebooks/professional/DC.md
+        - Notebooks/professional/ACsine.md
+        - Notebooks/professional/Transient.md
+      - 模电:
+        - Notebooks/professional/Nonlinear.md
+        - Notebooks/professional/Amplifier.md
+        - Notebooks/professional/SignalGeneratorAndPowerConverter.md
+      - 数电:
+        - Notebooks/professional/Digital.md
+      - 信号处理:
+        - Notebooks/professional/SignalAndSystem.md
+      - 其他:
+        - Notebooks/others/safe.md
   - 公开项目:
-    - 公开项目/SQTP.md
-    - 公开项目/iGEM.md
+    - Projects/SQTP.md
+    - Projects/iGEM.md
   - 理论:
-    - 理论/大学OVERALLCHECK.md
-    - 理论/高考后感言.md
+    - Theory/大学OVERALLCHECK.md
+    - Theory/高考后感言.md
   - 友链:
     - link.md
 

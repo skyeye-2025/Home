@@ -40,7 +40,7 @@ hide:
 <div class="flink-list-item">
     <a href="https://savia7582.github.io/Exterior/" target="_blank">
         <div class="flink-item-icon">
-            <img src="https://file.cc98.org/v4-upload/p/2025/0110/k31mvqd4.webp" alt="Savia">
+            <img src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607032002008.png" alt="Savia">
         </div>
         <!-- 新增文字容器 -->
         <div class="flink-item-text">
