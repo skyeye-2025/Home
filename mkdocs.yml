@@ -20,10 +20,9 @@ nav:
         - Notebooks/professional/Nonlinear.md
         - Notebooks/professional/Amplifier.md
         - Notebooks/professional/SignalGeneratorAndPowerConverter.md
-      - 数电:
-        - Notebooks/professional/Digital.md
-      - 信号处理:
-        - Notebooks/professional/SignalAndSystem.md
+      - Notebooks/professional/Digital.md
+      - Notebooks/professional/8051.md
+      - Notebooks/professional/SignalAndSystem.md
       - 其他:
         - Notebooks/others/safe.md
   - 公开项目:
