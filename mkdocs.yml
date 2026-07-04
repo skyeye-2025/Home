@@ -23,6 +23,7 @@ nav:
       - Notebooks/professional/Digital.md
       - Notebooks/professional/8051.md
       - Notebooks/professional/SignalAndSystem.md
+      - Notebooks/professional/BSP.md
       - 其他:
         - Notebooks/others/safe.md
   - 公开项目:
