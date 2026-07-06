@@ -1808,6 +1808,20 @@ $$
 
 ![image.png](https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022003468.png)
 
+### 从采样看各个变换的关系
+
+集大成的图，如果能理解以下几张图，那么信号与系统就算是理解充分了，如果能自己画出来，那就意味着充分熟悉。
+
+![image.png](https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042134511.png)
+
+![image.png](https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042132117.png)
+
+![image.png](https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042131214.png)
+
+![image.png](https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042216312.png)
+
+这个图我考前自己画的
+
 ## 拉普拉斯变换(LT)
 
 拉普拉斯变换Laplace Transform
