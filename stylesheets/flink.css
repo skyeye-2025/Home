@@ -1,0 +1,114 @@
+/* 友链样式 - 加宽加高+舒展内部空间 */
+.flink-list {
+    overflow: auto;
+    padding: 15px 15px 0;
+    /* 列表外层也适度加padding，整体更宽松 */
+    display: flex;
+    flex-direction: column;
+    /* 改为纵向排列，每个item占一行 */
+    align-items: center;
+    /* 水平居中 */
+    max-width: 1100px;
+    /* 适配更宽的item，列表最大宽度同步加大 */
+    margin: 0 auto;
+}
+
+[data-md-color-scheme="skyeye"] .flink-list a {
+    color: rgb(255, 255, 255);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.flink-list-item {
+    position: relative;
+    overflow: hidden;
+    margin: 18px 12px;
+    /* 适度加大item之间的间距，避免拥挤 */
+    width: 100% !important;
+    /* 改为100%宽度 */
+    max-width: 500px;
+    /* 从450px加宽到500px，核心加宽 */
+    height: auto;
+    /* 核心加高：上下padding从15px增至20px，左右从15px增至20px，内部空间大幅舒展 */
+    padding: 20px 20px;
+    border-radius: 8px;
+    border: 1px solid rgb(14, 202, 240);
+    display: flex;
+    align-items: center;
+    transition: all 0.25s ease;
+}
+
+.flink-item-icon {
+    margin-right: 18px;
+    /* 图标与文字间距从15px增至18px，更舒展 */
+    width: 60px;
+    /* 图标从55px增至60px，比例更协调 */
+    height: 60px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.flink-item-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.flink-item-text {
+    flex: 1;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.flink-item-name {
+    font-weight: bold;
+    font-size: 1.25em;
+    /* 文字稍放大，适配更宽的块 */
+    line-height: 1.5;
+    margin: 0 0 8px 0;
+    /* 名称与描述间距稍加大，更宽松 */
+}
+
+.flink-item-desc {
+    font-size: 0.9em;
+    /* 描述文字稍放大，可读性更好 */
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+}
+
+.flink-list-item:hover {
+    background-color: rgb(14, 202, 240);
+    border-color: rgb(14, 202, 240);
+}
+
+/* 响应式调整 - 移动端同步加宽加高 */
+@media screen and (max-width: 768px) {
+    .flink-list-item {
+        width: 100% !important;
+        max-width: 480px;
+        /* 移动端从400px加宽到480px */
+        padding: 18px 18px;
+        /* 移动端padding稍减但仍比之前大 */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .flink-list-item {
+        padding: 15px 15px;
+        /* 小屏手机padding适度回落，避免占满屏幕 */
+        max-width: 100%;
+        /* 小屏取消最大宽度限制，适配屏幕 */
+        width: 100% !important;
+    }
+
+    .flink-item-icon {
+        width: 55px;
+        height: 55px;
+        margin-right: 15px;
+    }
+}

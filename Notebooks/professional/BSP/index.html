@@ -1,0 +1,2402 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../SignalAndSystem/">
+      
+      
+        <link rel="next" href="../../others/safe/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202508141305660.webp">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>生物医学信号处理 - SKYEYE'S HOMEPAGE</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/typewriter.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/flink.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="skyeye" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="SKYEYE&#39;S HOMEPAGE" class="md-header__button md-logo" aria-label="SKYEYE'S HOMEPAGE" data-md-component="logo">
+      
+  <img src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202508141305660.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SKYEYE'S HOMEPAGE
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              生物医学信号处理
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/skyeye-2025/Home" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    skyeye-2025/Home
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../simplest/marx/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  课程笔记
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Projects/SQTP/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  公开项目
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Theory/%E5%A4%A7%E5%AD%A6OVERALLCHECK/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  理论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../link/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  友链
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="SKYEYE&#39;S HOMEPAGE" class="md-nav__button md-logo" aria-label="SKYEYE'S HOMEPAGE" data-md-component="logo">
+      
+  <img src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202508141305660.webp" alt="logo">
+
+    </a>
+    SKYEYE'S HOMEPAGE
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/skyeye-2025/Home" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    skyeye-2025/Home
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程笔记
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最简系列
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    最简系列
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simplest/marx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最简马原
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simplest/complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最简复变
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simplest/phy2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最简大物2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    专业课程
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    专业课程
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1" id="__nav_2_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    电路
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    电路
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    直流电路
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ACsine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    正弦交流电路
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Transient/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    过渡过程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模电
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    模电
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Nonlinear/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    非线性器件
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Amplifier/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    放大电路
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SignalGeneratorAndPowerConverter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    信号发生电路和功率变换电路
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Digital/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数字电路
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8051/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    微机原理及应用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SignalAndSystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    信号与系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    生物医学信号处理
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    生物医学信号处理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        写在前面
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        信号，卷积，系统
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        采样，DFT，频谱泄露
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="采样，DFT，频谱泄露">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        频谱泄露，栅栏效应，补零，采样率
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#z" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        拉普拉斯变换和z变换
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firiir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIR和IIR滤波器
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FIR和IIR滤波器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IIR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        题目
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_7" id="__nav_2_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    其他
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    其他
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../others/safe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    保留计划
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    公开项目
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    公开项目
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Projects/SQTP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Projects/iGEM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    iGEM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    理论
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    理论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Theory/%E5%A4%A7%E5%AD%A6OVERALLCHECK/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大学OVERALLCHECK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Theory/%E9%AB%98%E8%80%83%E5%90%8E%E6%84%9F%E8%A8%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    高考后感言
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    友链
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    友链
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../link/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Link
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        写在前面
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        信号，卷积，系统
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        采样，DFT，频谱泄露
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="采样，DFT，频谱泄露">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        频谱泄露，栅栏效应，补零，采样率
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#z" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        拉普拉斯变换和z变换
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firiir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIR和IIR滤波器
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FIR和IIR滤波器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IIR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        题目
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/skyeye-2025/Home/edit/master/docs/Notebooks/professional/BSP.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/skyeye-2025/Home/raw/master/docs/Notebooks/professional/BSP.md" title="查看本页的源代码" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="_1">生物医学信号处理<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">写在前面<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>由于我学习过《信号与系统》，这门课对我来说初期难度不算大，但是后面出现的很多数字信号处理的相关知识还是让我比较头疼。这门课其实是信号与系统+数字信号处理，但是数字信号处理部分其实是不完整的，比如不要求你真的去算FIR和IIR的那些参数，而是更加偏概念的理解，至于工程实现的话用计算机来搞定就行。</p>
+<p>我是认为学这门课之前有必要先学《信号与系统》，不然新概念太多，会学得很痛苦。这门课的课时也非常紧张，很多内容难以在课上展开，是在用3学分来上相当于5学分的知识量。这门课的重要性毋庸置疑，对于信号处理的实践也帮助很大，所以希望以后能越来越好。</p>
+<p>这部分的笔记其实远没有《信号与系统》的笔记那么结构化，我建议先看信号与系统笔记，先把具体的计算搞明白，尤其是离散的DTFT和z变换部分，然后再来看这部分“只言片语”的内容，建立直观认识。</p>
+<p>建议结合王贤迪老师和罗威老师做的交互式网页来理解：<a href="https://zjubsp.com/index.html">BSP Interactive Demos</a></p>
+<p>本笔记基于王贤迪老师2026春夏学期《生物医学信号处理》，课程PPT等整理而成（也有参考郑婧老师的课件）</p>
+<p>二次整理过后如果打算分发（如发布在CC98等），请先告知<a href="https://www.cc98.org/user/id/761094">CC98@skyeye2024</a>，谢谢。该笔记目前只发布在个人网站，严禁未经允许用于任何盈利用途。</p>
+<h2 id="_3">信号，卷积，系统<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>变化当中有信号，信号当中有信息</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042125697.png" /></p>
+<p>模拟信号：时间连续，幅值连续</p>
+<p>抽样信号：时间离散，幅值连续</p>
+<p>数字信号：时间离散，幅值离散（此处看起来数字信号连续，其实是经过了零阶保持处理的，实际上的仍然是离散的）</p>
+<p>抽样信号和数字信号都是离散信号</p>
+<p>信号处理包含：特征提取，去噪，评估，预测</p>
+<p>有限影响就是卷积的序列长度有限，两侧有0无限延伸</p>
+<p>卷积：加权求和</p>
+<p>我喜欢一个UP主说的：延迟，倍率，叠加。我觉得用LTI系统来解释卷积是最好的</p>
+<p>两个频率分别是ω1、ω2的正弦信号求和，仍是周期信号的前提是ω1/ω2是有理数</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042230733.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042230478.png" /></p>
+<p>卷积的分配律对应系统的并联，卷积的结合律对应系统的级联。即单位冲激响应为h1(t)和h2(t)的系统并联可以等效为单位冲激响应为h(t)=h1(t)+h2(t)的系统。单位冲激响应为h1(t)和h2(t)的系统级联可以等效为单位冲激响应h(t)=h1(t)<span class="arithmatex">\(\ast\)</span>h2(t)的系统</p>
+<p>差分方程和卷积表达式是等价的</p>
+<p>y[n]=4x[n]+2x[n-3]+x[n-6]，这是一个差分方程，一个无反馈的差分方程（和其他输入无关系），这是一个六阶差分方程。这个系统的h[n]=4δ[n]+2δ[n-3]+δ[n-6]</p>
+<p>y[n]+y[n-1]=x[n]是一阶的差分方程，就是看括号里的，用最高的减去最低的，对y和x那边各自做这样一个操作，然后y那边的最大差和x那边的最大差取更大的那个就是这个差分方程的阶数。对于这个差分方程，y那边最大的差别是n-(n-1)=1，x那边是0，因为没有其他的了，所以这是一阶的</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042126248.png" /></p>
+<p>这三种h[n]都是低通滤波，它们的时域和频域都是中间高两边低。但这本质上是因为它们的值都是正的，任何时域上偶对称、全正的序列，在频域都是中间高两边低的，并不是因为时域是中间高两边低，所以频域是中间高两边低</p>
+<table>
+<thead>
+<tr>
+<th>窗类型</th>
+<th>主瓣宽度（频率分辨率）</th>
+<th>旁瓣与阻带衰减</th>
+<th>过渡带陡峭度</th>
+<th>综合适用性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>矩形窗</td>
+<td>最窄（分辨率最高）</td>
+<td>最差（泄露严重）</td>
+<td>最陡</td>
+<td>极少使用，仅限阶数绝对受限场合</td>
+</tr>
+<tr>
+<td>三角窗</td>
+<td>最宽（分辨率最低）</td>
+<td>较差</td>
+<td>最缓</td>
+<td>不推荐实际设计，教学示例</td>
+</tr>
+<tr>
+<td>汉明窗</td>
+<td>居中（分辨率较高）</td>
+<td>优秀（抑制良好）</td>
+<td>较陡</td>
+<td>通用首选，适合多数工程需求</td>
+</tr>
+</tbody>
+</table>
+<p>h[n]出现负号就会带来变化率和跳跃，变化的检测，和高通有关</p>
+<p>失真的意思是边缘的时候有些出界了</p>
+<p>差分是边缘、斜率检测，是高通</p>
+<p>特征提取想到点乘(内积)，点乘可以用于比较两个序列的相似性。</p>
+<p>滑动：输出特性</p>
+<p>反转：时间对应</p>
+<p>卷积核的所有元素之和代表了平均亮度怎么样。如果所有元素之和为0或者负数，那么亮度就低，如果之和等于1，那就和原来图片亮度一样，如果大于1，那就亮度更亮</p>
+<p>卷积核中的负值意味着增大差异，高通，锐化，对比；正值意味着减少差异，低通，模糊，平均。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042127784.png" /></p>
+<p>只有对周期实信号x(t)求FS，指数形式得到的幅频特性<span class="arithmatex">\(|c_k|\)</span>才是对称的，满足<span class="arithmatex">\(c_k\)</span>和<span class="arithmatex">\(c_{-k}\)</span>共轭。如果x(t)是复信号，则这两个一般没有这样的关系，一般是不对称的</p>
+<p>三角形式FS一般只用来分解周期实信号，且三角形式里的a和b我们只用实数，不用它来分解复信号。也只有分解实信号，且这些系数都是实数的时候，才有三角形式和指数形式之间系数相互转换的那个表达式</p>
+<p>相位谱可以体现时移。时移之后幅度谱不变，相位谱改变，相位谱求导可以体现时移了多少。有个群延时的概念就是对相位谱求导加个负号</p>
+<p>通过尺度变换，对音频做加速和减速会导致听起来“水牛唱歌”或“谁家小孩”，是因为时移之后频域也会进行相应放缩。比如如果加速，那频域会展宽，从而增加高频信号，就听起来尖了。如果减速，频域会收窄，只剩下低频了，就听起来低沉了</p>
+<p>高频意味着清晰，细节</p>
+<p>经过线性时不变系统，原来信号x的每个频率对应的模和相位会变化</p>
+<p>其实这个从卷积性质是很显然的，因为Y=HX，两个复函数相乘，那模相乘，辐角相加</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042128586.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042222624.png" /></p>
+<p>注意这里直接套对应频率即可，不需要求完整的X(jω)</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042222453.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042222149.png" /></p>
+<p>这里也是，只需要看对应频率的幅值和相位，不需要把整个算出来，因为输入信号的频率是离散的而且很少</p>
+<p>如果给的是H(s)，应该令s=jω，并令ω=ωc，ωc是题目中的sin(ωct)的这个ωc，依次求出模长和辐角，再用上述公式。注意求辐角的时候如果分子或分母是有平方的，直接写两倍的去掉平方的辐角即可，比如(2+iω)^2不需要展开再用arctan，只需要写成2arctan(ω/2)就行</p>
+<p>对于离散也是类似的，如果给的是H(z)，应该令z=e^{jω}，然后把你题目里的那个ωc带进去ω。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042223020.png" /></p>
+<p>对于这一题，应该判断极点在-0.5，在单位圆以内，所以是稳定系统（输入有界则输出有界）。随后代入z=e^{jω}，只有单位圆上的才是频率响应，其余的是有个r的，带入之后求ω=3时的H(z)的模长和辐角，给x[n]弄上就行。</p>
+<p>类似地，对于H(s)，当极点在左半平面才是稳定的系统，然后如果要求频率响应或者送入cos(ωct)之后的响应，就是带入s=jω，然后把ωc带进去求模长辐角，就这样。</p>
+<p><img alt="Snipaste_2026-07-04_22-23-29.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042223680.png" /></p>
+<h2 id="dft">采样，DFT，频谱泄露<a class="headerlink" href="#dft" title="Permanent link">&para;</a></h2>
+<p>频率为f0+kfs的正弦波(k是整数)经过采样得到的和f0采样后的是一样的</p>
+<p>工程上采样频率应该是原来频率的10倍以上才行，两倍只是理论上可以还原</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042218355.png" /></p>
+<p>在他教的这门课里，Ω=ωT，其中ω是模拟角频率，是CTFT里的频域的变量。Ω是DTFT里的频域的变量。所以直观理解就是在CTFT里的变换，当经过采样，原信号变成离散的之后，DTFT的频域的图实际上变成CTFT里的频域经过缩放得到的样子，有些教材的这两个是反过来的。总之记住数字角频率=模拟角频率×T</p>
+<p>用100Hz采样，可以采出30Hz的信号，因为超过2倍。但是如果是包含60Hz的成分，尽管采样的时候有这个分量的贡献，但是它以低频信号的方式被还原，因为最多能还原100/2=50Hz的信号，而还原到的信号为|f-kfs|，且落在(-fs/2, fs/2)区间，所以这里|60-100|=40Hz</p>
+<p>Ω=pi的时候，ωs/2=pi/T，pi/T就是对应最多能识别的地方</p>
+<p>Ω/2pi=k/N=f/fs=ω/ωs，注意此处的f是包含混叠后的</p>
+<p>k/N里的k是DFS的频率的第k个，X[k]，N是时域长度或频域长度（反正DFS两个N是一样的）</p>
+<p>如何用采样理解从CTFT到DTFT</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042218328.png" /></p>
+<p>离散对应周期，周期连续信号用FS，非周期连续信号用CTFT，非周期离散信号用DTFT，周期离散信号用DFS，DFT是单周期的DFS。DTFT是CTFT对时域采样的结果，DFS是DTFT频域采样的结果，FS是CTFT频域采样的结果。FFT是DFT/DFS的加速算法。</p>
+<p>DTFT对于实数序列x[n]，频谱的特点是模长偶对称，辐角奇对称</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042220593.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042220199.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042226868.png" /></p>
+<p>可以直接展开成e指数，然后直接套公式就行，要对正变换的原始表达式熟悉。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042227664.png" /></p>
+<p>这道题没必要老老实实算，这种表达式全都是可以用e表示的就肯定对应δ</p>
+<h3 id="_4">频谱泄露，栅栏效应，补零，采样率<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042226566.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042224372.png" /></p>
+<p>这个图是频谱泄露的情况。原始信号是一个固定频率的正弦信号，但是经过FFT得到的却是包含了不同频率成分的信号。奈奎斯特采样定理要求采样也是无限长的，但是计算机无法处理无限长数据，所以只能对有限范围内的采样数据进行FFT，这个范围的选取会影响FFT的结果。图中没有选取原始信号的整数个周期，这会导致频谱泄露。因为FFT默认序列是周期延拓的，但如果没有选取整数个周期，导致延拓结果失真，于是原本频谱本来只应该在5Hz处出现峰值，但是现在泄露到了其他频率。而设置阈值的目的是只保留主瓣附近能量集中的点的相位信息，其余的设为0，这样可以减少因频谱泄露带来的影响。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042224209.png" /></p>
+<p>可以用时域截取本质上是乘了矩形窗，那对应频谱部分就要卷积，只有当在整数个周期截断的时候，对应频率的FFT才能是其余都是0的，才不会泄露</p>
+<p>为什么离散对应周期，因为离散本质是乘了冲激串，所以频域和冲激串卷积，就出现了周期</p>
+<p>频域采样定理：对于长度为N的序列x[n]，经过DTFT是一个频域连续的函数，如果在0&lt;ω&lt;2pi均匀采样M个点，得到DFT，则只有M≥N时，才可以唯一，不失真地还原x[n]，也就是至少包含N个自由度的信息，如果M&lt;N，就会发生时域混叠。不过如果是对实序列x[n]做DTFT，那么从0到pi和从pi到2pi的内容是对称的，这个时候其实可以只需要对0到pi采N/2向上取整个点即可，不过如果是复序列，那么pi到2pi的部分就不是对称的了，所以需采满大于等于N个。在DFT的表达式中，M=N，用N个点做FFT得到N个点再还原，所以对于M不怎么熟悉。确实这个定理用的很少，因为一般就是用N了，只是它想表达的意思就是至少要N个</p>
+<p>所以补零可以让M&gt;N，就是原本只需要N个点，现在你故意让它更加宽松，所以不会产生混叠</p>
+<p>Δf是物理分辨率</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042225737.png" /></p>
+<p>下面这题很有意思，如果想到DFT是DTFT采样就容易了，另外有限长序列的z变换直接套公式就行，像是u[n]这种组合直接用<span class="arithmatex">\(\dfrac {1-z^{-10}}{1-z^{-1}}\)</span>就行</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042227873.png" /></p>
+<p>区分采样率，观测时长，补零对DFS的影响</p>
+<p>采样率越高，能看到的频率成分越多，原来在DFS的峰会左移</p>
+<p>观测时长越多，确定性就越大</p>
+<p>补零越多，那么DFS越密集</p>
+<p>最理想情况：时域连续，频域连续</p>
+<p>实际：时域离散（采样），频域也离散，且有限</p>
+<p>当时域离散，频域就周期了，相当于卷积了冲激串。当时域有限，相当于与窗函数相乘，相当于频域卷积Sa，导致频谱泄露</p>
+<p>频谱泄露和振铃效应本质上是吉布斯现象在时域和频域的对偶的表现，都是因为卷积了Sa导致出现波纹</p>
+<p>一道重要的题目，理解频谱混叠，频谱泄露和补零</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042229710.png" /></p>
+<p>第一问，时域是一个窗函数。对应DTFT是有Sa的形状的，这里是DFT，所以是对DTFT进行采样，出来的结果也就是这样有起伏的，加上DTFT是周期的，对称的，所以到后面又翘起来了。</p>
+<p>第二问，全1的话就是常数了，只有0处有分量，X[0]=N。不过注意，一个可能的疑问是全1的DTFT是2pi为周期的冲激串，那0处采样值不应该是无穷大吗。但是注意，所谓的DFT是DTFT的采样，这里的DTFT并不是对周期延拓之后的结果做DTFT，那样会带来冲激，而是把有限长序列之外的其他值都当成0的DTFT的采样。</p>
+<p>我拿(a)来举例子，32点DFT，就是取时域中那一段非零的有限长序列（前11个点），把它在正负无穷远的所有其他位置视为0，然后对这个‘11个1+无数个0’的信号做DTFT，最后在频域的 [0,2π) 上均匀地抽出32个频率点。所以本来就不会出现冲激。</p>
+<p>第三问，这里数字角频率Ω=9pi/16，先判断是否是整周期采样，是否会出现频谱泄露，算一下2pi/(Ω)=32/9，已经是既约分数，去掉分母只取分子，周期是32，而DFT是32点的，符合整周期采样，所以不会发生频谱泄露（只是理论上，后面有解释）。然后由于9pi/16本来就是数字角频率，32点DFT在频谱上就是从0到2pi分了32份，每一份是2pi/32=pi/16，从0开始。注意这并不是对称的，虽然你可以分成0到15以及16到31，但是31不同于32，32和0才是相同的，所以这个并不是完全对称。而要判断在哪里有值，那9pi/16就是在第10个，k下标是9，因为第一个是0，第二个是pi/16。那么对面那个怎么找呢？我觉得可以这样看，其实补上第33个点，也就是N=32那个位置的话，那就是完全对称了。而9-0=9=32-X，得到X=23。就是从相同的点（0和32）来看，这是对称的，间隔是相同的，得到X=23，这是符合。</p>
+<p>第四问相较于第三问，在时域上相当于乘以矩形窗截断。此时只有16个点，至少要32个点才能整个周期采完，所以此时没采完。其实整周期采样和周期延拓是相关的，整周期采样等价于周期延拓之后和无限时间采样的结果一致，不一致的话就不是整周期采样，这里就明显延拓之后会出现一堆0，所以不是整周期采样，于是会出现频谱泄露。频谱泄露表现为不只是那个频率有值，但根本来说，形成的原理仍然是对DTFT的结果进行采样。DTFT的结果，无论是不是整周期采样，也就是这里的c和d，其实都有这种波纹。只是整周期采样的情况下，这种它恰好除了主瓣的峰值之外，其他点都采到了0的那个位置，所以表现为没有频谱泄露，而非整周期采样的情况下，没有这么恰好，所以就出现了其他地方也有的状态。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042229465.png" /></p>
+<p>在这里补零可以实现的就是让DFT在DTFT上采样得更加密集而已，不会改变频谱泄露的事实</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042229760.png" /></p>
+<p>x1如果你补零，那旁瓣一定会被采出来，不再是这么刚好落在零点的位置导致看起来好像没有泄露。而教材里认为的加窗导致频谱泄露，补零对应栅栏效应其实可能会产生误导，因为本质上就是对DTFT的采样方式不一样而已，波纹一直都存在。</p>
+<p>(e)是展示混叠的，它其实无法区分时域是cos(12pi n/16)还是cos(20pi n/16)，频域长一样，而只有0到15那部分是能用的。cos(20pi n/16-2pi n)=cos(-12pi n/16)=cos(12pi n/16)。这个-2pi n就和模拟里面-fs是一个意思。另外这题Ω=20pi/16，2pi/Ω=16/10=8/5，最小周期为8，所以32点是没有频谱泄露的。</p>
+<p>(f)仍然展示频谱泄露，这个就没什么区别了。</p>
+<h2 id="z">拉普拉斯变换和z变换<a class="headerlink" href="#z" title="Permanent link">&para;</a></h2>
+<p>拉普拉斯变换，σ代表信号中的实指数成分，正弦信号代表共振</p>
+<p>傅里叶变换关心周期，拉普拉斯变换关心指数衰减的成分，其实就是傅里叶变换关心纵轴jω，拉普拉斯变换关心σ</p>
+<p>右边序列，也就是到正无穷有定义，但是负无穷无定义，那么收敛域也是右边的，也是往右是收敛的。如果左边序列那么收敛方向也是往左</p>
+<p>注意区分零点（分子为零）和极点（分母为零）</p>
+<p>z变换中z^(-1)其实是δ[n-1]的z变换，所以z^(-1)意味着延时，模相同，但是相位会出现群延时。在r不是1的位置上的z^(-1)就是带衰减因子的延时</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042233770.png" /></p>
+<p>Ω=2pi对应ω=2pi/T，因为Ω=ωT，这里Ω是数字角频率，ω是模拟角频率</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042234963.png" /></p>
+<p>把原来拉普拉斯变换的s经过非线性变换得到r和辐角的形式，圆环的r对应σ，圆环上的角度对应Ω</p>
+<div class="arithmatex">\[z=e^{sT}\]</div>
+<p>光通过狭缝产生的衍射图样是孔径函数的傅里叶变换</p>
+<p>以下条件是在右边序列的前提下成立的。稳定等价于收敛域包含单位圆。右边序列等价于收敛域在最外面极点的外面。在右边序列的前提下，满足极点个数大于零点才是因果序列。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042234325.png" /></p>
+<p>临界稳定仍然是不稳定</p>
+<p>BIBO是有界输入则有界输出的意思</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042234331.png" /></p>
+<p>ROC是region of convergence，收敛域。</p>
+<p>序列从长度可以分为有限长和无限长，无限长的又可以细分左边序列和右边序列和双边序列。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042235279.png" /></p>
+<p>主要就是看发散不发散。你看如果含z^(1)的话，也就是有x[-1]项，无穷就不收敛。如果含z^(-1)的话，0就不收敛。总之收敛域总是一个圆，看的是z的范围，反正就无穷级数那块的东西。</p>
+<p>对所有变换，记住三件事：物理含义、简化积分、简化卷积</p>
+<p>这题要会做</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042235640.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042235974.png" /></p>
+<p>因果系统表现为，时域h[n]在负的地方全是0，频域H(z)的分母的多项式次数大于等于分子的次数且ROC在最外面极点的外面（保证时域右边序列）。其实很好理解，就是那个差分方程的y部分至少要和x的相当或者超前。这样才是y[n]由过去的x来决定，不能由未来的x来决定。</p>
+<p>零点虽然不影响收敛域，但是零点是有用的，因为零点附近的肯定是比较小的值，所以对相应的频率有抑制作用</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042235949.png" /></p>
+<p>这个怎么来的很好理解啊，就是复数运算取模的时候就相当于每一项取模再各自算</p>
+<p>给了零极点图定性画出H就需要用这个知识点。另外设计的时候也可以借助这个。比如说采样率250Hz，你需要去掉50Hz，那一个简单的想法就是在单位圆上50Hz，对应的位置，也就是角度为2pi×50/250=2pi/5的那个点，放一个零点，然后呢在靠近它的地方放一个极点（但注意极点必须在单位圆以内，否则就不稳定）</p>
+<p>靠近零点的位置幅值就小，靠近极点就大，你就看单位圆上Ω变化时靠近远离哪个就行</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042236550.png" /></p>
+<p>全通滤波器用来调相位</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042236558.png" /></p>
+<p>关于因果系统的某些模糊和约定的东西</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042236200.png" /></p>
+<h2 id="firiir">FIR和IIR滤波器<a class="headerlink" href="#firiir" title="Permanent link">&para;</a></h2>
+<p>FIR滤波器：Finite Impulse Response有限冲激响应滤波器</p>
+<p>IIR滤波器：Infinite Impulse Response无限冲激响应滤波器</p>
+<p>FIR和IIR滤波器的区别：</p>
+<p>FIR滤波器冲激响应有限，线性相位，无反馈，稳定，阶数相同时过渡带没IIR陡峭</p>
+<p>IIR滤波器冲激响应无限，非线性相位，有反馈，可能不稳定，阶数相同时过渡带比FIR陡峭</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042238939.png" /></p>
+<p>FIR没有非零极点，不是无极点</p>
+<p>不过FIR也不一定是线性相位，必须满足对称性才有线性相位。偶对称就是正常线性相位，奇对称就是带pi/2的线性相位</p>
+<p>IIR用很少的点可以实现比较好的幅频响应，但是它的相频响应不规律，会导致一些成分的畸变。而FIR需要很多点才能达到相同的倾斜程度，但是FIR的群延时很稳定。IIR有反馈，FIR无反馈。反馈这一点要回答上</p>
+<p>题目要你设计FIR或IIR，不需要进行具体的计算，不需要背根号下什么减一的那个公式，只需要掌握思路即可</p>
+<p>ωc的c是cut off的意思</p>
+<p>设计的时候先确定阶数，找到能满足要求的最小阶数，因为一般阶数越小就越便宜</p>
+<p>对低通滤波器进行变量代换即可得到高通，组合再得到带通，带阻</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042245736.png" /></p>
+<p>参数有Ωp，Ωs，p是pass，通带边缘的那个频率，s是stop，阻带边缘的那个频率。参数还有αp，αs。αp是通带最大衰减，就是通带范围内信号被允许衰减的最大值。αs是阻带最小衰减，指的是阻带范围内对不需要信号的最小衰减量。这个衰减量都是跟最大的|H|去比。αp比如-3dB，αs比如-20dB</p>
+<p>Ωp和Ωs越近，想要让αs越大需要的阶数就越高</p>
+<p>对于带通滤波，注意中心频率</p>
+<p>如果要设计或者优化，需要答出来Ωp，Ωs</p>
+<p>注意如果是有个陷波但是有一侧（比如频率高的那一侧）并没有回到1，这个不能称为带阻滤波器，而是低通滤波器。带阻滤波器需要两边增益仍然相同。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042248765.png" /></p>
+<h3 id="iir">IIR<a class="headerlink" href="#iir" title="Permanent link">&para;</a></h3>
+<p>从模拟IIR滤波器设计数字IIR滤波器</p>
+<p>模拟滤波器分四类</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042242213.png" /></p>
+<p>现实应用是一个trade-off的过程，巴特沃斯低通滤波器它通带阻带平滑，但是过渡带比较长。切比雪夫低通滤波器有一型和二型，一型是通带有波浪阻带没有，二型是阻带有波浪通带没有。椭圆低通滤波器通带和阻带都有波浪。有波浪意味着对不同频率进行了不同比例的放缩，这是让人不喜欢的，不过它们的优点是过渡带窄下降快，椭圆下降是最快的。这三个都是IIR滤波器，模拟滤波器。</p>
+<ul>
+<li>
+<p><strong>IIR数字滤波器</strong>的设计<strong>大多数情况</strong>下是<strong>借用模拟滤波器的原型</strong>（如巴特沃斯），再通过数学变换（双线性变换、脉冲响应不变法）将其映射到数字域。</p>
+</li>
+<li>
+<p><strong>FIR数字滤波器</strong>没有对应的模拟原型，完全在数字域设计（如窗函数法、等波纹法）。</p>
+</li>
+</ul>
+<p>因此可以说：<strong>模拟滤波器是IIR数字滤波器的“祖先”</strong>，而FIR是纯数字的产物。</p>
+<p>先根据对频率响应的要求设计模拟滤波器H(s)，然后求逆变换得到h(t)，然后用h[n]=Th(nT)得到h[n]，再对h[n]做z变换得到H(z)，就是脉冲响应不变法设计数字滤波器了</p>
+<p>双线性变换法就是用arctan，把原本H(jω)延伸到无穷才下降到0的映射到在pi那里就降为0了，避免了混叠，类比sigmoid，反正仍然是变量代换，把s平面每个点映射到了z的圆里面。这会导致比如原来截止频率为5Hz，后面就变得更小了，毕竟无穷远的频率都被压缩回来了，arctan是单调的</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042240713.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042241746.png" /></p>
+<p>极点是Y带来的，零点是X带来的。极点在单位圆以内才能保证稳定（H(z)）。ROC在最外面极点的外面且极点数量大于（或等于）零点数量才能保证因果。为什么保证因果？因果的本质是时间上最远的那个y的下标大于等于时间上最远的那个x的下标，比如y[n]=x[n-1]。而我们知道δ[n-1]对应z^{-1}，下标越大，z的次数就越高（比如z^0次数高于z^(-1)），于是你分子分母同乘了若干z使得没有z^(-1)的时候，这个方程的阶数也就越高。那么阶数越高，零点的个数也就越多。极点是分母的零点啊。那分母零点个数不小于分子零点个数，也就是极点不少于零点个数，才能保证因果。不过这个不是充要条件，而是你一开始已经打算设计因果系统，那么这个是一定要满足的，但真正保证它是因果的是收敛域。</p>
+<p>在工程上，一般要极点数量大于零点数量，因为如果当前的输出依赖当前实时的输入，这中间传输肯定有一定延时，不好实现。</p>
+<h3 id="fir">FIR<a class="headerlink" href="#fir" title="Permanent link">&para;</a></h3>
+<p>FIR就是若干z^{-1}的整数次方加上系数形成的，因为它只是y[n]=ax[n]+bx[n-1]等等这样，所以只会是a+bz^{-1}等等，所以它只有0作为极点。而IIR是有反馈的，是y[n]+ky[n-1]等等，这就注定了算H的时候y那部分被除下去就会有别的东西，不会是FIR那样分母干净。</p>
+<p>FIR就简单了，相当于直接设计h[n]</p>
+<p>现实不可能防止频谱泄露，因为不可能观测无限长时间</p>
+<p>第一类线性相位是θ=-tΩ，第二类线性相位是θ=β0-tΩ，其中β0取±pi/2</p>
+<p>线性相位就是延时，忽略了线性相位判断是奇函数还是偶函数之后带线性相位的就只是移动了而已</p>
+<p>奇对称的h[n]做不了低通滤波器，因为H(e^{j0})=对h[n]全部求和，那如果是奇对称的那全部加起来就是0了，那就不是低通了</p>
+<p>对于线性相位FIR（h[n]偶对称），N点序列h[n]有N-1个零点，共轭对称且与单位圆成镜像对称</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042243593.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042244211.png" /></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">长度</th>
+<th style="text-align: left;">对称类型</th>
+<th style="text-align: left;">系数示例</th>
+<th style="text-align: left;">对称轴位置</th>
+<th style="text-align: left;">相位类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>偶数</strong></td>
+<td style="text-align: left;"><strong>偶对称</strong></td>
+<td style="text-align: left;"><code>[1, 2, 3, 3, 2, 1]</code></td>
+<td style="text-align: left;">在 <code>3</code> 和 <code>3</code> 之间</td>
+<td style="text-align: left;"><strong>线性相位</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>偶数</strong></td>
+<td style="text-align: left;"><strong>奇对称</strong></td>
+<td style="text-align: left;"><code>[1, 2, 3, -3, -2, -1]</code></td>
+<td style="text-align: left;">在 <code>3</code> 和 <code>-3</code> 之间</td>
+<td style="text-align: left;"><strong>线性相位</strong>（有90°相移）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>奇数</strong></td>
+<td style="text-align: left;"><strong>偶对称</strong></td>
+<td style="text-align: left;"><code>[1, 2, 3, 2, 1]</code></td>
+<td style="text-align: left;">在中间的 <code>3</code> 上</td>
+<td style="text-align: left;"><strong>线性相位</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>奇数</strong></td>
+<td style="text-align: left;"><strong>奇对称</strong></td>
+<td style="text-align: left;"><code>[1, 2, 0, -2, -1]</code></td>
+<td style="text-align: left;">在中间的 <code>0</code> 上</td>
+<td style="text-align: left;"><strong>线性相位</strong>（有90°相移）</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>任意</strong></td>
+<td style="text-align: left;"><strong>都不满足</strong></td>
+<td style="text-align: left;"><code>[1, 2, 3, 4, 5, 6]</code></td>
+<td style="text-align: left;">无</td>
+<td style="text-align: left;"><strong>非线性相位</strong> ❌</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042239097.png" /></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">类型</th>
+<th style="text-align: left;">对称性</th>
+<th style="text-align: left;">长度 <span class="arithmatex">\(N\)</span></th>
+<th style="text-align: left;">相位表达式</th>
+<th style="text-align: left;">致命约束（零点位置）</th>
+<th style="text-align: left;">典型应用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">I 型</td>
+<td style="text-align: left;">偶对称<br><span class="arithmatex">\(h(n)=h(N-1-n)\)</span></td>
+<td style="text-align: left;">奇数</td>
+<td style="text-align: left;"><span class="arithmatex">\(\phi(\omega) = -\alpha \omega\)</span><br>（<span class="arithmatex">\(\alpha\)</span> 为整数）</td>
+<td style="text-align: left;">无限制，可设计所有类型滤波器（低通、高通、带通、带阻）。</td>
+<td style="text-align: left;">最通用，音频均衡器、通用滤波器。</td>
+</tr>
+<tr>
+<td style="text-align: left;">II 型</td>
+<td style="text-align: left;">偶对称</td>
+<td style="text-align: left;">偶数</td>
+<td style="text-align: left;"><span class="arithmatex">\(\phi(\omega) = -\alpha \omega\)</span><br>（<span class="arithmatex">\(\alpha\)</span> 为半整数）</td>
+<td style="text-align: left;">在 <span class="arithmatex">\(\omega=\pi\)</span>（奈奎斯特频率）处幅频响应必为 0。</td>
+<td style="text-align: left;">不能做高通或带阻，只能做低通或带通。</td>
+</tr>
+<tr>
+<td style="text-align: left;">III 型</td>
+<td style="text-align: left;">奇对称<br><span class="arithmatex">\(h(n)=-h(N-1-n)\)</span></td>
+<td style="text-align: left;">奇数</td>
+<td style="text-align: left;"><span class="arithmatex">\(\phi(\omega) = -\alpha \omega - \frac{\pi}{2}\)</span></td>
+<td style="text-align: left;">在 <span class="arithmatex">\(\omega=0\)</span> 和 <span class="arithmatex">\(\omega=\pi\)</span> 处幅频响应必为 0。</td>
+<td style="text-align: left;">仅适合做希尔伯特变换器或微分器，不能做普通选频滤波器。</td>
+</tr>
+<tr>
+<td style="text-align: left;">IV 型</td>
+<td style="text-align: left;">奇对称</td>
+<td style="text-align: left;">偶数</td>
+<td style="text-align: left;"><span class="arithmatex">\(\phi(\omega) = -\alpha \omega - \frac{\pi}{2}\)</span></td>
+<td style="text-align: left;">仅在 <span class="arithmatex">\(\omega=0\)</span> 处幅频响应必为 0。</td>
+<td style="text-align: left;">适合做微分器和宽带希尔伯特变换，但不适合低通。</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042240046.png" /></p>
+<p>比较五点的窗和十点的窗做卷积的效果。五点的窗==延时==更少，十点的窗延时更大。而且五点的窗对应频域主瓣更宽，十点的窗主瓣更窄，</p>
+<p>矩形窗是平均，三角窗是能量中间集中。</p>
+<p>矩形窗N增大，则主瓣变小，更多==高频进入衰减区==。但是注意并不是抑制增强，因为衰减是不变的，它只是横向缩放。</p>
+<p>矩形窗的那个零点可以记，如果是连续的就是2pi/τ，矩形窗长度是τ，正负各τ/2。如果是离散的就是2pi/N</p>
+<h3 id="_5">题目<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042246765.png" /></p>
+<p>这道题要从阻带衰减的角度去考虑，而不是从能不能滤掉50Hz来考虑。要比较三角窗和矩形窗的阻带衰减然后再来做选择</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042247675.png" /></p>
+<p>首先问你怎么设计低通滤波器。逻辑是首先一个理想的就是一个方形，对应着频域是Sa，但Sa是无限的，所以需要频域乘以矩形窗截断，于是在时域相当于卷积一个Sa，导致不是垂直的方形，而是有波纹出现，有过渡带出现。</p>
+<p>然后让你设计，只需要答出用一个低通减另一个低通，然后给一下技术指标也就是Ωc1，Ωc2即可。Ωc用(Ωp+Ωs)/2得到，这是对于FIR的Ωc的处理方法。</p>
+<p>而IIR滤波器的Ωc设计很复杂，不要求掌握。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042247175.png" /></p>
+<p>这一题，当N增大，时移会增加，整体往后移动了。然后呢其他没有特殊得分点。总结FIR滤波器窗函数N的影响</p>
+<p>在窗函数法设计FIR滤波器（h(n)=hd(n)⋅w(n)h(n)=hd​(n)⋅w(n)）中，滤波器长度 N是最核心的设计参数。当 N 增加时</p>
+<ol>
+<li>
+<p>频域性能（最核心影响）</p>
+</li>
+<li>
+<p><strong>过渡带变窄（频率选择性提高）</strong>：窗谱的主瓣宽度与 1/N成正比（例如矩形窗主瓣宽度为 4π/N4π/N）。NN 增大，主瓣变窄，卷积后理想滤波器的“陡峭边缘”被模糊的程度降低，过渡带急剧变窄。这是增加 N 最主要的正面收益。</p>
+</li>
+<li>
+<p><strong>阻带衰减（波纹幅度）基本不变</strong>：阻带最小衰减和通带波纹主要由窗函数类型（如矩形、汉宁、布莱克曼）的旁瓣相对幅度决定，<strong>与 N 无关</strong>。增加N只会让旁瓣的数量变多、起伏变密集，但旁瓣的“包络”幅度并未降低（例如汉明窗阻带衰减始终约 -53dB）。</p>
+</li>
+<li>
+<p>时域与实时性影响（代价）</p>
+</li>
+<li>
+<p><strong>群延迟（绝对延迟）增加</strong>：线性相位FIR滤波器的群延迟为 τ=(N−1)/2个采样点。N翻倍，意味着输出信号比输入信号延迟的时间也翻倍，这对实时性要求高的控制系统或语音通话影响较大。</p>
+</li>
+<li>
+<p>吉布斯（Gibbs）现象的特别表现</p>
+</li>
+<li>
+<p>对于<strong>矩形窗</strong>，增加 N 并不会减小截止频率附近的<strong>肩峰过冲幅度</strong>（约 8.95%），只会在更窄的频率范围内剧烈振荡（振荡频率加快）。这说明仅靠增加 N 无法消除矩形窗固有的吉布斯效应，必须改用其他窗函数。</p>
+</li>
+</ol>
+<p>如果有系统框图，先把H写出来，可以用H1，H2这样组合来写</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042247235.png" /></p>
+<p>这个注意经过处理，100Hz那个跑到最后面了，因为它N最大，延时最大</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042248101.png" /></p>
+<p>另外可以观察到其实处理之后包络是这种鼓包，是因为窗函数是一个平均的移动，会带来这种现象。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../SignalAndSystem/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 信号与系统">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                信号与系统
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../others/safe/" class="md-footer__link md-footer__link--next" aria-label="下一页: 保留计划">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                保留计划
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/skyeye-2025" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<skyeye2022@163.com>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M61.4 64C27.5 64 0 91.5 0 125.4c0 .9 0 1.7.1 2.6H0v256c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V128h-.1c0-.9.1-1.7.1-2.6 0-33.9-27.5-61.4-61.4-61.4zM464 192.3V384c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192.3l154.8 117.4c31.4 23.9 74.9 23.9 106.4 0zM48 125.4c0-7.4 6-13.4 13.4-13.4h389.2c7.4 0 13.4 6 13.4 13.4 0 4.2-2 8.2-5.3 10.7L280.2 271.5c-14.3 10.8-34.1 10.8-48.4 0L53.3 136.1c-3.3-2.5-5.3-6.5-5.3-10.7"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://space.bilibili.com/441014286" target="_blank" rel="noopener" title="space.bilibili.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92c-26.4-.8-48.2-9.8-65.3-27.2S.7 396.5 0 368.2V169.8c.8-26 9.7-47.6 26.7-65.7C43.8 87.8 65.5 78.8 92 78h29.4L96 52.2c-5.7-5.7-8.6-13-8.6-21.8S90.3 14.3 96 8.6 109 0 117.9 0s16.1 2.9 21.9 8.6L213.1 78h88l74.5-69.4C381.7 2.9 389.2 0 398 0s16.1 2.9 21.9 8.6c5.7 5.7 8.6 13 8.6 21.8s-2.9 16.1-8.6 21.8L394.6 78h29.3c26.4.8 48 9.8 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96c-9.6.4-17.4 3.7-23.6 9.8-6.1 6.1-9.4 13.9-9.8 23.5v194.4c0 9.2 3.3 17 9.8 23.5s14.4 9.8 23.6 9.8h320.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["announce.dismiss", "navigation.tracking", "navigation.tabs", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "navigation.expand", "navigation.indexes", "content.tabs.link", "content.tooltips", "content.code.copy", "content.action.edit", "content.action.view", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/typewriter.js"></script>
+      
+        <script src="https://cdn.staticfile.org/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

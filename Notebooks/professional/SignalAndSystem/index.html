@@ -1,0 +1,4911 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../8051/">
+      
+      
+        <link rel="next" href="../BSP/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202508141305660.webp">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>信号与系统 - SKYEYE'S HOMEPAGE</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/typewriter.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/flink.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="skyeye" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="SKYEYE&#39;S HOMEPAGE" class="md-header__button md-logo" aria-label="SKYEYE'S HOMEPAGE" data-md-component="logo">
+      
+  <img src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202508141305660.webp" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SKYEYE'S HOMEPAGE
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              信号与系统
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/skyeye-2025/Home" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    skyeye-2025/Home
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../simplest/marx/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  课程笔记
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Projects/SQTP/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  公开项目
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Theory/%E5%A4%A7%E5%AD%A6OVERALLCHECK/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  理论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../link/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  友链
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="SKYEYE&#39;S HOMEPAGE" class="md-nav__button md-logo" aria-label="SKYEYE'S HOMEPAGE" data-md-component="logo">
+      
+  <img src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202508141305660.webp" alt="logo">
+
+    </a>
+    SKYEYE'S HOMEPAGE
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/skyeye-2025/Home" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    skyeye-2025/Home
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Home
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程笔记
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    课程笔记
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最简系列
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    最简系列
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simplest/marx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最简马原
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simplest/complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最简复变
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../simplest/phy2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最简大物2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    专业课程
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    专业课程
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1" id="__nav_2_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    电路
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    电路
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    直流电路
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ACsine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    正弦交流电路
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Transient/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    过渡过程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模电
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    模电
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Nonlinear/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    非线性器件
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Amplifier/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    放大电路
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SignalGeneratorAndPowerConverter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    信号发生电路和功率变换电路
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Digital/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数字电路
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8051/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    微机原理及应用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    信号与系统
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    信号与系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        写在前面
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        认识信号
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="认识信号">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        离散信号
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        连续信号
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        系统的性质
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="系统的性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        时变/时不变
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        记忆，因果，稳定，可逆
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LTI系统
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LTI系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        直观理解卷积
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        δ(t)的性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        连续时间卷积的计算
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        傅里叶级数(FS)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ctft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        连续时间傅里叶变换(CTFT)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="连续时间傅里叶变换(CTFT)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常用傅里叶变换
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        性质
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性性，频移时移，微分性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        卷积性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        调制性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        尺度变换，对偶性，帕斯瓦尔定理，共轭对称性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        用傅里叶变换求周期信号的傅里叶级数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dtft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        离散时间傅里叶变换(DTFT)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="离散时间傅里叶变换(DTFT)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常用傅里叶变换
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        性质
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性性，频移时移，差分性质，时域扩展，频域微分
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        时域卷积
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        调制性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        帕斯瓦尔定理，共轭对称性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        离散时间傅里叶级数(DFS)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="离散时间傅里叶级数(DFS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FFT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dfsdtft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DFS和DTFT的关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fft_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        用FFT计算两个序列的卷积
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        采样
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="采样">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        采样定理三张图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        信号重建
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        连续时间系统的离散实现
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        采样例题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        从采样看各个变换的关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        拉普拉斯变换(LT)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="拉普拉斯变换(LT)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        重要拉普拉斯变换
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        收敛域性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常用拉普拉斯变换
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        周期信号的拉普拉斯变换
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        解常微分方程
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="解常微分方程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常微分方程的三种形式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        解方程
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="解方程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单边拉普拉斯变换
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#z" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        z变换
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="z变换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        重要的z变换
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常用z变换
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        收敛域性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        解差分方程
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="解差分方程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        差分方程的三种形式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        解方程
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="解方程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#z_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单边z变换
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BSP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    生物医学信号处理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_7" id="__nav_2_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    其他
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    其他
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../others/safe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    保留计划
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    公开项目
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    公开项目
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Projects/SQTP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Projects/iGEM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    iGEM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    理论
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    理论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Theory/%E5%A4%A7%E5%AD%A6OVERALLCHECK/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    大学OVERALLCHECK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Theory/%E9%AB%98%E8%80%83%E5%90%8E%E6%84%9F%E8%A8%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    高考后感言
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    友链
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    友链
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../link/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Link
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        写在前面
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        认识信号
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="认识信号">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        离散信号
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        连续信号
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        系统的性质
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="系统的性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        时变/时不变
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        记忆，因果，稳定，可逆
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lti" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LTI系统
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LTI系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        直观理解卷积
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#t" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        δ(t)的性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        连续时间卷积的计算
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        傅里叶级数(FS)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ctft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        连续时间傅里叶变换(CTFT)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="连续时间傅里叶变换(CTFT)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常用傅里叶变换
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        性质
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性性，频移时移，微分性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        卷积性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        调制性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        尺度变换，对偶性，帕斯瓦尔定理，共轭对称性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        用傅里叶变换求周期信号的傅里叶级数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dtft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        离散时间傅里叶变换(DTFT)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="离散时间傅里叶变换(DTFT)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常用傅里叶变换
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        性质
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性性，频移时移，差分性质，时域扩展，频域微分
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        时域卷积
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        调制性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        帕斯瓦尔定理，共轭对称性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        离散时间傅里叶级数(DFS)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="离散时间傅里叶级数(DFS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FFT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dfsdtft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DFS和DTFT的关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fft_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        用FFT计算两个序列的卷积
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        采样
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="采样">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        采样定理三张图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        信号重建
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        连续时间系统的离散实现
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        采样例题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        从采样看各个变换的关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        拉普拉斯变换(LT)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="拉普拉斯变换(LT)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        重要拉普拉斯变换
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        收敛域性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常用拉普拉斯变换
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        周期信号的拉普拉斯变换
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        解常微分方程
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="解常微分方程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常微分方程的三种形式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        解方程
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="解方程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单边拉普拉斯变换
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#z" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        z变换
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="z变换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        重要的z变换
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常用z变换
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        收敛域性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        解差分方程
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="解差分方程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        差分方程的三种形式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        解方程
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="解方程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#z_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单边z变换
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/skyeye-2025/Home/edit/master/docs/Notebooks/professional/SignalAndSystem.md" title="编辑此页" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/skyeye-2025/Home/raw/master/docs/Notebooks/professional/SignalAndSystem.md" title="查看本页的源代码" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="_1">信号与系统<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">写在前面<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>本笔记基于胡浩基老师发布在B站的<a href="https://www.bilibili.com/video/BV1g94y1Q76G/">《2022浙江大学信号与系统（含配套课件和代码） - 胡浩基老师》</a>，胡浩基老师2026春夏学期《信号与系统》（4学分），王贤迪老师2026春夏学期《生物医学信号处理》整理而来。</p>
+<p>生物医学信号处理更侧重离散信号处理，DFS和z变换是重点，对于变换的性质考察不深，不考调制。而4学分信号与系统更侧重连续信号，DFS不考，对于性质的考察更多。不过无论对哪个课来说采样都是重点。</p>
+<p>这篇笔记对于信号与系统课程进行了较为完整的整理，既可以作为初学者参考，也可以直接作为期末复习资料。对于学习《生物医学信号处理》的同学来说，这篇笔记也可以提供很多信号与系统的基础知识。我认为学《生物医学信号处理》之前应当先学信号与系统的，因为我学过信号与系统再去学《生物医学信号处理》都感觉吃力，没有学过信号与系统的同学可能面临更大的挑战。</p>
+<p>二次整理过后如果打算分发（如发布在CC98等），请先告知<a href="https://www.cc98.org/user/id/761094">CC98@skyeye2024</a>，谢谢。该笔记目前只发布在个人网站，严禁未经允许用于任何盈利用途。</p>
+<p>工程上把虚数单位 i 写成 j</p>
+<p>这里把模拟角频率用ω表示。胡浩基老师授课的信号与系统仍然用ω表达数字角频率，通过<span class="arithmatex">\(e^{j\omega}\)</span>来和模拟角频率区分，而王贤迪老师授课的生物医学信号处理用Ω表达数字角频率，和一些教材不同。</p>
+<p>CTFT频谱写为X(jω)和X(ω)是一个意思，自变量都是ω。DTFT频谱写为<span class="arithmatex">\(X(e^{j\omega})\)</span>或<span class="arithmatex">\(X(e^{j\Omega})\)</span>，自变量是数字角频率，无论是ω还是Ω</p>
+<p>pi就是圆周率π，a^n的"^"是幂的意思，f_s的" _ " 是下标的意思</p>
+<h2 id="_3">认识信号<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>我们用x(t)表达连续时间信号，自变量是时间t，可以简单理解为初高中学的那种函数（曲线），比如x(t)=t+1。用x[n]表达离散时间信号，自变量n你可以把它说成时间也可以看成下标，它更像是数列，或者python里的数组，所以也可以说成序列。你可以用x[n]=n+1来描述这个离散时间信号，它只在n为整数的地方有值。</p>
+<p>我后面就简称为连续信号和离散信号</p>
+<h3 id="_4">离散信号<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>介绍两个常用的离散信号（序列）</p>
+<div class="arithmatex">\[
+\delta[n]=
+\begin{cases}
+1, n=0\\
+0, \text{else}\\
+\end{cases}
+\]</div>
+<div class="arithmatex">\[
+u[n]=
+\begin{cases}
+1, n\ge0\\
+0, \text{else}
+\end{cases}
+\]</div>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202603251642176.png" /></p>
+<p>用这两个序列可以表示各种序列，其实光用δ[n]就够了，因为它是最小的单位。这里要知道可以移动信号，比如δ[n-1]就是在n=1的位置δ[n-1]=1，其余为0，这个高中学过函数变换应该很熟，左加右减，只不过离散的只能移动整数值。另外还可以对信号做乘法，比如2δ[n]是n=0的地方δ[n]=2。有了这两个处理方法，你就可以用δ[n]组合出任何x[n]。</p>
+<p>用δ[n]表示u[n]，u[n]左边全是0不用放，0处的值是1，所以放一个δ[n]，1处的值是1，所以放一个δ[n-1]，2处的值是1，所以放一个δ[n-2]，以此类推这么下去，所以u[n]就用δ[n]完全表达出来了，u[n]=δ[n]+δ[n-1]+δ[n-2]+...，如果用求和符号来化简，可以写成<span class="arithmatex">\(\sum\limits_{i=0}^{+\infty}\delta[n-i]\)</span>。所以你看离散信号的表示一点都不难，就是一个一个放上去。</p>
+<p>再比如，如果是0，1，2处的值为1，其余为0，则可以表示为δ[n]+δ[n-1]+δ[n-2]，除此以外也可以表示为u[n]-u[n-3]，为什么呢。因为u[n]是从0往右均为1，u[n-3]是从3往右均为1，那大于等于3的那些地方，都是1-1=0了，只剩下0，1，2处的值，这样就可以对离散信号进行表示。在这门课的实际学习中，其实就是要你把各种各样的信号用基础的信号来表示。</p>
+<p>举一个例子</p>
+<div class="arithmatex">\[
+sgn[n]=
+\begin{cases}
+1, n&gt;0\\
+0, n=0\\
+-1, n&lt;0\\
+\end{cases}
+\]</div>
+<p>对于这个信号，怎么用δ[n]或者u[n]表示呢？如果是δ[n]，还是用之前一个一个放的思路，n&lt;0的部分都放-1，n&gt;0的地方都放1，所以就是(-δ[n+1]-δ[n+2]-δ[n+3]+...)+(δ[n-1]+δ[n-2]+δ[n-3]+...)。那么用u[n]怎么表达呢？这里需要引入一个新的序列，就是x[n]=1。注意这和高中学的常函数不一样，这个1并不是处处有值，而是说这个序列每一项都是1，这一点非常重要。利用这个序列可以把sgn[n]表示为-1+2u[n]-δ[n]，务必注意0那个地方在定义里是0，如果不把这个δ[n]减掉，0那个地方就成了1，就和我们要求的不一样了。</p>
+<p>已经比较熟练地使用“放置”的思路之后，就可以理解下面这个公式了</p>
+<div class="arithmatex">\[
+x[n]=\sum\limits_{k=-\infty}^{+\infty}x[k]\delta[n-k]
+\]</div>
+<p>先别急，其实思路和我们前面讲到的一个个放上去是一样的。等式右边其实是把原来作为一整个序列的x[n]，拆分成了一个一个只在n=k有值的孤立的δ[n-k]，然后用x[k]这个数来作为系数给δ[n-k]做数乘，把它变成原来那一项的高度，全部组合起来，就成了原来的x[n]</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202603252025420.png" /></p>
+<p>仔细看看，如果把k一个一个带入，是不是就是得到了这样的结果。</p>
+<p>这个表达式实际上就是x[n]卷积δ[n]，后面会讲，现在你就知道x[n]卷积δ[n]=x[n]了</p>
+<p>讲了这个之后还要提一下δ[n]的筛选性质，就是<span class="arithmatex">\(x[n]\delta[n-n_0]=x[n_0]\delta[n-n_0]\)</span>，这很好理解，因为δ[n-n0]除了n0那个点之外都是0，那其他就都没了，和只有x[n0]和它相乘是一样的效果。</p>
+<p>前面提到了信号的两种变换方式，时移和数乘，其实还有其他的变换方式比如写成x[-n]，x[2n]，组合起来可以变成x[-3n+6]这样。一种常见的考法就是给你x[n]要你求x[-3n+6]这样。第一种方法是看下标，新的序列y[n]=x[-3n+6]在n=1处是x[3]的值，而n=2处是x[0]的值，一项一项带进去，这在序列有限，比较少的时候这么做比较方便。但是如果序列比较长的话，还是需要掌握第二种方法。第二种就是用函数变换时的那种思路，x[-n]想成关于n=0轴对称翻转，而x[3n]这里和连续的不太一样，不是简单伸缩了，而是把一些值给剃掉了，比如x[3n]在n=0是x[0]，在n=1是x[3]，相当于把1和2处的值给去掉了，然后把剩下的按顺序组成新的序列（0处位置不变）。那么x[-3n+6]就可以理解为x[n]先关于n=0对称得到x[-n]，然后把不能被3整除的项都去掉重新组成序列x[-3n]，然后再把这个序列往右移动2个单位，变成x[-3(n-2)]=x[-3n+6]。这里确实对于高中数学函数变换有一定要求，这里也没法展开太多，有需要的自己找一数补课：<a href="https://www.bilibili.com/video/BV1Pv4y1v719">相关视频</a></p>
+<p>介绍一下三角函数和e指数产生的离散时间信号，比如<span class="arithmatex">\(x[n]=\sin(\omega_0 n)\)</span>，我们知道如果是连续的那么是有周期性的，最小正周期是<span class="arithmatex">\(2\pi/|\omega_0|\)</span>，但是在离散的这里如果<span class="arithmatex">\(2\pi/|\omega_0|\)</span>不是有理数，那么它就不具有周期性，因为你找不到一个整数T使得<span class="arithmatex">\(\sin(\omega_0n)=\sin(\omega_0(n+T))\)</span>。如果<span class="arithmatex">\(2\pi/|\omega_0|\)</span>可以写成p/q这样的既约分数的形式（也就是除了1之外没有可以约的了），那么它的最小正周期就是p。比如说对于<span class="arithmatex">\(\sin(4\pi n)\)</span>，<span class="arithmatex">\(2\pi/4\pi=1/2\)</span>，那么最小正周期就是1，对于<span class="arithmatex">\(\sin(\dfrac \pi 4 n)\)</span>，<span class="arithmatex">\(2\pi/\frac \pi 4=8\)</span>，所以最小正周期是8。如果把<span class="arithmatex">\(\sin(\omega_0 n)\)</span>改成<span class="arithmatex">\(\cos(\omega_0 n)\)</span>或者<span class="arithmatex">\(e^{j\omega_0n}\)</span>，结论一样，有没有周期性以及最小正周期的计算方法相同。</p>
+<p>关于周期性还有一点要说的，就是两个序列<span class="arithmatex">\(x_1[n]\)</span>和<span class="arithmatex">\(x_2[n]\)</span>各有周期T1，T2（T1≠T2），则他们两个线性运算过后的函数如果要判断有没有周期性，就看T1/T2是否是有理数。如果是有理数，则最小正周期是T1和T2的最小公倍数。如果是无理数，则没有周期性。</p>
+<p>我建议要对这种离散的正弦序列有一个直观的认识，不要把它和连续的正弦波搞混，一个是离散的一个是连续的。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202603252009964.png" /></p>
+<p>注意<span class="arithmatex">\(\cos(\pi n)=(-1)^n\)</span>，有些时候会用-1的n次方来迷惑你，其实可以写成cos的形式</p>
+<h3 id="_5">连续信号<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>这里介绍信号与系统里定义的基本连续信号</p>
+<p>δ(t)是单位冲激信号，难以通过表达式来描述，只能通过它的性质来了解它的用法。它并不是常规的函数，如果真的要画图，那么它就是在0那个地方冲到无穷大再回到0，除此以外别的地方都没有值了。而单位冲激信号的“单位”就体现在对它从负无穷到正无穷积分为1。在图上用一个箭头表示，并标出它的大小（比如这里积分的值为1就写个1）</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021008020.png" /></p>
+<p>δ(t)有很多种定义的方式，通常教学中采用的是Δ趋于0逼近的方法</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021010824.png" /></p>
+<p>这三者中的任意一者当Δ趋于0之后得到的都是冲激信号δ(t)，δ(t)的定义有多样性。你可能会说不对啊第一个不是偶函数，没有负的部分。这里就要引入函数相等的概念</p>
+<p>在过去教的是两个函数定义域相同，且定义域上每一处的函数值都相同，这样两个函数才相等。但是这样的定义太严格了，更松的定义是下面这样</p>
+<div class="arithmatex">\[\forall y(t), \int_{-\infty}^{+\infty}y(t)f_1(t)dt=\int_{-\infty}^{+\infty}y(t)f_2(t)dt, \text{then} f_1(t)=f_2(t)\]</div>
+<p>这个更松的定义允许两个函数有可数个点上的值不同，而对于上面三个Δ相关的函数来说，令Δ趋于0，代入这个判别条件之后得到的结果确实是一样的，都是y(0)，具体的积分证明这里不展开，课程也不要求，但需要记住的是δ(t)的性质就是积分之后只留下那个点处的值，这可以说是δ(t)最本质的性质，称为筛选性质。</p>
+<p>还有一种对δ(t)的定义是这样的</p>
+<div class="arithmatex">\[\lim_{\omega\to+\infty}\frac{\sin(\omega t)}{\pi t}=\delta(t)\]</div>
+<p>这个怎么证明也是超纲的，这里不展开，但是胡浩基老师的课讲到了这一点，仅作了解。</p>
+<p>还有一种对δ(t)的定义是对u(t)求导，这里需要补充单位阶跃信号u(t)。其实离散那里介绍了u[n]之后u(t)长什么样也比较好猜</p>
+<div class="arithmatex">\[
+u(t)=
+\begin{cases}
+1, t&gt;0\\
+0, t&lt;0
+\end{cases}
+\]</div>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021026247.png" /></p>
+<p>0处是一个跳变的间断点，0处的值其实是任意的，根据前面提到的拓展的函数相等的定义，0处取任意值都可以，我们不研究这个。当你对u(t)求导，很明显0那个位置的导数会变成无穷，而除此以外其他地方导数都为0。如果学过模电可能知道单位阶跃响应的导数是单位冲激响应，这和单位阶跃信号求导是单位冲激信号其实是相通的，后面会介绍。</p>
+<p>当然连续信号也有常函数x(t)=1，就是一根横线了。还有三角函数，这就很熟悉了。三角函数的周期没有离散的那么多约束，<span class="arithmatex">\(x(t)=\sin(\omega_0 t)\)</span>的周期就是<span class="arithmatex">\(2\pi/\omega_0\)</span>，如果角频率为ω1和ω2的三角函数相加，也要满足ω1/ω2是有理数才是周期的。</p>
+<p>用连续信号u(t)表示各种方形的信号就很容易了，对于符号函数sgn(t)，可以写为2u(t)-1或者u(t)-u(-t)</p>
+<div class="arithmatex">\[
+sgn(t)=
+\begin{cases}
+1, t&gt;0\\
+-1, t&lt;0\\
+\end{cases}
+\]</div>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021036239.png" /></p>
+<p>符号函数在0处也是不定义的，这和离散的情况不同，所以它表达式也和离散的那个有一些差异。</p>
+<p>还有一个重要的连续信号，Sa(t)，抽样信号</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021059466.png" /></p>
+<p>它的图象就是一个峰值逐渐减小的正弦曲线，因为它以1/t 为包络线。除此以外可以用sin(t) 上某点到原点的斜率来理解它，显然极值就在这条线相切的地方，而不是sin(t)达到极值时的位置（除了t = 0）。它的零
+点也就是分子为0 的点。另外它是一个偶函数，因为sin(t)和t 都是奇函数，奇函数相除得到偶函数。</p>
+<p>这个东西和方波构成变换对，常用作低通滤波器（保留低频信号，抑制高频信号的一个系统），后面会介绍这是什么意思。</p>
+<p>它有以下积分性质</p>
+<div class="arithmatex">\[
+\int_{-\infty}^{+\infty}\frac {\sin(\omega t)}{\pi t}=
+\begin{cases}
+1, &amp; \omega&gt;0\\
+0, &amp; \omega=0\\
+-1, &amp; \omega&lt;0
+\end{cases}
+\]</div>
+<h2 id="_6">系统的性质<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>系统是接受输入信号然后发出输出信号的东西，你把x(t)送进去，就得到了y(t)。注意这里的x和y不是自变量，而是代表输入和输出信号。有些时候这两个信号存在一些关系，比如y(t)=2x(t)，还是要注意和初高中的函数区分开，x和y并不是一个数，而是说我任意地扔进去一个信号，它还给我的信号具备每一项都变成原来的两倍的特征。比如说我扔进去u(t)，还给我2u(t)。</p>
+<p>输入信号x也称激励，输出信号y也称响应。</p>
+<p>信号与系统这门课研究线性时不变(linear time-invariant，或简写为LTI)系统，什么意思后面会解释。不是所有的系统都是LTI系统，所以我们需要认识系统的性质并判断</p>
+<p>后面的很多东西，比如系统的性质，对于离散和连续是共通的，为了节省就只写连续的情况，离散的情况只需要把所有x(t)替换成x[n]即可</p>
+<p>我们定义系统的一些性质</p>
+<h3 id="_7">线性性<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>说一个系统是线性系统（或说它具有线性性）意味着满足齐次性和叠加性。</p>
+<ol>
+<li>x(t)→y(t)，则ax(t)→ay(t)(齐次性homogeneous property)</li>
+<li>x1(t)→y1(t)，x2(t)→y2(t)，则x1(t)+x2(t)→y1(t)+y2(t)(叠加性additive property)</li>
+</ol>
+<p>或者直接写为ax1(t)+bx2(t)→ay1(t)+by2(t)</p>
+<p>线性系统的判据为：①每一项都有x②每一项的x都是一次</p>
+<p>比如y(t)=x(t)+1就不是线性系统，当输入改成ax(t)，输出变成ax(t)+1，这和a(x(t)+1)不总是相同</p>
+<p>根据是否满足齐次性和是否满足叠加性可以把系统划分为四个类型。线性系统好举例，比如y(t)=kx(t)，这种既满足齐次性也满足叠加性。而满足齐次性不满足叠加性的需要稍微构造一下，比如<span class="arithmatex">\(y(t)=\dfrac {x^2(t)}{x'(t)}\)</span>。不满足齐次性也不满足叠加性的也比较容易，比如y(t)=x(t)+1。在实函数部分难以找到满足叠加性却不满足齐次性的系统，复函数有，比如y(t)=Re(x(t))，当a=j的时候不满足，可以自己验证一下。那么结论就是，判断一个系统是否是线性系统时先看叠加性，如果不满足那就判断它不满足线性性，如果满足的话就认为它满足线性性，就这样就行，应付考试范围的应该够了。</p>
+<p>e^x(t)不是线性系统，因为它可以展开成1+x+...，这里有1这一项不包含x，而且后面的项也不是一次</p>
+<h3 id="_8">时变/时不变<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>非时变系统的特征：</p>
+<p>对于x(t)→y(t)，有x(t-t0)→y(t-t0)</p>
+<p>一种是把括号里的东西作为一个整体减去t0(即把x(t)替换为x(t-t0))，另一种变换是把t替换为t-t0，你就看这两种变换的表达式是否一样，如果一样就是时不变，如果不一样就是时变</p>
+<p>你看y(t)=x(2t)，输入的是x(t)得到y(t)=x(2t)，如果你换成输入x(t-t0)，那么得到y(t)=x(2t-t0)，是把x括号里的东西整体减去t0。而把t替换为t-t0也就是y(t-t0)，表达式是x(2(t-t0))=x(2t-2t0)，这和之前那个不一样，所以是时变系统。</p>
+<p>x(t)→y(t)=x(3-t)是时变系统，因为当x1(t)=x(t-t0)，x1(t)→x(3-t-t0)，而y(t-t0)=x(3-(t-t0))=x(3-t+t0)，和x1(t)映射结果不同，因此这是时变系统</p>
+<p>x(t)→y(t)=tx(t)是时变系统，x1(t)=x(t-t0)→tx1(t)=tx(t-t0), y(t-t0)=(t-t0)x(t-t0)</p>
+<p>x(t)→y(t)=x(t-1)是时不变系统，x1(t-t0)→x(t-1-t0)，y(t-t0)=x(t-t0-1)</p>
+<p>写成符号就是y(t)=x(g(t))的时候，x1(t)=x(t-t0)→x(g(t)-t0)，y(t-t0)=x(g(t-t0))</p>
+<p>非时变系统的判据为：①t只在x括号内②x括号里的t只能以t+c的形式出现，c是常数，不能以-t, 2t, e^t等其他形式出现</p>
+<h3 id="_9">记忆，因果，稳定，可逆<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>无记忆系统意味着只通过x(t)或x[n]来得到y(t)，y[n]，不能出现其他（过去或将来的信号）。无记忆系统一定是因果系统</p>
+<p>因果系统是y(t)或y[n]只依赖过去或现在的x，不能出现将来的x，比如x(t+1)。非因果系统无法在物理上实现，这里的实现指的是那种实时处理，毕竟你无法得到未来发生的数据，但如果你说全部保存下来再处理的话，那种是可以的</p>
+<p>有记忆系统不一定是因果系统，因为有记忆系统可能用到过去的信号，也可以用到将来的信号。</p>
+<p>稳定系统就是输入有界则输出有界</p>
+<p>如果任何两个不同的x信号经过系统的y响应都不一样，那么这个系统就是可逆系统。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021208636.png" /></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">系统表达式</th>
+<th style="text-align: center;">记忆</th>
+<th style="text-align: center;">因果</th>
+<th style="text-align: center;">线性</th>
+<th style="text-align: center;">时不变</th>
+<th style="text-align: center;">稳定</th>
+<th>可逆</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">y(t)=<span class="arithmatex">\(e^{x(t)}\)</span></td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td>√</td>
+</tr>
+<tr>
+<td style="text-align: left;">y[n]=x[n]x[n-1]</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td>×</td>
+</tr>
+<tr>
+<td style="text-align: left;">y(t)=<span class="arithmatex">\(\frac {dx}{dt}\)</span></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">有争议</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">×</td>
+<td>×</td>
+</tr>
+<tr>
+<td style="text-align: left;">y[n]=x[n−2]−x[n+1]</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td>×</td>
+</tr>
+<tr>
+<td style="text-align: left;">y(t)=sin(4t)x(t)</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">√</td>
+<td>有争议</td>
+</tr>
+<tr>
+<td style="text-align: left;">y[n]=x[4n]</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">√</td>
+<td>×</td>
+</tr>
+<tr>
+<td style="text-align: left;">y[n]=x[n-2]+x[2-n]</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">√</td>
+<td>×</td>
+</tr>
+<tr>
+<td style="text-align: left;">y(t)=<span class="arithmatex">\(\int_{-\infty}^{2t}x(\tau)d\tau\)</span></td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">×</td>
+<td>√</td>
+</tr>
+<tr>
+<td style="text-align: left;">y(t)=x(t/3)</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">√</td>
+<td>√</td>
+</tr>
+<tr>
+<td style="text-align: left;">y[n]=<span class="arithmatex">\(\begin{cases}x[n], n&gt;0\\ 0, n=0\\ -x[n], n&lt;0 \end{cases}\)</span></td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">√</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">√</td>
+<td>×</td>
+</tr>
+</tbody>
+</table>
+<p>说一下有争议的，dx/dt这个求导，根据微积分里的表达式，它可以用到t-和t+的信号，但是如果本来有导数，那么x(0)-x(0-)也能把x'(0)求出来，不一定要用到0+的值，所以这个有争议，也不会考这个</p>
+<p>sin(4t)x(t)那个的争议点在于，当sin为0的时候，无法通过y来求出x。但是如果用那个推广的函数相等的定义，就算x去掉那些无法被确定的点得到的也是同一个x，所以这个有争议，不会这样考。</p>
+<p>积分的那个我说一下</p>
+<p>第一种是把t换成t-t0，就是<span class="arithmatex">\(\int_{-\infty}^{2(t-t_0)}x(\tau)d\tau\)</span></p>
+<p>第二种是把x括号里的东西作为整体减去t0，就是<span class="arithmatex">\(\int_{-\infty}^{2t}x(\tau-t_0)d\tau\)</span>，这个用变量代换，令τ-t0=λ，就变成<span class="arithmatex">\(\int_{-\infty}^{2t-t_0}x(\lambda)d\lambda\)</span>，积分限和上面的不一样，所以整体也不一样，是时变的。</p>
+<p>介绍一下系统的串联和并联</p>
+<p>串联就是x(t)经过一个系统得到z(t)，然后把z(t)作为第二个系统的输入得到y(t)，那么这样就叫串联</p>
+<p>并联就是x(t)经过一个系统得到y1(t)，同时x(t)也被送入第二个系统得到y2(t)，那么y1(t)+y2(t)作为最终的输出就意味着两个系统并联了</p>
+<p>两个LTI系统的串联仍然是线性系统，两个LTI系统的并联仍然是线性系统。比如由于一阶导是LTI的，所以高阶导数也是LTI的。</p>
+<h2 id="lti">LTI系统<a class="headerlink" href="#lti" title="Permanent link">&para;</a></h2>
+<p>LTI系统，即线性(linear)时不变(time-invariant)系统，满足线性系统和时不变系统的要求，是最简单的一种系统，简单到我只要知道一个非零x(t)对应的y(t)，那么就可以直接得到任何x(t)对应的y(t)</p>
+<p>研究的时候，把δ[n]称为单位冲激序列，把δ[n]对应的输出h[n]称为单位冲激响应。注意h[n]是零状态响应，不考虑初始储能。除此以外单位阶跃响应也是零状态响应</p>
+<p>对于任意x[n]，进行同一个LTI的时候，得到的结果可以用x[n]<span class="arithmatex">\(\ast\)</span>h[n]表示，这个“<span class="arithmatex">\(\ast\)</span>”是（线性）卷积，后面介绍卷积</p>
+<p>h[n]是LTI系统的唯一标识，如果两个LTI系统的h[n]一样，那么它们就是一样的，但是如果不是LTI系统，那么就不能这么说，非LTI系统连h[n]的概念都没有，因为δ[n]在不同时候输入得到的结果都可能是不一样的。</p>
+<div class="arithmatex">\[
+\begin{align}
+对LTI系统的等价条件(时域)\\
+无记忆性等价条件&amp;:h(t)=k\delta(t)\\
+可逆等价条件&amp;:\exists h_1(t), h(t)\ast h_1(t)=\delta(t)\\
+因果等价条件&amp;:\forall t&lt;0, h(t)=0\\
+稳定等价条件&amp;:\int_{-\infty}^{+\infty}|h(t)|dt&lt;\infty\\
+\end{align}
+\]</div>
+<h3 id="_10">直观理解卷积<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>在这里理解卷积是很直观的，对于单位脉冲序列产生的单位脉冲响应，如果移动单位脉冲序列，比如从δ[n]变成δ[n-1]，那么得到的响应就是h[n-1]。如果数乘δ[n]，输入aδ[n]，那么得到的结果就是ah[n]</p>
+<p>任意的x[n]，都可以用经过平移和数乘后的δ[n]的和来表示，于是任意x[n]的输出，也就可以用相应平移和数乘后的h[n]的和来表示。如果用一个数组表示h[n]，比如(1, 2, 3, 4)，那么对于输入为u[n]来说，就相当于(1, 2, 3, 4, 0...)+(0, 1, 2, 3, 4, 0...)+(0, 0, 1, 2, 3, 4, 0...)，括号最左侧的数字对应下标0</p>
+<p>有个卷积公式，<span class="arithmatex">\(x[n]\ast h[n]=\sum_{k=-\infty}^{+\infty}x[k]h[n-k]\)</span>，也就是平时经常看到的积分的那个对于连续而言的卷积公式的样子，这里是对于离散的。</p>
+<p>要证明这个，首先要证明<span class="arithmatex">\(x[n]=\sum_{k=-\infty}^{+\infty}x[k]\delta[n-k](其实也就是x[n]\ast \delta[n]=x[n])\)</span></p>
+<p>这个其实是显然的，n-k其实就是把δ[n]右移k位，到达x[k]本来应该在的那个位置，然后再乘了x[k]的倍数。前面离散信号部分也讲过</p>
+<p>得到这个之后再结合线性时不变的特征，就能直接得到那个卷积公式了，把δ换成h就行</p>
+<p>所以如果是原本的卷积公式，算法就跟之前一样，就是位移，数乘，叠加</p>
+<p>然后还可以改变一下卷积公式的形式，用另一种方式可视化</p>
+<p><span class="arithmatex">\(x[n]\ast h[n]=\sum_{k=-\infty}^{+\infty}x[k]h[n-k]=\sum_{k=-\infty}^{+\infty}x[k]h[-(k-n)]\)</span></p>
+<p>第一种形式可以解读为，求出k固定的时候n的样子再叠加，每一个经过位移和数乘的序列，就是k固定时的样子。而第二种形式可以解读为，求出n固定的时候所有x[k]h[-(k-n)]的结果然后加起来。要直观表现就是把h的序列翻转过来（因为有符号），然后想求卷积后y的第n项，就看翻转过来的h移动n位之后的，和x[k]的序列分别相乘相加得到的值。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021215632.png" /></p>
+<p>注意是h[n]反转，然后被平移的也是h[n]</p>
+<p>对于有限长度的序列的卷积，用列表法比较容易</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021644512.png" /></p>
+<p>就按副对角线求和就行</p>
+<p>本来就是一样的东西，我觉得用哪个来想都很快。可以参考<a href="https://www.bilibili.com/video/BV1Vd4y1e7pj/">3B1B讲卷积的视频</a></p>
+<p>3B1B那个是从X+Y为一个固定值的视角来看卷积的，但我认为要理解卷积必须要讲LTI系统。位移，数乘，叠加是卷积的本质。</p>
+<p>对于连续信号，如果能得到矩形的响应，就可以通过把模拟信号用矩形来近似，从而近似出响应，取的方波越小近似就越精确</p>
+<p>要定义一个<span class="arithmatex">\(\delta_\Delta(t)\)</span>，宽度是Δ，高度是1/Δ，当Δ→0时就是冲激函数δ(t)</p>
+<p>然后有<span class="arithmatex">\(x_\Delta(t)=\sum_{k=-\infty}^{+\infty}x(k\Delta x)\delta_\Delta(t-k\Delta)\cdot \Delta\)</span></p>
+<p>举例说明，比如对于k=0处，由于<span class="arithmatex">\(\delta_\Delta(t) \cdot \Delta\)</span>相当于高度为1宽度为Δ的矩形，所以再乘个x(0)就是图里的形状了，注意这个表达式并不是表示面积而是表达这个矩形</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021218847.png" /></p>
+<p>另外认为当Δ→0，<span class="arithmatex">\(x_Δ(t)=x(t)\)</span>，其实也就是<span class="arithmatex">\(x(t)\ast \delta(t)=x(t)\)</span></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021219883.png" /></p>
+<p>这部分就是证明x(t)→<span class="arithmatex">\(x(t)\ast h(t)\)</span></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021220502.png" /></p>
+<p>务必注意用以下判据来做的时候必须先判断是否是LTI系统，比如y(t)=tx(t)这种就不能用这种来判断，输入有限，输出有限才是判断稳定的根本，当x有限的时候，t拉到无穷大，那y也就无穷大了</p>
+<h3 id="t">δ(t)的性质<a class="headerlink" href="#t" title="Permanent link">&para;</a></h3>
+<p>δ(t)最本质的定义是筛选性质，即<span class="arithmatex">\(\int_{-\infty}^{+\infty}f(t)\delta(t)=f(0)\)</span>，要求f(t)不是奇异函数。</p>
+<div class="arithmatex">\[
+\begin{align}
+\delta(t)&amp;=\lim\limits_{\Delta\to0}\delta_\Delta(t)\\
+\int_{-\infty}^{+\infty}\delta(t)dt&amp;=1\\
+\int_{-\infty}^{+\infty}x(t)\delta(t)dt&amp;=x(0)\\
+\int_{-\infty}^{+\infty}x(t)\delta(t-t_0)dt&amp;=x(t_0)\\
+x(t)\delta(t)&amp;=x(0)\delta(t)\\
+x(t)\delta(t-t_0)&amp;=x(t_0)\delta(t-t_0)\\
+\delta(t)&amp;=\delta(-t)\\
+\delta(at)&amp;=\frac 1 {|a|}\delta(t)\\
+\delta(at+b)&amp;=\frac 1 {|a|}\delta(t+\frac b a)\\
+\delta(f(t))&amp;=\sum\limits_{f(t_i)=0}\frac 1 {|f'(t_i)|}\delta(t-t_i) \\
+\delta'(at)&amp;=\frac 1 {|a|}\frac 1 a\delta'(t)\\
+\delta^{(k)}(at)&amp;=\frac 1 {|a|}\frac 1 {a^k}\delta^{(k)}(t)\\
+函数相等的由f_1(t)=f_2(t)&amp;\Leftrightarrow\int_{-\infty}^{+\infty}y(t)f_1(t)dt=\int_{-\infty}^{+\infty}y(t)f_2(t)dt推导得到\\
+f(t)\ast \delta(t)&amp;=f(t)
+\end{align}
+\]</div>
+<p>证明<span class="arithmatex">\(\delta(at)=\frac 1 {|a|}\delta(t)\)</span>也要用到广义函数相等的定义以及筛选性质，演示a&gt;0的证明，当a&lt;0的时候多一个负号，因为如果变量替换u=at(a&lt;0)的话，积分限会反过来，形式就不一样，所以需要多凑一个负号。</p>
+<p>务必注意对于冲激函数做尺度变换，它的“面积”并不是不变的。比如你用δ(2t)，看起来宽度是被压窄了，但是它的高度也相应等倍数变小了，并不是保持“面积”不变</p>
+<div class="arithmatex">\[
+\begin{align}
+\int_{-\infty}^{+\infty}y(t)\delta(at)dt&amp;\overset{\text{u=at}}{=}\int_{-\infty}^{+\infty}y(u/a)\delta(u)d(u/a)\\
+&amp;=\frac 1 a\int_{-\infty}^{+\infty}y(u/a)\delta(u)d(u)\\
+&amp;=\frac 1 ay(0/a)\\
+&amp;=\frac 1 a y(0)\\
+&amp;=\frac 1 a\int_{-\infty}^{+\infty}y(t)\delta(t)dt\\
+&amp;=\int_{-\infty}^{+\infty}y(t)\frac 1 a\delta(t)dt
+\end{align}
+\]</div>
+<p>所以和直观的f(2t)导致压缩的直觉相反，δ(t)的高度并不会变成原来的两倍，而是变成原来的&frac12;。如果要用函数变换求变换后的位置，那其实只要确定它的位置和高度即可，位置可以直接变换得到，而高度变成1/|a|</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021225326.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021226809.png" /></p>
+<h3 id="_11">连续时间卷积的计算<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>连续函数的卷积公式</p>
+<div class="arithmatex">\[
+x(t)\ast h(t)=\int_{-\infty}^{+\infty}x(\tau)h(t-\tau)d\tau
+\]</div>
+<p>求<span class="arithmatex">\(e^{-bt}u(t)\ast e^{-at}u(t)\)</span></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021227486.png" /></p>
+<p>直接用卷积公式算过程就是这样。我一开始做的时候对于u(τ)和u(t-τ)感觉无从下手，后面看了才知道只需要分类讨论就行，它只能取1和0。最终积分出来是一个关于t的函数，可以用u(t)这样来简化表达式，不用写分段了</p>
+<p>下面这种简单函数化成面积更好算，我借这个题说明了卷积的卷（反转）和积（相乘）是怎么体现的，从连续函数的角度来说</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021228858.png" /></p>
+<p>除非被卷积的两个函数中有冲激函数，否则结果一定是连续的函数</p>
+<p>用这种反转再积分的思路很容易能推导出来这样的结论</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021229660.png" /></p>
+<p>来一道考试难度的题目</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021229670.png" /></p>
+<p>其实这种方波的，只需要算出关键点的位置就行，肯定是用直线连起来的，不用把表达式写出来。</p>
+<p>来一道麻烦一点的题</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021230224.png" /></p>
+<p><a href="https://www.bilibili.com/video/BV1g94y1Q76G/?p=11&amp;t=3628">本题讲解的链接</a></p>
+<p>然后老师算的时候还算了两个半周期的情况(0, T/2和T/2, T)，其实根据对称性只需要求一个半周期(0, T/2)之内的情况就够了，因为剩下的那半个周期直接对称就完事了</p>
+<p>卷积有交换律和结合律，把这两个一起用就可以得到对于多个项的卷积你可以任意调位置，从哪里开始卷积都可以</p>
+<p>分配律和乘法一样的</p>
+<p><span class="arithmatex">\(x(t)\ast u(t)\)</span>是从负无穷到t的变限积分，<span class="arithmatex">\(x[n]\ast u[n]\)</span>是从负无穷到n的累加</p>
+<p>定义了一个冲激偶函数</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021235712.png" /></p>
+<p>另外δ'(t)是奇函数，因为δ(t)是偶函数所以求导是奇函数了</p>
+<p><span class="arithmatex">\(\frac {dx(t)}{dt}=x(t)\ast \delta'(t)\)</span>，因为微分器d/dt是LTI系统，而且单位冲激函数经过它得到的单位冲激响应是δ'(t)，所以x(t)输入之后得到的响应就可以用x(t)卷积单位冲激响应来表示</p>
+<div class="arithmatex">\[
+\frac {d[x(t)\ast h(t)]}{dt}=[x(t)\ast h(t)]\ast\delta'(t)=[x(t)\ast \delta'(t)]\ast h(t)=\frac {dx(t)}{dt}\ast h(t)
+\]</div>
+<p>用上面提到的性质可以证明，LTI系统的单位冲激响应等于单位阶跃响应求导，另外单位阶跃响应是单位冲激响应的变限积分。</p>
+<div class="arithmatex">\[
+\begin{align}
+y(t)&amp;=x(t)\ast h(t)\\
+u(t)\ast h(t)&amp;=y_1(t)\\
+\frac {du(t)}{dt}\ast h(t)&amp;=\delta'(t)\ast u(t)\ast h(t)\\
+&amp;=\delta'(t)\ast y_1(t)\\
+&amp;=\frac {dy_1(t)}{dt}
+\end{align}
+\]</div>
+<div class="arithmatex">\[
+\begin{align}
+x(t+t_0)\ast h(t-t_0)&amp;=x(t)\ast h(t)\\
+x(t+a)\ast h(t+b)&amp;=y(t+a+b), y(t)=x(t)\ast h(t)
+\end{align}
+\]</div>
+<p>为什么呢，其实很显然，首先支撑范围是不变的，就是你x整体左移，h整体右移，最左边加最左边和最右边加最右边都是一样的。然后卷积得到的值其实和它们的绝对位置没有关系，只跟它们有重叠部分的那些地方有关系，所以最后的值也是一样的</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021238598.png" /></p>
+<p>其实熟练了，你就知道卷积一个δ相当于把x往左往右移动而已，δ(t-t0)意味着相对于原来的位置向右偏移了t0。其实你可以把δ(t)想象成一个手柄，然后卷积的时候就好像你用鼠标拖拽这个柄，函数也相应地移动，PPT里移动文本框的这种感觉。</p>
+<p>如果要求卷积的逆运算，对于离散的情况是容易的，需要用到的结论是x[n]长度为N1，h[n]长度为N2的话，那么卷积之后长度就是N1+N2-1，根据这个可以反推未知的序列的长度。然后你就可以一个一个列方程来算，首尾可以直接得到，中间项就稍微麻烦一点就设一下解一下就行。</p>
+<p>但是对于连续的来说就比较麻烦，需要用到傅里叶变换</p>
+<p>解释一下前面提到的LTI系统是因果系统的等价条件</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021241846.png" /></p>
+<p>如果h(t)在0以左没有值，那么卷积的时候，每一个x(t)其实就只有负无穷到t0的需要积分，但是如果h(t)在0左边也有值，那么卷积的时候就会在t0右边还有需要积分的部分</p>
+<h2 id="fs">傅里叶级数(FS)<a class="headerlink" href="#fs" title="Permanent link">&para;</a></h2>
+<p>傅里叶级数英文Fourier Series，首字母为FS。也有人写为CFS，这个C是Continuous time也就是连续时间的意思，连续时间傅里叶级数，和后面DFS，离散时间傅里叶级数区分开</p>
+<p>傅里叶级数针对周期函数</p>
+<p>傅里叶级数是在解决热传导问题的时候提出来的，热传导问题是给一个偏微分方程求解，现在已知方程的正弦，余弦和常数特解，希望得到通解。傅里叶提出可以通过把任意周期函数分解成正弦，余弦和常数的和的形式</p>
+<div class="arithmatex">\[
+f(t)=a_0+\sum\limits_{k=1}^{+\infty}a_k\cos(k\omega_0t)+\sum\limits_{k=1}^{+\infty}b_k\sin(k\omega_0t)
+\]</div>
+<p>于是可以据此得到热传导问题的通解，热传导问题这里不展开</p>
+<p>傅里叶本人并没能严格证明取等条件，后来迪利克雷研究出了一个充分条件（即满足这些条件就可以写这个等号，但是也有能写等号但不满足这些条件的情况）</p>
+<p>如果f(x)满足①一个周期内绝对可积②一个周期内有限个第一类间断点（可去间断点或跳跃间断点）且没有无穷间断点③一个周期内有限个极值点。</p>
+<p>一般工程上遇到的波形都满足这三个条件，可以用级数展开</p>
+<p>傅里叶级数是对周期函数的展开，周期函数本身有一个最小正周期T0，这个T0对应的ω定义为基波频率ω0，而2ω0，3ω0等角频率被称为高次谐波频率。其实就是模电里的说法，B0是直流分量，ω0的（包含sin和cos）称为基波分量，更高的称为高次谐波分量（比如二次，三次谐波分量）</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021244041.png" /></p>
+<p>知道了ω0的含义，接下来就是要问如何得到系数。这里要引入正交基的概念，定义正交基之前要先定义内积和基。</p>
+<p><img alt="Snipaste_2026-07-02_12-45-04.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021245472.png" /></p>
+<p>满足这些规则的运算就可以被称为内积，常见的内积有线性代数里的那种两个向量点乘的，而傅里叶级数用到的是积分<span class="arithmatex">\(\int_0^{T_0}f(t)\overline{g(t)}dt\)</span>作为内积</p>
+<p>接下来定义什么是基，在这里基是可以经过线性组合表示任何周期函数的一组函数，且线性无关。傅里叶级数里就是用了sin和cos作为基底。</p>
+<p>定义了内积和基，正交基就是一组两两内积为0的基，而这里选的若干函数正好满足这个需求</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021245905.png" /></p>
+<p>而自己和自己内积得到的结果非零，比如<span class="arithmatex">\(\int_0^{T_0}1dt=T_0\)</span>，<span class="arithmatex">\(\int_0^{T_0}\sin^2(k\omega_0t)dt=\frac {T_0} 2\)</span>，<span class="arithmatex">\(\int_0^{T_0}\cos^2(k\omega_0t)dt=\frac {T_0} 2\)</span></p>
+<p>根据这样的性质，很容易得到傅里叶级数中的系数，这其实是利用了正交基的特性</p>
+<div class="arithmatex">\[
+f(t)=a_0+\sum\limits_{k=1}^{+\infty}a_k\cos(k\omega_0t)+\sum\limits_{k=1}^{+\infty}b_k\sin(k\omega_0t)
+\]</div>
+<p><span class="arithmatex">\(\int_0^{T_0}f(t)\cdot 1dt=\int_0^{T_0}f(t)\cdot a_0dt=a_0T_0\)</span>(和1做内积得到1的系数)</p>
+<p><span class="arithmatex">\(\int_0^{T_0}f(t)\cdot \cos(k\omega_0t)dt=\int_0^{T_0}\cos^2(k\omega_0t)\cdot a_kdt=a_k\frac{T_0} 2\)</span>(和cos做内积得到cos的系数)</p>
+<p><span class="arithmatex">\(\int_0^{T_0}f(t)\cdot \sin(k\omega_0t)dt=\int_0^{T_0}\sin^2(k\omega_0t)\cdot b_kdt=b_k\frac{T_0} 2\)</span>(和sin做内积得到sin的系数)</p>
+<p>于是将一个周期函数展开成傅里叶级数的步骤就是：①确定这个周期函数的最小正周期，求出T0和ω0②写出带系数的展开式③将f(t)依次和1，sin(kω0t)，cos(kω0t)做内积，就是算积分，这一步最麻烦④解出系数写出完整展开式</p>
+<p>傅里叶级数除了三角形式之外，还有复数形式。提出复数形式是为了让系数计算不用算三个，只需要算一个就行。不过更本质的其实是，e^{st}是后续各种变换的基。</p>
+<div class="arithmatex">\[
+x(t)=\sum\limits_{k=-\infty}^{+\infty}a_ke^{jk\omega_0t}
+\]</div>
+<div class="arithmatex">\[
+\int_0^{T_0}x(t)e^{-jk\omega_0t}dt=a_kT_0
+\]</div>
+<p>把a_k写成c_k也行，看个人习惯，表达的都是那个意思</p>
+<p>本质上是把正交基从1,sin(kω0t),cos(kω0t)换成了e^(jkω0t)。但你可能会疑问这里怎么内积的时候用的是共轭复数，是因为复内积的定义里就是要加一个共轭的，用三角的话都是实数就没有这个变化</p>
+<p>要实现系数互推也简单，利用欧拉公式得到</p>
+<div class="arithmatex">\[
+e^{jk\omega_0t}+e^{-jk\omega_0t}=2\cos(k\omega_0t)
+\]</div>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021247721.png" /></p>
+<p>于是k&gt;0时<span class="arithmatex">\(c_k=\dfrac {a_k-jb_k} 2\)</span>，k&lt;0时<span class="arithmatex">\(c_k=\dfrac {a_{-k}+jb_{-k}} 2\)</span></p>
+<p>得到这个关系之后用反解ak和bk也就很容易了<span class="arithmatex">\(a_k= c_k+c_{-k}, b_k=j(c_k-c_{-k})\)</span></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021248412.png" /></p>
+<p>这里老师写的是Bk做cos的系数，不过无所谓，你自己选好用哪个就行。注意ω0和T之间存在关系，不要忘了化简。sin的系数全为0，因为原本是一个偶函数那就不会有奇函数分量了。</p>
+<p>傅里叶级数的指数形式是更常用的，因为和后续的傅里叶变换等表达式更加一致，而且也不用考虑sin和cos的问题，统一用指数来做正交基</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021259233.png" /></p>
+<p>注意到这里还没完，当k=0的时候你算一个极限得到0处的常数的值</p>
+<p>最终化简完是一样的</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021259836.png" /></p>
+<p>指数形式的傅里叶级数有人用a_k有人用c_k，无所谓的，你知道都是那个意思就行</p>
+<p>除了三角和指数作为正交基之外，还有其他的正交基比如哈尔小波，勒让德多项式。信号处理部分好像还有一种叫小波分析的，可以自行了解</p>
+<h2 id="ctft">连续时间傅里叶变换(CTFT)<a class="headerlink" href="#ctft" title="Permanent link">&para;</a></h2>
+<p>Continuous time fourier transform首字母CTFT</p>
+<h3 id="_12">定义<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>傅里叶变换针对非周期函数，其实就是把T当作无穷大了，那么就没有具体的ω0了，所以就要用频率连续的来表示</p>
+<p>这是傅里叶级数</p>
+<div class="arithmatex">\[
+x(t)=\sum\limits_{k=-\infty}^{+\infty}c_ke^{jk\omega_0t}
+\]</div>
+<p>把<span class="arithmatex">\(c_k\)</span>写成表达式得到</p>
+<div class="arithmatex">\[
+x(t)=\sum\limits_{k=-\infty}^{+\infty}(\frac 1 {T_0}\int_{-T_0/2}^{T_0/2}x(t)e^{-jk\omega_0t}dt)e^{jk\omega_0t}
+\]</div>
+<p>经过乘ω0除ω0得到</p>
+<div class="arithmatex">\[
+x(t)=\sum\limits_{k=-\infty}^{+\infty}(\frac 1 {\omega_0T_0}\int_{-T_0/2}^{T_0/2}x(t)e^{-jk\omega_0t}dt)e^{jk\omega_0t}\omega_0=\sum\limits_{k=-\infty}^{+\infty}(\frac 1 {2\pi}\int_{-T_0/2}^{T_0/2}x(t)e^{-jk\omega_0t}dt)e^{jk\omega_0t}\omega_0
+\]</div>
+<p>当ω0→0，就从求和变成了积分，ω0当成dω0，T0变成无穷</p>
+<div class="arithmatex">\[
+x(t)=\int_{-\infty}^{+\infty}(\frac 1 {2\pi}\int_{-T_0/2}^{T_0/2}x(t)e^{-j\omega t}dt)e^{j\omega t}d\omega=\int_{-\infty}^{+\infty}(\frac 1 {2\pi}\int_{-\infty}^{+\infty}x(t)e^{-j\omega t}dt)e^{j\omega t}d\omega
+\]</div>
+<p>令<span class="arithmatex">\(X(\omega)=\int_{-\infty}^{+\infty}x(t)e^{-j\omega t}dt\)</span>即可写出以下常用形式</p>
+<div class="arithmatex">\[
+x(t)=\frac 1 {2\pi}\int_{-\infty}^{+\infty}X(\omega)e^{j\omega t}d\omega
+\]</div>
+<p>从x(t)到X(ω)称为正变换，是从时域到频域，平时说的傅立叶变换就是这个。从X(ω)到x(t)称为逆变换，是从频域到时域。变换公式就是这两个</p>
+<p>X(ω)和<span class="arithmatex">\(c_k\)</span>在比例上是相同的，更具体地说，如果你取周期函数x(t)的单周期做傅里叶变换得到X(jω)，那么原本周期函数的傅里叶级数的系数<span class="arithmatex">\(c_k=\frac 1 {T_0}X(jk\omega_0)\)</span>，所以其实周期函数的傅里叶级数都可以用连续时间傅里叶变换来求了之后再去求系数。从这里其实就已经可以看出后面DFT和DTFT的关系了，其实也是频域采样的结果，而且对于连续的都是使用“取单周期得到连续频谱再在连续频谱上取点得到离散频谱”的方式。</p>
+<p>不经过傅里叶级数也可以证明</p>
+<div class="arithmatex">\[
+x(t)=\int_{-\infty}^{+\infty}(\frac 1 {2\pi}\int_{-\infty}^{+\infty}x(t)e^{-j\omega t}dt)e^{j\omega t}d\omega
+\]</div>
+<p>需要用到调整积分顺序，把内部的t改成另一个变量以免和外部的t搞混等操作，我觉得比较麻烦就不记录了</p>
+<p>补充各项是实数还是复数</p>
+<p>FS</p>
+<ul>
+<li>时间变量 t：实数。</li>
+<li>频率变量：离散谐波次数k为整数，基频ω0​为实数。</li>
+<li>傅里叶系数：<ul>
+<li>指数形式：系数 cn​ 通常取复数（包含幅度和相位信息）。</li>
+<li>三角形式：系数 an,bn​ 对实函数为实数；若原函数为复函数，则也可为复数。</li>
+</ul>
+</li>
+<li>原函数 f(t)：可以是实数（常见于物理信号）或复数（数学推广）。</li>
+</ul>
+<p>CTFT</p>
+<ul>
+<li>时间变量 t：取实数（t∈R）。</li>
+<li>频率变量 ω（或 f）：取实数（ω∈R）。</li>
+<li>变换结果 F(ω)：通常取复数（即使原函数为实函数，其傅里叶变换也一般是复函数，包含幅度谱和相位谱）。</li>
+<li>原函数 f(t)：可以是实数（常见于工程应用）或复数（理论分析）。</li>
+</ul>
+<h3 id="_13">常用傅里叶变换<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+\begin{align}
+e^{-at}u(t)&amp;\overset{\mathcal{F}}{\longrightarrow}\frac 1 {a+j\omega}(a&gt;0)\\
+\delta(t)&amp;\overset{\mathcal{F}}{\longrightarrow}1\\
+1&amp;\overset{\mathcal{F}}{\longrightarrow}2\pi\delta(\omega)\\
+宽为\tau高为E的偶函数方波&amp;\overset{\mathcal{F}}{\longrightarrow}E\tau Sa(\frac \tau 2 \omega)=\dfrac {2E\sin(\frac \tau 2 \omega) }\omega\\
+\dfrac {\sin(\omega_ct)}{\pi t}&amp;\overset{\mathcal{F}}{\longrightarrow}宽为2\omega_c高为1的偶函数方波\\
+\cos(\omega_0t)&amp;\overset{\mathcal{F}}{\longrightarrow}\pi(\delta(\omega+\omega_0)+\delta(\omega-\omega_0))\\
+\sin(\omega_0t)&amp;\overset{\mathcal{F}}{\longrightarrow}\frac \pi j(\delta(\omega-\omega_0)-\delta(\omega+\omega_0))\\
+u(t)&amp;\overset{\mathcal{F}}{\longrightarrow}\frac 1 {j\omega}+\pi\delta(\omega)\\
+e^{j\omega_0t}\ast h(t)&amp;\overset{\mathcal{F}}{\longrightarrow}H(j\omega_0)e^{j\omega_0t}
+\end{align}
+\]</div>
+<p>这些公式都是直接记直接用，不要求掌握怎么推</p>
+<p>先看第一个，就是一个大于零指数衰减的原函数，然后1/(a+jw)通常用模长和辐角来表达，相当于幅频特性和相频特性了，1/(a+jw)的模是<span class="arithmatex">\(\dfrac 1 {\sqrt{a^2+\omega^2}}\)</span>，辐角是<span class="arithmatex">\(-\arctan(\dfrac \omega a)\)</span>。注意必须熟练掌握对复函数求模和辐角的方法，用上复数求模的性质。比如如果是分数的话那直接分子分母各自求模相除即可，没必要分母有理化然后写成a+bj的形式再求，那样太麻烦了。比如这里，1/(a+jω)，分子模长1，分母模长<span class="arithmatex">\(\sqrt{a^2+\omega^2}\)</span>，一除就好了。然后辐角其实也可以这样求，分子辐角0，分母辐角arctan(ω/a)，那相减就完事了。看到分数的X(jω)不要慌，不要分母有理化！另外看到相频特性也不要慌，它仅仅是<span class="arithmatex">\(e^{j()}\)</span>括号里的那一坨东西罢了，很好翻译成完整的复数表达式</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021305569.png" /></p>
+<p>幅频特性长这样的(ω绝对值小的时候值大，ω绝对值大的时候值小)就是低通滤波器low-pass filter。老师讲课的时候用X(jω)和我前面的X(ω)是同一个东西。自变量确实是ω，写成X(jω)是为了体现把X(s)的所有s换成jω</p>
+<p>对于这个|X(ω)|，ω=<span class="arithmatex">\(\pm\sqrt 3 a\)</span>的时候模长变为1/(2a)也就是最大值的一半，这时的ω称为截止频率，就是-3dB，学过模电的应该很熟悉了</p>
+<p>对于每个常用变换，都需要熟悉x(t)，X(jω)，以及幅频特性和相频特性</p>
+<p>第二个<span class="arithmatex">\(\delta(t)\overset{\mathcal{F}}{\longrightarrow}1\)</span>，证明的时候用上δ(t)的筛选性质就得到了，不过注意这个1是一个常函数而不是一个值</p>
+<p>第三个<span class="arithmatex">\(1\overset{\mathcal{F}}{\longrightarrow}2\pi\delta(\omega)\)</span>，反着推容易，用上傅里叶逆变换的公式然后也是用筛选性质就直接得到了，正着推需要用到之前提到的一个极限，<span class="arithmatex">\(\lim\limits_{\omega\to\infty}\dfrac {\sin(\omega t)}{\pi t}=\delta(t)\)</span></p>
+<p>第二条和第三条放一起记，是对称的</p>
+<p>第四和第五就是方波和Sa互为傅里叶变换，Sa就是sin(t)/t</p>
+<p>第四个推起来简单的，中途有一步用到欧拉公式。第五个用逆变换推就类似，如果正着推就比较麻烦。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021306018.png" /></p>
+<p>用的时候，知道方波和Sa对应，所以先把Sa写出来，那Sa里面肯定有个ω写上，然后把方波的边上的数字写进去，然后把方波面积作为Sa的系数。</p>
+<p>如果是已知频域是ASa(kω)需要反推原函数，先判断原函数是方波，然后直接确定边界是±k，然后就需要确定高度。由于它是平的，所以你只要知道0处的高度就行，又因为<span class="arithmatex">\(x(t)=\frac 1 {2\pi}\int_{-\infty}^{+\infty}X(\omega)e^{j\omega t}d\omega\)</span>，所以当t=0时就相当于对X(ω)做一个从负无穷到正无穷的积分再除以2pi就行。只要熟练应用sin(ωt)/t积分为pi即可</p>
+<p>第五个在用的时候有一个快速的方法，首先你知道它变换得到一个方波，而且根据sin里的系数直接把边界给写出来。而要确定高度的时候，我们只要找它在ω=0时的高度即可</p>
+<p>由<span class="arithmatex">\(X(\omega)=\int_{-\infty}^{+\infty}x(t)e^{-j\omega t}dt\)</span>，当ω=0，相当于直接对x(t)从负无穷到正无穷积分，然后根据sin(ωt)/t从负无穷到正无穷积分为pi直接写出高度即可</p>
+<p><span class="arithmatex">\(\int_{-\infty}^{+\infty}x(t)dt=X(0), \int_{-\infty}^{+\infty}X(\omega)d\omega=\frac 1 {2\pi}x(0)\)</span></p>
+<p>总是更加喜欢方波，因为它实际上只有两个参数，而且0部分的值可以用来参考。实际上只需要记忆时域是方波和时域是sin/t形式的正变换怎么做即可，遇到了要求反变换的时候直接用对偶性做正变换然后再除以2pi即可，由于这里都是偶函数，所以翻转前后一样。所以没有必要再反推，只需要正推即可。</p>
+<p>我解释一下这里，因为对偶性还没有讲。简单来说，CTFT的正变换和逆变换其实是可以相互转换的。你如果想对频域做逆变换，只需要把频域的自变量换成t，然后把它关于y轴对称，再对对称后的图形做正变换，注意此时的“正变换”本质上是逆变换，所以你要把变换后的自变量换回t，这样就正确了。没搞懂也没关系，我自己感觉这样比较快，理解不了就老实用原来的方法</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021316289.png" /></p>
+<p>u(t)的推导比较麻烦，务必记得还有个piδ(ω)项。后面学到拉普拉斯变换是很干净的1/s，但那是在收敛域Re(s)&gt;0里。而傅里叶变换在jω上，就会出现这么一个项</p>
+<h3 id="_14">性质<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p>性质不用掌握怎么推，可以稍微了解一下，这样也有利于记忆</p>
+<h4 id="_15">线性性，频移时移，微分性质<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<p>第一个是线性性，根据积分的线性性就很容易得到了</p>
+<p>凡是阶梯状的都很容易拆成若干方形的组合，另外用上常函数1相关的也很容易去凑</p>
+<p>符号函数可以用2u(t)-1表示，也可以用u(t)-u(-t)来表示，用两种这两种办法都可以得到相同的结果，就是sgn(t)→2/(jω)。</p>
+<p>所以用线性性其实就是尝试把要变换的函数分解成那些已知的函数的线性叠加</p>
+<p>已知的那些，偶函数的有1，方波，cos，Sa。其实原函数和变换后的X(ω)的对称性是相同的（如果有对称性），所以就那几个对就可以了</p>
+<p>反正有奇对称和偶对称的然后又是平平的就喜欢用线性性</p>
+<p>第二个是时移性质，这些性质我觉得都可以从拉普拉斯变换的性质那里迁移过来，因为本来傅里叶变换也就是拉普拉斯变换的特殊形式</p>
+<div class="arithmatex">\[
+x(t-t_0)\overset{\mathcal{F}}{\longrightarrow}X(\omega)e^{-j\omega t_0}
+\]</div>
+<p>用定义很好证明，积分换元的事情</p>
+<p>当给出的x(t)虽然不是奇函数或偶函数，但是经过平移可以变成奇函数或偶函数的话，用时移性质就行了。注意时移性质中ω是自变量，X(ω)并不是乘以一个常数</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021332204.png" /></p>
+<p>可以熟悉一下就不用再搞一次欧拉公式了</p>
+<p>或者其实后面学了调制性质你就理解为和cos对应的傅里叶变换做了卷积，相当于在两边各复制了一份</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021332448.png" /></p>
+<p>然后这个是求一个反变换，注意看到相位部分是正比例函数就要想到时移性质</p>
+<p>这里如果知道了群延时的概念，也就是对相频特性求导取负号得到的是延时的t0（就是原来的从t变成t-t0），那就容易了。先对幅频特性直接求反变换得到2Sa(2t)/pi，然后对相频特性求导得到-2，那就是延时了2，那么原来的就是2Sa(2(t-2))/pi</p>
+<p>第三个频移性质</p>
+<div class="arithmatex">\[
+x(t)e^{j\omega_0t}\overset{\mathcal{F}}{\longrightarrow}X(\omega-\omega_0)
+\]</div>
+<p>也是用定义容易证明</p>
+<p>用频移性质来推sin(ω0t)和cos(ω0t)的表达式是比较容易的，都是从1的傅里叶变换通过频移来获得</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021333589.png" /></p>
+<p>微分性质</p>
+<p>时域</p>
+<div class="arithmatex">\[
+\frac {dx(t)}{dt}\overset{\mathcal{F}}{\longrightarrow}j\omega X(\omega)
+\]</div>
+<p>δ(t)的n阶导经过傅里叶变换得到(jω)的n次方。其实你就理解成微分算子经过傅里叶变换变成了jω这一项就好了</p>
+<p>频域</p>
+<div class="arithmatex">\[
+tx(t)\overset{\mathcal{F}}{\longrightarrow}j\frac {dX(\omega)}{d\omega}
+\]</div>
+<p>用这个性质容易推出</p>
+<div class="arithmatex">\[
+t^ne^{-at}u(t)\overset{\mathcal{F}}{\longrightarrow}\frac {n!}{(a+j\omega)^{n+1}}
+\]</div>
+<p>应试范围的最多考到n=2的情况</p>
+<h4 id="_16">卷积性质<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<p>时域</p>
+<div class="arithmatex">\[
+x(t)\ast h(t)\overset{\mathcal{F}}{\longrightarrow}X(\omega)H(\omega)
+\]</div>
+<p>记住时域卷积等于频域相乘</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021335259.png" /></p>
+<p>我自己做的时候是先拆成两个宽度相同的方波，一个高度为1一个高度为&frac12;来做，不过这里他说可以直接用三角形面积作为Sa方的系数。之所以是Sa方是因为你知道三角波要分成两个方波，就有了两个Sa相乘，然后你待定系数A，既然<span class="arithmatex">\(X(\omega)=\int_{-\infty}^{+\infty}x(t)e^{-j\omega t}dt\)</span>，当ω=0的时候，X(ω)的值就是x(t)图象的面积代数和。由于X(ω)已知是ASa方(ω)，当ω=0的时候Sa趋于1，于是这个点的值就是A。所以就得到x(t)自己做一个积分得到的结果就是A</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021335824.png" /></p>
+<p>梯形的系数也是一样用面积确定，麻烦一点的就是要根据宽度不同的方波得到梯形波的结论推导出两个边界</p>
+<p>要特别注意方波卷积成三角波的时候宽度是三角波的一半，不然Sa里的系数就搞错了</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021336709.png" /></p>
+<p>这道题最聪明的方法是这样做，我一开始想到的方法是把u(t)拆解掉变成多个三角波的叠加，因为我关注到斜率是45度，如果一个增加一个减小那么和就是不变的，这是一种方法，不过就没有这里直接看出这是什么东西的卷积那么巧妙</p>
+<p>如果看到从0开始的话就可以想想是不是方波和什么东西的卷积</p>
+<p>有了卷积性质，就可以解决已知卷积的结果和其中一个被卷积的函数，然后求另一个被卷积的函数的题目了</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021336712.png" /></p>
+<p>注意要分别对x(t)和y(t)做傅里叶变换，然后把两个ω的函数相除再进行逆变换就可以得到h(t)</p>
+<p>最高境界就是把h(t)和H(ω)看作同一个东西，这个被称为LTI的系统函数</p>
+<p>看完了前面的来做练习题</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021337704.png" /></p>
+<p>第二题易错，务必写清楚到底是谁乘以谁，而且cos和sin和δ的关系要搞明白，不要直接套公式</p>
+<p>第四道题易错，要区分好两个时移的性质，这个可以用调制性质，但是注意2pi是乘还是除，确实容易错</p>
+<p><a href="https://www.bilibili.com/video/BV1g94y1Q76G/?p=22&amp;t=6810">讲解链接</a></p>
+<p>有了卷积性质，就可以验证那句话，LTI系统简单到只要知道任意一个不为零的输入对应的输出，就可以知道任何输入的输入，用H(ω)=Y(ω)/X(ω)再反变换回去就能得到h(t)</p>
+<p>关于卷积性质我还有补充的，就是不是什么时候都能用H=Y/X来求出H，因为有些时候Y和X里面带δ，这个时候不能求出所有的H，但是可以求出一部分H</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021338232.png" /></p>
+<p>比如这个，x和y只由直流分量和若干谐波得到，这个时候你对x, y做傅里叶变换没法除，因为δ你处理不了。但是尽管如此，仍然可以得到部分H的值，核心结论是下面这个</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021338329.png" /></p>
+<p>1变成2，所以H(0)是2，4cos(2pi t)变成2cos(2pi t+pi/2)，这里相同频率的话正弦余弦都一样，只是差了相位，用三角恒等式化成同名然后符号相同就行，那么|H(2pi)|=&frac12;，∠H(2pi)=pi/2，然后H(3pi)=0</p>
+<p>h(t)为实数（这里默认）的LTI系统满足幅度谱偶对称，相位谱奇对称，所以H(-2pi)和H(-3pi)也容易求得</p>
+<p>积分性质</p>
+<p>不用背，你只要知道变限积分可以写成x(t)卷积u(t)就行，然后就用卷积性质做</p>
+<p>重新审视常见的系统</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">系统名称</th>
+<th style="text-align: center;">冲激响应 <span class="arithmatex">\(h(t)\)</span></th>
+<th style="text-align: center;">频率响应 <span class="arithmatex">\(H(\omega)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">微分器</td>
+<td style="text-align: center;"><span class="arithmatex">\(\delta'(t)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(j\omega\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">积分器</td>
+<td style="text-align: center;"><span class="arithmatex">\(u(t)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\frac{1}{j\omega} + \pi \delta(\omega)\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">延时器</td>
+<td style="text-align: center;"><span class="arithmatex">\(\delta(t - t_0)\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(e^{-j\omega t_0}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>后面采样部分会涉及到微分器和延时器的离散版本的设计</p>
+<p>比较两种方法算卷积</p>
+<p>常规卷积</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021339399.png" /></p>
+<p>后面分类讨论t&lt;0和t&gt;0分别积分</p>
+<p>用傅里叶变换</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021339035.png" /></p>
+<p>注意可以分解成两个之和，不要直接用反变换公式算</p>
+<p>这部分经常用到分式的因式分解，你如果把jω当成x，就是要把二次分式分解成若干1/(a+x)的线性组合</p>
+<p>练习题</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021340641.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021340551.png" /></p>
+<p>遇到等式直接全部做傅里叶变换就完事了，然后最后还是相当于做一个分解然后做一个反变换，还是考分式的分解，这东西在微积分那里都考烂了</p>
+<p>我还是补一下分式的分解吧</p>
+<p>留数法进行部分分式分解</p>
+<p>如果是假分式，即分子次数比分母次数大，先用长除法得到真分式</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021345886.png" /></p>
+<p>然后对分母进行因式分解，分几种情况，我们最喜欢看到的情况是相异的几个极点（分母项）比如(s+a)(s+b)(s+c)，这种情况下用“盖起来算其他”，譬如这里的(s+3)/(s+1)(s+2)，它的分解形式为A/(s+1)+B/(s+2)，如果要求A，就让s+1=0（即s=-1），并把(s+3)/(s+1)(s+2)中的(s+1)盖起来，只看(s+3)/(s+2)，然后把s=-1代入得到2，对B同理，是令s=-2然后把它盖住算就行。这种简单的形式其实用配凑（用分母因式线性组合出分子）会更快，比如瞪眼看出s+3=2(s+2)-(s+1)然后直接除就行。留数法对分母超过两次的才有明显的优势，因为超过三次的时候分子不好瞪了。</p>
+<p>但是如果分母有重根，不建议用留数法，因为需要额外的求导之类的东西，建议用常规的待定系数法。另外如果分母有不能分解为实数的根的话（Δ&lt;0），同样不建议用留数法，建议用cos(ωt)u(t)对应s/(s^2+ω^2)等来配凑，结合频移性质来凑。</p>
+<p>哦不过如果分母是(s+1)(s^2+2s+5)像这样，对于单极点还是可以用上面的留数法来做的，但凡有一项出来，剩下的待定系数都会变得很简单</p>
+<p>正弦交流电路里的相量是经过傅里叶变换的X(ω)</p>
+<h4 id="_17">调制性质<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[
+x_1(t)x_2(t)\overset{\mathcal{F}}{\longrightarrow}\frac 1 {2\pi}X_1(\omega)\ast X_2(\omega)
+\]</div>
+<p>反过来证明简单，其实很容易理解，卷积性质成立的话，那逆变换的时候相比正着就是多了一个1/(2pi)</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021346108.png" /></p>
+<p>注意多一个1/(2pi)</p>
+<p>一个常用的性质是时域乘以2cos(ω0t)那么频域就会往左右两边各移动ω0，而且高度不变</p>
+<p>使用调制性质可以很容易求以下这个卷积</p>
+<div class="arithmatex">\[\frac 1 {a+j\omega}\ast\frac 1 {b+j\omega}\]</div>
+<p>频域卷积对应时域相乘，这里还需要乘以2pi，然后还有注意u(t)相乘之后就只剩下一个了，变成时域是<span class="arithmatex">\(2\pi e^{-(a+b)t}u(t)\)</span>，然后你直接做正变换就容易了，得到卷积后是<span class="arithmatex">\(\dfrac {2\pi} {a+b+j\omega}\)</span></p>
+<p>讲了调制性质就顺便讲调制和解调，调制是modulation，解调是de-modulation。这里只讲最简单的一种，叫做正弦载波幅度调制其中的双边带抑制载波（DSB-SC）调制与相干解调</p>
+<p>调制步骤是把初始的x(t)乘以一个载波cos(ω0t)得到y(t)发出去</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021346030.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021347352.png" /></p>
+<p>先把x(t)经过低通滤波器得到一个带限信号，然后再乘以cos(ω0t)发出去，这是调制</p>
+<p>解调是把y(t)再乘以cos(ωct)，乍一看有点莫名其妙，但是经过傅里叶变换实际上就又得到了在中间的波形</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021347870.png" /></p>
+<p>乘了之后还需要用一个低通滤波器把两边的给去掉，然后需要变成原来的两倍就得到了还原的X(ω)</p>
+<p>如果原信号截止频率ω0，而载波信号频率ωc，则低通滤波器的截止频率ωp满足</p>
+<div class="arithmatex">\[
+\omega_0&lt;\omega_p&lt;2\omega_c-\omega_0
+\]</div>
+<p>低通滤波器就是在频域里是一个高度为2的方波，据此推出时域的Sa</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021347752.png" /></p>
+<p>之所以要调制不能直接传，是因为低频信号穿透性不好，需要用高频信号发射出去，而且高频信号可以控制载波频率，避免信号重叠</p>
+<p>其实光从时域也可以解释，<span class="arithmatex">\(w(t)=x(t)\cos^2(\omega_ct)=x(t)(\frac{1+\cos(2\omega_ct)}2)\)</span>，其中x(t)/2被保留，能量变成一半，而cos(2ωct)被滤掉了</p>
+<p>如果只是传一个信号，这种先分开再集合还原的做法好像有些麻烦多余，但是如果要传多个信号，防止干扰的时候这种做法的意义就体现出来了</p>
+<p>多个信号传输的时候需要满足更多约束才能保证能分开</p>
+<p><img alt="Snipaste_2026-07-02_13-48-17.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021348354.png" /></p>
+<p>为了不发生重叠，需要让ωc2-ωM &gt; ωc1+ωM</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021349437.png" /></p>
+<p>用来卷积的那个Sa就是理想低通滤波器</p>
+<p><img alt="Snipaste_2026-07-02_13-50-04.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021350044.png" /></p>
+<p>第一个是0中心的，第二个是有延时的。在频域方面其实都能实现限制频率在±wc之间，只是卷积之后的两个函数不一样</p>
+<p>理想低通滤波器的局限性之一是它是非因果的，如果你想要得到y(t)，必须把所有x(t)都得到才能进行处理，就做不到实时的处理，只能全部记录完之后再处理。因果系统的h(t)在卷积时只需要用到过去发生的值（未来的为0），所以可以实现实时处理，但是就不是理想的</p>
+<p>一个容易引起误解的表述“理想低通滤波器不能实现”，意思是理想低通滤波器，也就是这个Sa，做不到实时处理，因为它卷积要用到负无穷到正无穷的x(t)。但是如果你已经把要处理的x(t)记录完了用这个来做低通滤波完全没问题</p>
+<p>理想低通滤波器的第二个局限性是它会把陡峭上升沿变成逐渐衰减的震动，学名叫振铃效应，胡浩基把它比喻为年轮</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021350711.png" /></p>
+<p>卷积了之后时域的y(t)就会出现这种震动，其实本质上还是Sa它自己就是一个振荡衰减的图，就是这些一瓣一瓣的正负在导致震动。如果对二维图像比如一个纯色圆做这种低通滤波，就会出现一圈一圈的像年轮一样的逐渐变淡的图象</p>
+<p>于是在自己设计滤波器的时候可以考虑增加主瓣面积，减小旁瓣面积，主瓣就是Sa最大的那个。这种思想设计出来的叫做巴特沃斯低通滤波器。但是这种设计的代价是上升没那么陡峭，换来了其他地方的振铃效应更小</p>
+<p>由于这两个缺点，在实际应用的时候几乎不用理想低通滤波器</p>
+<h4 id="_18">尺度变换，对偶性，帕斯瓦尔定理，共轭对称性<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<p>尺度变换</p>
+<div class="arithmatex">\[
+x(at)\overset{\mathcal{F}}{\longrightarrow}\frac 1 {|a|}X(\frac \omega a)
+\]</div>
+<p>若信号时域胖则频域瘦，若时域瘦则频域胖。因为时域变胖相当于a减小(a&lt;1)，于是频域的频率变大，于是就看起来更瘦（比如如果是Sa的话）</p>
+<p>又比如1和δ(t)的变换对，δ(t)是瘦到极致，1是胖到极致，其实不应该用胖还是瘦，应该用是否平缓来衡量</p>
+<p>另外根据这个拓展一下，用上时移性质可以得到</p>
+<div class="arithmatex">\[
+x(at+b)\overset{\mathcal{F}}{\longrightarrow}\frac 1 {|a|}e^{j\omega\frac b a}X(\frac\omega a)
+\]</div>
+<p>对偶性</p>
+<div class="arithmatex">\[
+X(t)\overset{\mathcal{F}}\longrightarrow2\pi x(-\omega)
+\]</div>
+<p>本来正变换和逆变换的运算就是类似的，只是一个是逆时针绕一个是顺时针绕，还有逆变换多除了2pi</p>
+<p>本质上是正变换和逆变换存在一个反演的关系</p>
+<div class="arithmatex">\[
+\mathcal{F}^{-1}\{\cdot\}=\frac 1{2\pi}\mathcal{F}\{(-\cdot)\}
+\]</div>
+<p>所以你做两次傅里叶变换（暂且忽略自变量的改变），把其中一个F替换成F-1，它自己就消掉了，剩下2pi和一个-</p>
+<p>这意味着做傅里叶逆变换的时候，只需要把自变量看成t，先关于纵轴对称，然后做傅里叶正变换，然后再除以2pi，再把自变量从ω换回t就行。</p>
+<p>别忘了最终的自变量还是ω</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021352072.png" /></p>
+<p>这个只要之前那题对于符号函数的傅里叶变换结果还记得就比较容易推，后面会讲到，不过如果没反应过来对偶性还是会很懵的</p>
+<p>帕斯瓦尔定理</p>
+<div class="arithmatex">\[
+\int_{-\infty}^{+\infty}|x(t)|^2dt=\frac 1 {2\pi}\int_{-\infty}^{+\infty}|X(\omega)|^2d\omega
+\]</div>
+<p>物理含义是傅里叶变换能量守恒，不过差个2pi的系数</p>
+<p>来一道一题多解</p>
+<p>$$
+\int_{-\infty}^{+\infty}(\frac {\sin(t)} t)^2dt= ?
+$$
+第一种方法，理解为能量，那你就把Sa(t)的频域求出来，然后把频域能量求出来除以2就行，频域就是一个方波，很容易求，别忘了平方。</p>
+<p>第二种方法，理解为X(0)，先求Sa²(t)的傅里叶变换，然后X(0)就是这个表达式的值</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021354566.png" /></p>
+<p>另外帕斯瓦尔定理不适用于能量无限的信号，比如δ(t)。δ(t)平方是未定义的，你从频域积分无穷大也能看出来</p>
+<p>来一道特别好的题，非常好地把傅里叶变换的原始积分的定义和后面直观的用性质的处理方法给结合了起来</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021354227.png" /></p>
+<p>首先直接求X并不难，得到是<span class="arithmatex">\(X(j\omega)=E\tau Sa(\frac \tau 2 \omega)e^{-j\frac \tau 2 \omega}\)</span>，注意其实相频特性只需要看<span class="arithmatex">\(e^{j()}\)</span>的括号里的部分，你看EτSa那部分都是实数啊，实数就只是模，不会包含相频特性。我觉得确实对于常用傅里叶变换要搞明白它们的幅频特性相频特性，这样就可以对这种表示方法祛魅了。那么第一题就是<span class="arithmatex">\(-\frac \tau 2 \omega\)</span>，第二题直接带入X(0)得到Eτ，或者你可以根据傅里叶变换的定义可以得到</p>
+<div class="arithmatex">\[X(0)=\int_{-\infty}^{+\infty}x(t)e^{-j0 t}dt\]</div>
+<p>那就是直接时域积分，求面积，也就是Eτ，非常简单。</p>
+<p>第三题其实也是一样的，相当于求2pi x(0)，因为x(t)的表达式多一个&frac12;pi的因子。不过老师讲课时修正，认为x(0)应当是&frac12;(x(0+)+x(0-))，所以应该是pi E，因为对于这种左右极限不同的，傅里叶变换是收敛到左右极限的平均值</p>
+<p>第四题看其实还是用<span class="arithmatex">\(x(t)=\frac 1 {2\pi} \int_{-\infty}^{+\infty}X(j\omega)e^{j\omega t}d\omega\)</span>，只需要让X(jω)改成题中的X(jω)乘以2sinω/ω，然后让t=2即可。那么我们就实际上要求一个<span class="arithmatex">\(2\pi x_1(2)\)</span>，其中<span class="arithmatex">\(x_1(t)\)</span>=x(t)卷积以x=0为轴，宽度为2，高度为1的方波，不过由于τ不确定，需要分类讨论。但是其实我们没有必要把卷积结果给求出来，我们只关心x(2)，所以我们也可以用公式法，用积分把x(2)给求出来，还是挺麻烦的</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021356509.png" /></p>
+<p>其实积分都不难，但是要做好支撑的分类</p>
+<p>第五题更简单，只要用上帕斯瓦尔定理，去算一下时域的能量再乘以2pi即可，得到2pi τE²</p>
+<p>第六题也简单，你就把X(jω)的那个相频特性给用欧拉公式展开成实加虚的样子然后老实做反变换即可</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021356153.png" /></p>
+<p>共轭对称性</p>
+<p>x(t)为实偶函数，则X(ω)也是实偶函数</p>
+<p>x(t)为实奇函数，则X(ω)为纯虚奇函数，比如符号函数对应2/(jω)</p>
+<p>这两条反过来也成立，其实很好理解，反变换和正变换本来就很相似。我觉得没有必要反过来，你把反变换当成正变换就行，因为对称之后除以2pi不改变对称性。比如给你X(jω)问你x(t)，那你仍然记实偶对实偶，实奇对虚奇，X(jω)实偶那对应x(t)也是实偶</p>
+<p>简称实偶对实偶，实奇对虚奇。其实还有虚偶对虚偶，虚奇对实奇，其实用实的直接推过来就行，只是两侧多乘了j而已。</p>
+<p>证明方法是把e^(-jωt)用欧拉公式展开，然后用奇偶性积分的性质来消掉一些东西</p>
+<p>x(t)为实函数，则X(ω)的实部为偶函数，虚部为奇函数，证明方法是把x(t)分解成奇函数+偶函数然后用上面关于实偶实奇的结论，x(t)的偶分量得到X(ω)的实部，奇分量得到虚部。这句话反过来也对，如果X(ω)实部偶函数虚部奇函数，则x(t)为实函数</p>
+<p>如果X(ω)是实函数，那么也是符合x(t)实部偶函数，虚部奇函数</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021357153.png" /></p>
+<p>x(t)为实函数，则|X(ω)|为偶函数，θ(ω)为奇函数，这个用Re和Im来表达|X(ω)|和θ(ω)就容易证明了，而且实部是偶函数，虚部是奇函数</p>
+<p>x(t)为虚函数，则幅度谱偶函数，相位谱非奇非偶，但是实部是奇函数，虚部是偶函数</p>
+<p>例题：实因果信号x(t)的X(jω)实部为1/(ω²+1)，求x(t)</p>
+<p>用到一个傅里叶变换，这个可以背，不过也很好求</p>
+<div class="arithmatex">\[
+e^{-a|t|}\overset{\mathcal{F}}{\longrightarrow}\frac {2a}{a^2+\omega^2}
+\]</div>
+<p>这个通过1/(a+jω)+1/(a-jω)就能得到了</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021358368.png" /></p>
+<h3 id="_19">用傅里叶变换求周期信号的傅里叶级数<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<p>由于周期信号可以写成</p>
+<div class="arithmatex">\[
+x(t)=\sum\limits_{-\infty}^{+\infty}a_ke^{jk\omega_0t}
+\]</div>
+<p>那么对它做傅里叶变换就可以得到</p>
+<div class="arithmatex">\[
+X(\omega)=\sum\limits_{-\infty}^{+\infty}a_k(2\pi\delta(\omega-k\omega_0))
+\]</div>
+<p>解释一下为什么<span class="arithmatex">\(e^{jk\omega_0t}\)</span>变成了那个东西。首先是1对应2piδ(ω)，然后频移性质可以给x(t)增加一个e^(jω0t)，那么把ω0改成kω0就行了</p>
+<p>如果要求周期信号的傅里叶变换就可以先求傅里叶级数的系数再用这个公式</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021359545.png" /></p>
+<p>务必区分清楚，周期信号的傅里叶级数和傅里叶变换得到的结果是不一样的。求周期信号的傅里叶级数分两步，第一步是看一个周期之内的傅里叶变换，第二步用ak=1/T倍X(jkω0)这个公式。求周期信号的傅里叶变换绝对不是一个周期内的傅里叶变换而是整个周期的，相当于你需要对时域卷积一个冲激串，于是你频域需要和一个冲激串相乘，不过一般先得到傅里叶级数再得到傅里叶变换，就比傅里叶级数多一步，需要用<span class="arithmatex">\(X(\omega)=\sum\limits_{-\infty}^{+\infty}a_k(2\pi\delta(\omega-k\omega_0))\)</span>，好吧其实还是用和冲激串相乘的思路，只是要把ck换成傅里叶级数，这么说不做三步做两步也行，即先求一个周期的，然后再和周期冲激串在频域相乘</p>
+<p>对一个周期内的波形做傅里叶变换（注意这一步得到的不是整个周期信号的傅里叶变换，对周期信号做傅里叶变换是不收敛的），然后用<span class="arithmatex">\(a_k=\frac 1 TX(k\omega_0)\)</span>，也就是把ω都替换为ω0再整体除以T，就得到了ck</p>
+<p>介绍一个叫周期冲激串的东西，后面采样什么的会用到</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021359474.png" /></p>
+<p>其实频域很好记，间隔和高度都是ω0</p>
+<h2 id="dtft">离散时间傅里叶变换(DTFT)<a class="headerlink" href="#dtft" title="Permanent link">&para;</a></h2>
+<p>Discrete time fourier transform，首字母DTFT</p>
+<p>这里的ω（数字角频率）和之前CTFT的ω（模拟角频率）意义不同，但是在信号与系统课上没有把这一点展开，因为这是后续数字信号处理课程的内容。如果用Ω表达数字角频率，那么关系是Ω=ωT。数字角频率是归一化角频率，用<span class="arithmatex">\(\Omega=2\pi \dfrac f {f_s}=\omega/f_s=\omega T\)</span>来计算，其中f_s是采样频率。归一化就体现在f除以f_s，相当于以f_s作为衡量的标准。胡浩基老师先讲了DTFT，才讲采样，是为了延续CTFT的内容，先把这部分怎么算给讲完了，才去讲DTFT是怎么来的（采样）</p>
+<div class="arithmatex">\[
+X(e^{j\omega})=\sum\limits_{n=-\infty}^{+\infty}x[n]e^{-j\omega n}
+\]</div>
+<div class="arithmatex">\[
+x[n]=\frac 1 {2\pi}\int_{2\pi}X(e^{j\omega})e^{j\omega n}d\omega
+\]</div>
+<p>要对比离散时间傅里叶变换和连续时间傅里叶变换。<span class="arithmatex">\(X(e^{j\omega})\)</span>的自变量是ω，但是为了和连续的区分，因此这里必须写成e^(jω)。所以题目给X(jω)或X(ω)的时候，你要知道变换回去是x(t)，而<span class="arithmatex">\(X(e^{j\omega})\)</span>变换回去是x[n]</p>
+<p><span class="arithmatex">\(X(e^{j\omega})\)</span>是自变量为ω，周期为2pi的周期函数。之所以是周期函数是因为它这里是求和，加减2pi相当于多了若干<span class="arithmatex">\(e^{-j2\pi}\)</span>，相当于乘了1</p>
+<p>注意离散时间傅里叶变换和连续时间傅里叶变换的关系，连续时间处理的是x(t)，离散时间处理的是x[n]。而它们的基函数是不同的，连续时间傅里叶变换的基函数是<span class="arithmatex">\(e^{j\omega t}\)</span>，离散时间傅里叶变换的基函数是<span class="arithmatex">\(f[n]=e^{j\omega n}\)</span>。这意味着，就算频域的函数相同，比如都是常函数1，它们的原函数也不相同。</p>
+<p>离散时间傅里叶变换的直观理解和连续时间傅里叶变换的完全不同，这是刚学DTFT这块容易感到困惑的原因。在理解连续时间傅里叶变换的时候，我们可以想象一个个频率不同的正弦波（从胖到瘦）叠加起来，但是在理解离散时间傅里叶变换的时候，我们不应当想象连续的波，而是想象频率不同的正弦序列（没有直观的胖瘦，而是更加破碎零散）叠加起来，这样就很容易理解为什么会出现周期性（本质上是采样之后不同成分会发生混叠）</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202603252009964.png" /></p>
+<p>要理解你在用这种东西去拼成原始的x[n]，而不是正弦波，这就是区别</p>
+<p>x[n]在算的时候可以在任意一个宽度为2pi的区间做积分，被积分的函数相对ω也是以2pi为周期的。其实就是因为任意x[n]只需要用某个宽度为2pi区间的这些频率的e^(jωn)来表达就行了，其他的都用不到。</p>
+<p>特别注意离散时间傅里叶变换，时域都是离散的，频域都是连续的，当你看到一个1的时候，你要区分它究竟指的是常函数1，也就是连续的全平的那个，还是离散信号一个一个都是1的。</p>
+<h3 id="_20">常用傅里叶变换<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+\begin{align}
+a^nu[n]&amp;\overset{\mathcal{F}}{\longrightarrow}\frac 1 {1-ae^{-j\omega}}(|a|&lt;1)\\
+\delta[n]&amp;\overset{\mathcal{F}}{\longrightarrow}1\\
+离散的1序列&amp;\overset{\mathcal{F}}\longrightarrow 2\pi\sum\limits_{k=-\infty}^{+\infty}\delta(\omega-2k\pi)\\
+窗函数x[n]=
+\begin{cases}
+1,-N_1\le n\le N_1, N\in\mathbb Z\\
+0,\text{else}
+\end{cases}
+&amp;\overset{\mathcal{F}}\longrightarrow
+\frac {\sin((N_1+\frac 1 2)\omega)}{\sin(\frac 1 2 \omega)}\\
+\frac {\sin(\omega_0n)}{\pi n}&amp;\overset{\mathcal{F}}\longrightarrow1,\omega\in(-\omega_0, \omega_0), 0&lt;\omega_0&lt;\pi,2\pi为周期重复\\
+u[n]&amp;\overset{\mathcal{F}}\longrightarrow\frac 1 {1-e^{-j\omega}}+\pi\sum\limits_{k=-\infty}^{+\infty}\delta(\omega-2k\pi)\\
+e^{j\omega_0n}\ast h[n]&amp;\overset{\mathcal{F}}\longrightarrow H(e^{j\omega_0})e^{j\omega_0n}\\
+\cos(\omega_0n)&amp;\overset{\mathcal{F}}\longrightarrow\pi(\delta(\omega-\omega_0)+\delta(\omega+\omega_0)), 0&lt;\omega_0&lt;\pi, 2\pi为周期重复\\
+\sin(\omega_0n)&amp;\overset{\mathcal{F}}\longrightarrow\frac\pi j(\delta(\omega-\omega_0)-\delta(\omega+\omega_0)), 0&lt;\omega_0&lt;\pi, 2\pi为周期重复
+\end{align}
+\]</div>
+<p>只要记住H(<span class="arithmatex">\(e^{j\omega}\)</span>)是以2pi为周期的就不容易漏掉δ项</p>
+<p>第一个</p>
+<div class="arithmatex">\[
+a^nu[n]\overset{\mathcal{F}}{\longrightarrow}\frac 1 {1-ae^{-j\omega}}(|a|&lt;1)
+\]</div>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021422272.png" /></p>
+<p>知道是等比数列求和就容易记了</p>
+<p>这里时域的样子是这样的</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021423128.png" /></p>
+<p>然后把它的幅频特性是<span class="arithmatex">\(\dfrac 1 {\sqrt{a^2-2a\cos(\omega)+1}}\)</span>，是一个振荡的，最高点和最低点在1/(1-a)和1/(1+a)之间取，看a的正负性来决定哪个是更高的</p>
+<p>这个东西要算的话有点麻烦，你要把e^(-jω)展开成cos和sin，然后分母实数化得到实部和虚部再求模。一般只是把它进行代数处理而很少用图去理解它。后面又会遇到分式的分解，你可以直接把e^(-jω)设为x。</p>
+<p>我觉得连续的写成X(jω)，离散的写成<span class="arithmatex">\(X(e^{j\omega})\)</span>大概就是因为这个最经典的变换，你看连续的是变成1/(a+jω)，离散的是变成这个东西，就是一一对应的</p>
+<p>第二个</p>
+<div class="arithmatex">\[
+\delta[n]\overset{\mathcal{F}}{\longrightarrow}1
+\]</div>
+<p><img alt="Snipaste_2026-07-02_14-23-28.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021423132.png" /></p>
+<p>注意这里的1仍然是连续的常函数（DTFT的频谱是连续的），而不是离散的。这个和连续时间傅里叶变换的很像，但是并不是δ(t)=δ[n]，因为它们的基函数不一样。</p>
+<p>第三个</p>
+<div class="arithmatex">\[
+1\overset{\mathcal{F}}\longrightarrow 2\pi\sum\limits_{k=-\infty}^{+\infty}\delta(\omega-2k\pi)
+\]</div>
+<p>这里的1指的是x[n]里每一项都是1，注意是离散的而不是连续的，也不是一个单独的数值</p>
+<p>右边看起来有个求和很可怕，其实表达的意思不过是把-pi到pi内的东西按2pi为周期复制下去而已</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021425756.png" /></p>
+<p>对于离散时间傅里叶变换，需要时刻记住<span class="arithmatex">\(X(e^{j\omega})\)</span>是以2pi为周期的</p>
+<p>然后你也可以这样表达</p>
+<p><img alt="Snipaste_2026-07-02_14-25-58.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021426756.png" /></p>
+<p>表达的意思是一样的，考试时通常就这样写比较方便，只是千万别忘了加两条虚线来表达你知道它是周期重复的</p>
+<p>这个的证明一般从右到左做，因为有筛选性质比较方便</p>
+<p>而从左往右比较麻烦，但是这个过程中的一个处理方式是要记下来的</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021426106.png" /></p>
+<p>首先对e的那个累加变成了cos的累加是需要知道的，相当于把n互为相反数的两项组合起来变成2cos(nω)。然后从cos的这个累加变成sin的这个相除也是要掌握的，后面也会用到，这一步用到了积化和差，你把sin(ω/2)乘过去然后用积化和差会得到sin((N+&frac12;)ω)</p>
+<div class="arithmatex">\[
+(1+2\cos(\omega)+2\cos(2\omega)+...)\sin(\frac 1 2\omega)=(\sin(\frac 1 2\omega))+(\sin(\frac 3 2\omega)-\sin(\frac 1 2\omega))+(\sin(\frac 5 2 \omega)-\sin(\frac 3 2\omega))+...
+\]</div>
+<p>这样更小的就被消掉了，只剩下最大的那个，比如如果加到2cos(2ω)那留下来的就是sin(5ω/2)，对应关系是如果是nω那就剩下sin((n+&frac12;)ω)</p>
+<p>而从sin的到δ那一步太复杂了，也不要求，就不证明了</p>
+<p>在这里离散和连续也可以一起记忆，因为离散的简直就是连续的那个再以2pi为周期延拓得到的</p>
+<p>另外这个性质其实其实可以callback周期冲激串的CTFT。如果周期冲激串以T=1为周期，那么得到的频域和这里一样，也是高度为2pi，间隔2pi的周期冲激串。由此可见，其实T=1的时域冲激串对原函数采样和序列采样得到的x[n]经过各自的变换，得到的表达式是一样的。（但是变量不一样，周期冲激串得到的是模拟角频率，序列得到的是数字角频率）</p>
+<p>第四个</p>
+<div class="arithmatex">\[
+x[n]=
+\begin{cases}
+1,-N_1\le n\le N_1, N\in\mathbb Z\\
+0,\text{else}
+\end{cases}
+\overset{\mathcal{F}}\longrightarrow
+\frac {\sin((N_1+\frac 1 2)\omega)}{\sin(\frac 1 2 \omega)}
+\]</div>
+<p>可能还是图形直观一些</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021426058.png" /></p>
+<p>用到了刚刚介绍过的变换过程</p>
+<p>当ω→0，<span class="arithmatex">\(X(e^{j\omega})\to 2N_1+1\)</span>，可以用等价无穷小来证，也可以直接根据正变换的那个Σ的表达式直接把ω=0带进去，那就是做一个求和的事情</p>
+<p>可以验证这个函数也是以2pi为周期的</p>
+<p>第五个</p>
+<div class="arithmatex">\[
+\frac {\sin(\omega_0n)}{\pi n}\overset{\mathcal{F}}\longrightarrow1,\omega\in(-\omega_0, \omega_0), 0&lt;\omega_0&lt;\pi,2\pi为周期重复
+\]</div>
+<p>这个和连续的简直是一摸一样，只是把t换成了n而且频域的是周期性</p>
+<p>当n=0，时域的值为ω0/pi，不同的ω0在这个点的值不一样，要小心。</p>
+<p>然后需要讲到当ω0不在0到pi的时候如何处理，其实就是用到三角变换的事情，在离散时间傅里叶变换这里常用的变换有</p>
+<div class="arithmatex">\[
+\begin{align}
+\sin(-\omega_0n)&amp;=-\sin(\omega_0n)\\
+\sin(\omega_0n+2\pi n)&amp;=\sin(\omega_0n)\\
+\sin(\omega_0n+\pi n)&amp;=(-1)^n\sin(\omega_0n)
+\end{align}
+\]</div>
+<p>处理ω0不在0到pi的情况下第五条变换只需要用到前两条就行，第三条可以用于化简带(-1)^n的表达式，另外转换的时候也可以，比如说你把<span class="arithmatex">\(sin(ω_0n+2\pi n)\)</span>改成<span class="arithmatex">\(sin(ω_0n+\pi n+\pi n)=(-1)^nsin(ω_0n+\pi n)\)</span></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021428071.png" /></p>
+<p>比如如果是-的就把符号提出来然后反转就行，这样就已经实现了-pi到pi的所有的表示</p>
+<p>然后如果是超出了-pi到pi，需要用+2kpi n的方法弄回-pi到pi的区间，然后还可能需要补一些δ[n]</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021428780.png" /></p>
+<p>但是还没搞定，因为我们只考虑了上面的改变，但是在0那个位置是有瑕疵的，原本0那里是5/4，现在变成了-&frac34;，所以需要补2δ[n]</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021430496.png" /></p>
+<p>除了用这种方法，这种超出-pi到pi的还有另外一种方法，就是你先直接像连续那样变换，不管它在频域超出-pi到pi，然后你再用上周期性，把它两端有的给补上去，这时会发生重叠，重叠部分直接相加得到最终的结果</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021430317.png" /></p>
+<p>叠加之后的结果是一样的</p>
+<p>这种方法在后面其他“超出-pi到pi”的场合也有应用</p>
+<p>但是这种方法的弊端在于，如果ω变得太大，重叠的就会越来越多，更加难分析，不像上面的那种做法那样只要考虑0处的变化就行</p>
+<p>如果是sin(npi)/npi，这个其实就是δ[n]，得到的结果是1</p>
+<h3 id="_21">性质<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<h4 id="_22">线性性，频移时移，差分性质，时域扩展，频域微分<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
+<p>线性性好说，主要看题</p>
+<p>求sgn[n]的DTFT</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021442553.png" /></p>
+<p>时移性质</p>
+<div class="arithmatex">\[
+x[n-n_0]\overset{\mathcal{F}}\longrightarrow X(e^{j\omega})e^{-j\omega n_0}
+\]</div>
+<p>频移性质</p>
+<div class="arithmatex">\[
+e^{j\omega_0n}x[n]\overset{\mathcal{F}}\longrightarrow X(e^{j(\omega-\omega_0)})
+\]</div>
+<p>有了频移性质就比较容易推cos(ωn)和sin(ωn)的傅里叶变换了</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021442892.png" /></p>
+<p>注意也是有周期性的</p>
+<p>当然这里也会遇到ω0超出0到pi范围的问题，类似地需要用三角恒等式来搞，比如在括号里加2pi n或者pi n</p>
+<p>不过这里就不用担心0那个点的值不同的问题了</p>
+<p>sin(pi n)有两种理解方式，一种是你直接把它的序列写出来，它自己本身就是一个全0的序列，那傅里叶变换也肯定是全零的，注意变换后的0是常函数的0。第二种理解方式是你就套原来的结论，然后当周期性的时候pi那个地方一正一负叠加消掉了</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021443624.png" /></p>
+<p>而cos(pi n)就是也是可以先原样地套，然后根据周期来叠加，就可以这样</p>
+<p>在这里需要掌握一个重要的相等关系，<span class="arithmatex">\(cos(\pi n)=e^{j\pi n}=e^{-j\pi n}=(-1)^n\)</span></p>
+<p>这几个其实都是一样的，高中学数列的时候就有让你构造1，-1，1，-1的序列，其实就是有这么一些构造方式。所以这几个的傅里叶变换是同一个结果。</p>
+<p>直接把<span class="arithmatex">\(e^{j\pi n}\)</span>当作1的傅里叶变换经过频移也是很好理解的</p>
+<p>要求这样一个以pi为周期的东西的傅里叶变换</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021450279.png" /></p>
+<p>如果只是以2pi为周期的话，还是很容易搞的，但是要怎么把频率变成原来的两倍，我头一次做的时候想到的是伸缩或者卷积之类的，没想出来，但是其实只要复制一份然后再移动pi就可以了</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021451678.png" /></p>
+<p>所以凡是遇到让频域图象移动pi个单位，相当于直接给原函数乘以(-1)^n，这个要很熟练，就跟之前连续那里在频域往ω0和-ω0放一个相当于原函数乘以2cos(ω0t)一样，是方便的东西</p>
+<p>差分性质</p>
+<div class="arithmatex">\[
+x[n]-x[n-1]\overset{\mathcal{F}}\longrightarrow (1-e^{-j\omega})X(e^{j\omega})
+\]</div>
+<p>这个直接用时移性质证明就行了</p>
+<p>时域翻转</p>
+<div class="arithmatex">\[x[-n]\overset{\mathcal{F}}\longrightarrow X(e^{-j\omega})\]</div>
+<p>时域扩展</p>
+<div class="arithmatex">\[
+x_{(k)}[n]\overset{\mathcal{F}}\longrightarrow X(e^{j\omega k})
+\]</div>
+<p>要解释一下<span class="arithmatex">\(x_{(k)}[n]\)</span>的意思，这是一个新的序列，相当于在原序列的两两之间插入k-1个0。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021452556.png" /></p>
+<p>而经过时域变胖，也就是拉宽了，会导致频域从ω变成kω，其实是压缩了，所以仍然满足时域胖频域瘦</p>
+<p>这个性质考出来会比较难看出来，比如这样</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021452255.png" /></p>
+<p>用这个性质也可以做前面的一道题</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021452640.png" /></p>
+<p>只需要让频域变成-pi到pi之间，有-3pi/4到3pi/4的一个凸字形以2pi为周期的，然后时域在每个点之间插一个零，那么频域就压缩成&frac12;，那么就可以实现之前的结果了</p>
+<p>频域微分</p>
+<div class="arithmatex">\[
+nx[n]\overset {\mathcal{F}}{\longrightarrow}j\frac {dX({e^{j\omega})}}{d\omega}
+\]</div>
+<p>和时域一样，把t换成了n</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021453156.png" /></p>
+<p>这个可以记一下</p>
+<h4 id="_23">时域卷积<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
+<p>时域卷积等于频域相乘</p>
+<div class="arithmatex">\[
+x[n]\ast h[n]\overset{\mathcal{F}}\longrightarrow X(e^{j\omega})H(e^{j\omega})
+\]</div>
+<p>有卷积性质可以讲时域累加</p>
+<div class="arithmatex">\[
+y[n]=\sum\limits_{k=-\infty}^{+\infty}x[k]=x[n]\ast u[n]\overset{\mathcal{F}}{\longrightarrow}X(e^{j\omega})(\frac 1 {1-ae^{-j\omega}}+\pi\sum\limits_{k=-\infty}^{+\infty}\delta(\omega-2k\pi))
+\]</div>
+<p>又由于<span class="arithmatex">\(X(e^{j\omega})\)</span>有2pi的周期，所以那个δ(ω-2kpi)用了筛选性质相当于第二项只需要乘以常数的<span class="arithmatex">\(X(e^{j0})\)</span></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">系统名称</th>
+<th style="text-align: center;">冲激响应 <span class="arithmatex">\(h[n]\)</span></th>
+<th style="text-align: center;">频率响应 <span class="arithmatex">\(H(e^{j\omega})\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">差分器</td>
+<td style="text-align: center;"><span class="arithmatex">\(\delta[n]-\delta[n-1]\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1-e^{-j\omega}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">累加器</td>
+<td style="text-align: center;"><span class="arithmatex">\(u[n]\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\frac{1}{1-e^{-j\omega}} + \pi\sum\limits_{k=-\infty}^{+\infty} \delta(\omega-2k\pi)\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">延时器</td>
+<td style="text-align: center;"><span class="arithmatex">\(\delta[n-n_0]\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(e^{-j\omega n_0}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>DTFT你只要把<span class="arithmatex">\(e^{-j\omega}\)</span>设为x那就还是相当于做分式的分解而已</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021543846.png" /></p>
+<p>这个就是最常规的分式分解的了，自己做的时候把e^{jω}设为x，然后按照自己习惯的方式分解成m/(a+x)+n/(b+x)的形式，然后让a和b变回1，也就是上下同除a或者上下同除b。注意是允许出现诸如1/(1+x/2)的形式的，因为常用公式里面要求|a|&lt;1，a可以是负数，不是一定要写成1/(1-正数x)的形式</p>
+<h4 id="_24">调制性质<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[
+x[n]y[n]\overset{\mathcal{F}}{\longrightarrow}\frac 1 {2\pi}X(e^{j\omega})\circledast Y(e^{j\omega})=\frac 1 {2\pi}\int_{2\pi} X(e^{j\theta})Y(e^{j(\omega-\theta)})d\theta
+\]</div>
+<p>虽然也是时域相乘等于频域卷积(除以2pi)，但是这里的卷积是特殊的圆卷积，和连续的不一样。圆卷积是只在一个周期内卷积，这也很好理解，因为离散时间傅里叶变换这块有效的也就是一个周期。</p>
+<p>没必要积分计算圆卷积，可以把它还原成普通卷积来做。正确做法就是只取两个原函数-pi到pi的频域（其余为0）然后做卷积，然后以2pi为周期延拓再除以2pi，得到的结果就是圆卷积的结果</p>
+<p>注意对于x[n]cos(ω0n)，不需要按这种单周期的方法做，而是直接做普通卷积即可，形式上是一样的，不需要仔细考究是否在-pi到pi，周期性已经蕴含在e^(jω)里了。</p>
+<div class="arithmatex">\[
+x[n]\cos(\omega_0 n)\overset{\mathcal{F}}{\longrightarrow}\frac 1 2[X(e^{j(\omega-\omega_0)}+X(e^{j(\omega+\omega_0)}))]
+\]</div>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021546668.png" /></p>
+<p>自己练习就行，注意系数</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021550613.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021551769.png" /></p>
+<p>③其实就是②右移pi（或左移pi也一样），通过乘以(-1)^n，把②的低通滤波器变成了高通滤波器</p>
+<p>④是相对麻烦一些的，如果用圆卷积定义来做，需要注意要考虑移动时旁边周期的也会过来有交叉。简单一些的方法，就是先不管它的周期性直接做卷积，然后再用上周期性然后叠加的部分加起来</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021552013.png" /></p>
+<p>更快的方法，用上三角恒等式</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021553020.png" /></p>
+<h4 id="_25">帕斯瓦尔定理，共轭对称性<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[
+\sum\limits_{n=-\infty}^{+\infty}|x[n]|^2=\frac 1{2\pi}\int_{2\pi}|X(e^{j\omega})|^2
+d\omega\]</div>
+<p>和连续的也差不多，只不过左边是对离散的求能量</p>
+<p>共轭对称性</p>
+<p>仍然是实偶对实偶，实奇对虚奇</p>
+<p>实序列经过DTFT，幅度谱偶，相位谱奇，且实部偶，虚部奇</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021555315.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021600445.png" /></p>
+<p>第一步用上欧拉公式，然后这个形式直接得到x[n]我是真没绷住，第一次见真没思路，直接反变换比较难想，因为不像CTFT那样正变换和反变换可以换着用的关系，这里就比较不同。无论是正变换还是反变换，看到e指数，或者三角函数也要想到e指数，就要想到可以简单地做出来，因为原始表达式就是对e指数求和或者积分</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021601618.png" /></p>
+<p>然后到这里看似已经完成了，但是你还需要求0这个地方的值，就需要用上第二第四个条件</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021601472.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021602241.png" /></p>
+<p>这题除了第二小问之外都非常困扰我。我先总结一下规律吧。先看幅度谱是不是偶函数，如果是偶函数那就比较简单了，时域要么是实偶（相位0），要么是实偶移动一下（相位谱线性相位），不会考其他的情况。如果幅度谱不是偶函数，那就看实部和虚部。注意幅度谱不可能是奇函数，因为它是模长啊，模长怎么可能有负的呢？这里第一问不要以为那个sin求和是幅度谱，幅度谱不可能是奇函数。正确的方式是看它的实部和虚部。实部是sin乘上e分出来的cos，是一个奇函数。虚部是sin乘上e分出来的jsin，是一个偶函数。实部奇虚部偶则为虚信号。如果是实信号，实部偶虚部奇，而且幅度谱偶相位谱奇。由于第一问这个频域不是偶函数也不是奇函数，所以x肯定不是偶函数或奇函数。</p>
+<p>第三小问幅度谱是偶函数，相位谱非奇非偶，但是原函数是实函数，这打破了实函数对应幅度谱是偶函数，相位谱是奇函数的假设。更加严谨的表述可能是实函数对应幅度谱是偶函数，相位谱满足B(-ω)+B(ω)=2kpi的特征。但是问了老师之后发现，如果你把相频特性超越±pi的部分折回到±pi之间，那么(3)的相频特性实际上就是一个奇函数，这样就简单了。所以我建议必须首先看相频特性是否是线性相位，如果是线性相位先看是不是奇函数，如果是奇函数那么就很爽，因为它只是一个时移，你可以直接忽略相频特性，直接看幅频特性，如果幅频特性是实偶函数，那么说明原来是一个实偶函数，然后经过一个时移。如果幅频特性是奇函数，分实奇函数和虚奇函数，这个也可以直接对应原来的虚奇和实奇，也不难</p>
+<p>补充离散冲激串的DTFT</p>
+<div class="arithmatex">\[\sum_{k=-\infty}^{+\infty}\delta[n-mk](m\in\mathbb Z_+)\]</div>
+<p>如果m=2，如果和原信号相乘相当于隔一个地采样，但是变成0的那些仍然保留，这就和时域扩展不一样了。当m=2的时候，你实际上可以把它写成(1+(-1)^n)/2，这下看懂了，因为这个东西其实就是把频域在原来位置的基础上叠加一个频移pi的再除以2</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021604649.png" /></p>
+<p>又是一道类似CTFT那里的好题，需要从DTFT的定义上面来搞，不过还算是比较简单，因为都是已知的序列，然后呢后面帕斯瓦尔定理用的也比较常规，只需要推出绝对值里面的对应的x[n]就行。不过第二小问让我有疑惑，似乎不能简单认为有群延时</p>
+<p>奇函数的线性相位，也就是只是-t0ω，其实是要经过unwrap的，真正的表达式是比较麻烦的，会跳跃±pi，但是让你做题写的，只需要写成正比例函数的形式即可。哪怕跳跃，只要斜率是固定的，那就都算线性相位</p>
+<h2 id="dfs">离散时间傅里叶级数(DFS)<a class="headerlink" href="#dfs" title="Permanent link">&para;</a></h2>
+<p>Discrete fourier series</p>
+<p>信号与系统其实不考这个，这个放在数字信号处理，但是胡浩基老师觉得很有价值所以讲了。这个在生物医学信号处理是重点</p>
+<p>傅里叶级数FS是从连续x(t)到离散<span class="arithmatex">\(a_k\)</span>，连续时间傅里叶变换是从连续x(t)到连续X(jω)，离散时间傅里叶变换是从离散x[n]到连续<span class="arithmatex">\(X(e^{j\omega})\)</span>，还差一个就是从离散x[n]到离散<span class="arithmatex">\(a_k\)</span>的离散信号傅里叶级数。之所以要引入离散信号傅里叶级数是因为计算机只能处理离散的数据</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021614667.png" /></p>
+<p>离散对应周期，比如傅里叶级数a_k是离散的，对应x(t)是周期的，而离散时间傅里叶变换的x[n]是离散的，对应<span class="arithmatex">\(X(e^{j\omega})\)</span>是周期的</p>
+<p>离散傅里叶级数的定义</p>
+<div class="arithmatex">\[
+a_k=\sum\limits_{n=0}^{N-1}x[n]e^{-j\frac {2\pi} N nk}
+\]</div>
+<p>除了记作a_k，也有写成X[k]的情况</p>
+<div class="arithmatex">\[
+x[n]=\frac 1 N \sum\limits_{k=0}^{N-1}a_ke^{j\frac {2\pi} N nk}
+\]</div>
+<p>是在用<span class="arithmatex">\(e^{\large{j\frac {2\pi} N nk}}\)</span>作为基底来表示，而这个东西显然关于N是周期的，而它表示出来的x[n]，也是以N为周期的</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021626071.png" /></p>
+<h3 id="fft">FFT<a class="headerlink" href="#fft" title="Permanent link">&para;</a></h3>
+<p>FFT是用来加速DFS求值的一种算法，时间复杂度为O(NlogN)，比直接解方程的复杂度低，本质上是用了分治策略</p>
+<p>一个n-1次多项式f(x)可以用n个不同的点来表示，如(x_1, f(x_1)), ..., (x_n, f(x_n))，这n个点可以任选，我们希望以最快的速度得到这n个点的函数值。一个一个带入在小的集合上有用，但时间复杂度较高。为了加速，我们引入FFT。FFT的思想是，将多项式按奇偶项分成子多项式，对子多项式可以继续往下分，直到分到最底层只有两项的多项式c0+c1x。随后只需要直接代入1和-1这两个点得到值，然后经过系数的组合得到4项的多项式在1，j，-1, -j的值，然后继续往上表示8项的，直到把最顶层的都表示出来，于是就可以得到原来的所有的点的函数值。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021631880.png" /></p>
+<p>这是表示FFT算法的蝴蝶图，通过底层的求值经过组合得到a_k</p>
+<p>这里只是介绍了最经典的库利-图基的radix-2算法，经过发展还有混合基FFT，实FFT，chirp-Z变换等推广，这里不展开，可以自行了解。</p>
+<h3 id="dfsdtft">DFS和DTFT的关系<a class="headerlink" href="#dfsdtft" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(a_k\)</span>是<span class="arithmatex">\(X(e^{j\omega})\)</span>在0到2pi上的均匀采样，其实这一点和FS之于CTFT的关系是一样的。“用傅里叶变换求周期信号的傅里叶级数”那一节讲到，如果想要求周期信号的傅里叶级数，可以先求一个周期内的信号的傅里叶变换（只保留那个周期内的值，其余部分均让信号为0），然后用<span class="arithmatex">\(a_k=\frac 1 TX(k\omega_0)\)</span>，即可得到指数形式的FS的系数</p>
+<p>想要得到DFS的系数a_k，只需要对周期序列的一个周期（N）内的信号做DTFT，然后在0到2pi上从0开始间隔2pi/N，取N个点即可，这N个点的值就是DFS的结果，不需要除以什么东西</p>
+<p>后续在BSP部分会补充DFS这块更详细的内容，此处因为还没有讲采样所有先不展开</p>
+<h3 id="fft_1">用FFT计算两个序列的卷积<a class="headerlink" href="#fft_1" title="Permanent link">&para;</a></h3>
+<p>先定义循环移位，比如说一个长度为N的序列往右移动一位就是把原本是最后一个的N-1放最前面，然后其余的往右移动，像是8051的RR指令。然后表达长度为N的序列循环右移m次就用x[(n-m)N]表示</p>
+<p>不过这种说法在具体计算的时候比较难表达，更加容易的方式是你就看括号里的东西是几，然后对它取模，限制在0到N-1的范围内，再根据原来的序列就能得到它的值</p>
+<p>比如x[n]=[1, 2, 0, -1]，我想要得到x[-1]，那就相当于取原来的x[3]</p>
+<p>然后定义两个N点序列的循环卷积，注意离散的循环卷积只能作用于两个长度相同的序列</p>
+<p>循环卷积就是圆卷积，有连续和离散两个版本，和一开始学的线性卷积不一样。</p>
+<div class="arithmatex">\[
+y[n]=x[n]\circledast h[n]=\sum\limits_{m=0}^{N-1}x[m]h[(n-m)N]
+\]</div>
+<p>其实完全可以先算线性卷积再求圆周卷积。线性卷积方法已经明显，就是列表然后副对角线方向求和。而要得到圆周卷积，比如这里模4，只需要把线性卷积结果里面下标模4相同的加起来即可。</p>
+<p>比如这里(1,2,3,4)卷积(1,0,2,1)先进行线性卷积得到(1,2,5,9,8,11,4)，下标从0到6，那么下标为0和4的就加起来，也就是这里的1+8=9。然后下标为1和5的加起来，也就是这里的2和11加起来是13。然后下标为2和6的加起来，比如这里是5+4=9。接着下标为3的已经没有下标为7的了，所以就它自己，是9。这里圆周卷积的输入是两个相同长度的序列，输出也是相同长度的序列，知道这一点就行。</p>
+<p>因为FFT算法比较快（对于大的数据计算而言），可以利用FFT来计算线性卷积。长度为L1和L2的序列做线性卷积的长度是L1+L2-1。第一步得要补0成长度为L1+L2-1的序列，因为循环卷积的长度和原来两个的长度是相同的。前面(1,2,3,4)卷积(1,0,2,1)的例子卷积完长度是7，于是需要补成(1,2,3,4,0,0,0)卷积(1,0,2,1,0,0,0)做圆周卷积，得到的结果就和线性卷积一样了。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021651201.png" /></p>
+<p>对于人来说求正变换和反变换很慢，但是对计算机来说在大的数据上很快（相比直接线性卷积）。你在考试肯定还是用普通的卷积求法。</p>
+<h2 id="_26">采样<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h2>
+<p>采样是沟通连续与离散的桥梁</p>
+<p>采样就是从连续信号中等间隔地记录值</p>
+<p><img alt="Snipaste_2026-07-02_16-59-14.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021659444.png" /></p>
+<div class="arithmatex">\[
+x[n]=x(nT)
+\]</div>
+<p>采样定理：如果x(t)是带限信号，即当<span class="arithmatex">\(|ω|&gt;ω_M\)</span>时X(jω)=0，如果采样频率<span class="arithmatex">\(\omega_s&gt;2\omega_M\)</span>,则x(t)可以由样本值序列x[n]=x(nT)唯一确定，<span class="arithmatex">\(T=2\pi/\omega_s\)</span>，<span class="arithmatex">\(\omega_M\)</span>是带限信号截止频率</p>
+<p>显然采样频率ωs越大，就越容易还原信号，因为采样频率大了那T就小了，采的点就越密集，获取的信息就越多</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021903351.png" /></p>
+<p>一个采样的结果可以还原出不同的可能性，比如14pi的情况就是比4pi的多一个周期的</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021903487.png" /></p>
+<p>本质上是2kpi n无法分辨，在ω_M的表达式里2pi/T就是ω_s</p>
+<p>务必注意从采样信号还原原来的信号有多解</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021904442.png" /></p>
+<p>带公式，x[n]=x(nT)那一步不用操心，照常带进去就行，关键是题目给你的现成的表达式是要带2knpi的，这里不可以用2kpi不带n，这样是有问题的。为什么？题目要求寻找T使得sin(2000pi nT)=sin(npi/5+2kpi)，假设k任取，那么你得到的T=1/10000+k/1000n。但T是一个和n无关的东西，所以必须要把这个n约掉，所以要用nk，这样就剩下k/1000</p>
+<h3 id="_27">采样定理三张图<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<p>采样定理的证明需要全部记住</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021904694.png" /></p>
+<p>核心就是这三张图，要对其中的表达式也要很清楚。注意这里冲激串采样的ω和序列采样的ω不是同一个ω，冲激串采样的那个ω是模拟角频率，还是对应现实频率，但是序列采样的那个ω是数字角频率，或者说归一化角频率</p>
+<p>第一第二个是连续时间傅里叶变换，第三个是离散时间傅里叶变换</p>
+<p>先推导第二张图</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021904626.png" /></p>
+<p>p(t)就是连续时间傅里叶变换最后那里讲到的周期冲激串，如果还记得的话就知道P(jω)是高度为2pi/T，间隔为ω0的周期函数了（间隔ω0对应时域的冲激串间隔T），这里T是<span class="arithmatex">\(2\pi/\omega_s\)</span>，所以P(jω)间隔为ω_s</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021905717.png" /></p>
+<p>然后卷积就简单了，对δ卷积相当于复制一份，于是就可以画出②里右边的样子了。当然还配合了X(jω)的形状，如果①的变换是那样的话那②的图象就是画出来的那样</p>
+<p>接下来看③的证明，主要是证明x[n]的<span class="arithmatex">\(X(e^{j\omega})=X_p(j\frac \omega T)\)</span>，这里只看变量ω变成了ω/T，也就是横坐标扩成了原来的T倍</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021905710.png" /></p>
+<p>到这一步之后<span class="arithmatex">\(X_p\)</span>里的ω换成ω/T，最终的表达式就一样了</p>
+<p>证明了<span class="arithmatex">\(X(e^{j\omega})=X_p(j\frac \omega T)\)</span>，就可以直接根据<span class="arithmatex">\(X_p(j\omega)\)</span>的图象然后扩大T倍就得到了<span class="arithmatex">\(X(e^{j\omega})\)</span></p>
+<p>务必注意序列的ω是数字角频率，建议写成Ω。</p>
+<p>我发现了一件惊人的事情，原来x[n]序列和间隔为1高度为原来采样结果的冲激串的频域是相同的，只是一个用ω，一个用Ω</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021906244.png" /></p>
+<p>用间隔为1的冲激串进行采样之后做CTFT</p>
+<div class="arithmatex">\[ X_c(j\omega) = \int_{-\infty}^{\infty} \left( \sum_{n=-\infty}^{\infty} x[n]\delta(t-n) \right) e^{-j\omega t} dt = \sum_{n=-\infty}^{\infty} x[n]e^{-j\omega n} \]</div>
+<p>序列采样做DTFT，为了区分，这里数字角频率用了Ω</p>
+<div class="arithmatex">\[ X(e^{j\Omega}) = \sum_{n=-\infty}^{\infty} x[n]e^{-j\Omega n} \]</div>
+<p>可以看出，其实和CTFT表达式一样，只是自变量换了</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021910383.png" /></p>
+<p>所以采样定理可以解决DTFT正变换的问题，可以把它变成对连续时域进行T=1采样得到的结果，于是你直接对时域相同表达式求CTFT之后直接把CTFT的按2pi混叠即可，没有任何其他的变化，因为此处的T=1，所以1/T=1，所以高度方面不需要调整，只需要注意自变量从模拟角频率</p>
+<p>现在根据这个图再去看采样定理，想要表达的意思就是②里面的频域的那些是分开的，不发生混叠，才可以恢复原来的信号。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021911050.png" /></p>
+<p><span class="arithmatex">\(\omega_s-\omega_M&gt;\omega_M\)</span>，也就是<span class="arithmatex">\(\omega_s&gt;2\omega_M\)</span>，就是采样定理提到的条件</p>
+<p>把截止频率的两倍称为奈奎斯特采样频率，当采样频率为奈奎斯特采样频率的时候，不能保证一定能够还原，比如对sin</p>
+<h3 id="_28">信号重建<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h3>
+<p>接下来讲怎么通过采样还原原来的信号，公式叫做内插公式，所谓内插就是把离散的补全成连续的。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021912412.png" /></p>
+<p>他这里从xp(t)开始推，然后把δ给弄到卷积那里去了，然后把x(nT)替换成x[n]</p>
+<p>这种形式的叫做低通内插，事实上如果X(jω)是另一种形式也可以得到相同的Xp(jω)</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021914607.png" /></p>
+<p>在这种情况下想要还原，需要用另一个滤波器</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021914502.png" /></p>
+<p>这种还原方式叫做带通内插</p>
+<p>在这里科普滤波器的四种类型</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021914987.png" /></p>
+<p>低通和高通，带通和带阻是相反的关系，如果看成digital的，只有0和1的话</p>
+<p>补充一个易错点，即使<span class="arithmatex">\(\omega_s&lt;2\omega_M\)</span>，也未必会发生混叠。关键在于带限信号的截止频率是定义为最外面的零点，在内部可以也有没有值的地方，可能刚好错开不会混叠</p>
+<h3 id="_29">连续时间系统的离散实现<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
+<p>本质上是冲激响应不变法设计数字滤波器以及信号重建</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021932237.png" /></p>
+<p>模拟系统里，x(t)经过系统和h(t)卷积得到y(t)。现在我希望把x(t)间隔T采样得到的序列x[n]送入离散系统和h[n]卷积，并保证卷积后的结果y[n]就是模拟系统里y(t)间隔T采样的结果，问题就是这个h[n]怎么设计，它和h(t)的关系</p>
+<p>冲激响应不变法是设计数字滤波器的一种方法，是已经有一个H(jω)（带限），你要得到h[n]，有两种路径</p>
+<p>路径一：</p>
+<ol>
+<li>H(jω)做CTFT逆变换得到h(t)</li>
+<li>令h[n]=Th(nT)得到h[n]</li>
+</ol>
+<p>路径二：</p>
+<ol>
+<li>令<span class="arithmatex">\(H(e^{j\omega})=H(j\dfrac \omega T)\)</span>得到<span class="arithmatex">\(H(e^{j\omega})\)</span></li>
+<li>对<span class="arithmatex">\(H(e^{j\omega})\)</span>做DTFT逆变换得到h[n]</li>
+</ol>
+<p>这两个路径得到的结果完全等价（在无混叠且时域没有δ(t)的情况下）</p>
+<p>接下来要证明为什么是hd[n]=Th(nT)，为什么要乘以T</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021932129.png" /></p>
+<p>这里展示了采样前后傅里叶变换的图象差异，并根据<span class="arithmatex">\(X(e^{j\omega})\)</span>和<span class="arithmatex">\(Y(e^{j\omega})\)</span>的图象反推<span class="arithmatex">\(Hd(e^{j\omega})\)</span>的图象</p>
+<p>而h(nT)的高度是Eh/T，为了实现这个图里的高度为Eh，所以需要乘以T</p>
+<p>接下来展示怎么设计</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021933377.png" /></p>
+<p>注意数字微分器这个无法用Th(nT)得到，因为微分它本来就有δ'(t)，无法采样，这也说明其实上面两个路径并不完全等价，仅有部分时候可以混用。</p>
+<p>这个我想到另一种方法，这里做逆变换不要这样套公式，要用积分性质。把带限jω视为jω乘以低通滤波器，对应时域就是δ'(t)卷积sin(ωct)/(pi t)，那你就对这个东西求导就好了，得到的就是上面的结果。这就是最快的计算方法，不要用套公式的方式分部积分算。</p>
+<p>延时器（Delay）</p>
+<p>连续频率响应为 <span class="arithmatex">\(H_c(j\omega)=e^{-j\omega t_0}\)</span>。带限设计下，离散频率响应为：</p>
+<div class="arithmatex">\[
+H_d(e^{j\Omega}) = H_c\left(j\frac{\Omega}{T}\right) = e^{-j(\Omega/T) t_0} = e^{-j\Omega (t_0/T)}, \qquad |\Omega| &lt; \Omega_c
+\]</div>
+<p>求 <span class="arithmatex">\(h_d[n]\)</span> 的逆离散时间傅里叶变换：</p>
+<div class="arithmatex">\[
+h_d[n] = \frac{1}{2\pi} \int_{-\Omega_c}^{\Omega_c} e^{-j\Omega (t_0/T)} e^{j\Omega n} d\Omega
+= \frac{1}{2\pi} \int_{-\Omega_c}^{\Omega_c} e^{j\Omega (n - t_0/T)} d\Omega
+\]</div>
+<p>直接计算积分：</p>
+<div class="arithmatex">\[
+h_d[n] = \frac{1}{2\pi} \cdot \frac{e^{j\Omega (n - t_0/T)}}{j(n - t_0/T)} \Bigg|_{-\Omega_c}^{\Omega_c}
+= \frac{e^{j\Omega_c (n - t_0/T)} - e^{-j\Omega_c (n - t_0/T)}}{2\pi j (n - t_0/T)}
+= \frac{\sin\left(\Omega_c (n - t_0/T)\right)}{\pi (n - t_0/T)}
+\]</div>
+<p>若 <span class="arithmatex">\(n = t_0/T\)</span>（且 <span class="arithmatex">\(t_0/T\)</span> 为整数），取极限得该点值为：</p>
+<div class="arithmatex">\[
+h_d[t_0/T] = \frac{\Omega_c}{\pi}
+\]</div>
+<h3 id="_30">采样例题<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h3>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021944178.png" /></p>
+<p>遇到这样的题，先根据周期冲激串确定采样周期和ωs，这里xs就是前面采样重点图里面的xp，xs=x(t)δT(t)</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021944951.png" /></p>
+<p>第一题直接套结论，第二题需要小心，因为这是冲激函数而不是普通的，所以它的高度会随放缩变化，容易错，第三题就直接跳过了</p>
+<p>在满足采样定理的时候（无混叠），可以直接从采样序列x[n]的频谱还原x(t)的频谱，就取一个周期内的然后进行合适的横纵坐标缩放</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021945854.png" /></p>
+<p>一道比较特别的题目</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021946549.png" /></p>
+<p>涉及到能量需要想到帕斯瓦尔定理，出现x[n]=x(nT)需要想到采样定理。这里首先通过直观理解，猜出可能可以通过采样信号的长乘宽来估算连续信号的能量</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021947184.png" /></p>
+<p>这里需要猜出条件是满足采样定理的条件，然后从离散那里开始，先用了离散的帕斯瓦尔定理把x[n]的能量转到频率部分，然后根据x[n]的频谱和x(t)频谱的关系，改成对X(jω)的积分，最后再用连续帕斯瓦尔定理转到连续信号的能量</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021947886.png" /></p>
+<p>这一题求出差分方程的H之后直接把e^{jω}换成e^{jωT}即可。注意一开始的ω是数字角频率，换掉之后的ω是模拟角频率。其实就是前面说的冲激响应不变法的频域变换现在换成从H(e^{jω})回到H(jω)而已，所以就是把ω换成ωT。凡是从数字设计模拟或者从模拟设计数字都是这样。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607021948681.png" /></p>
+<p>这个是冲激串采样，和序列采样不一样。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022003376.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022003468.png" /></p>
+<h3 id="_31">从采样看各个变换的关系<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h3>
+<p>集大成的图，如果能理解以下几张图，那么信号与系统就算是理解充分了，如果能自己画出来，那就意味着充分熟悉。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042134511.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042132117.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042131214.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607042216312.png" /></p>
+<p>这个图我考前自己画的</p>
+<h2 id="lt">拉普拉斯变换(LT)<a class="headerlink" href="#lt" title="Permanent link">&para;</a></h2>
+<p>拉普拉斯变换Laplace Transform</p>
+<p>学拉普拉普变换和z变换是为了设计滤波器</p>
+<p>滤波器设计中的困难是怎么把无限、连续、非因果的理想滤波器优化为计算机可实现的有限、离散、因果的滤波器</p>
+<h3 id="_32">定义<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h3>
+<p>拉普拉斯变换是傅里叶变换的推广，因为可以进行傅里叶变换的函数有限制条件</p>
+<p>傅里叶变换</p>
+<div class="arithmatex">\[
+X(j\omega)=\int_{-\infty}^{+\infty}x(t)e^{-j\omega t}dt
+\]</div>
+<p>拉普拉斯变换</p>
+<div class="arithmatex">\[
+X(s)=\int_{-\infty}^{+\infty}x(t)e^{-st}dt
+\]</div>
+<p>其实从这里就能看出其实傅里叶变换里的jω的j是有道理的，把jω替换成s就是拉普拉斯变换了。拉普拉斯变换和傅里叶变换的区别在于，那个e除了旋转之外还会缩小，从而解决傅里叶变换要求x(t)绝对可积的那个限制，因为它自己就会衰减，当然这也要求s在实部大于零的复平面取值。对于傅里叶变换得到的是实频域，对拉普拉斯变换得到的是复频域。这里的s=σ+jω，注意ω仅在j那里，ds=jdω，σ是一个常数</p>
+<p>逆变换</p>
+<div class="arithmatex">\[
+x(t)=\frac 1{2\pi j}\int_{\sigma-j\infty}^{\sigma+j\infty}X(s)e^{st}ds, \sigma=Re(s)
+\]</div>
+<p>第一次学我有些疑问，这里的σ是常数还是变量？它被积分完还能留下吗，如果能留下那x还是t的函数吗，σ本身会不会成为一个自变量？</p>
+<p>解释一下，这里的积分限其实是复平面里的一条竖线</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022004230.png" /></p>
+<p>在这条线上积分，也就是说拉普拉斯变换的基函数其实是<span class="arithmatex">\(e^{st}=e^{\sigma t+j\omega t}\)</span>，那这里的σ究竟是多少，事实上σ是任取的，σ取0那就是在用<span class="arithmatex">\(e^{j\omega t}\)</span>做基函数，这就是傅里叶变换，σ取1那就是用<span class="arithmatex">\(e^{t+j\omega t}\)</span>做基函数。不管σ取哪个，用逆变换公式变换回去都能得到x(t)。</p>
+<p>连续时间傅里叶变换就是取σ=0时的情况，从符号上就是把所有的s=σ+jω替换为jω</p>
+<p>第二个疑问，复变里学的是从0开始积分，怎么这里是从-∞开始。其实这两种定义都可以，这种从负无穷积到正无穷的是双边拉普拉斯变换，从0开始的是单边拉普拉斯变换。其实对于因果信号来说，因果信号就是t&lt;0均为0，这两种是一样的</p>
+<p>在这个公式里，σ可以是全体实数，而不仅限于复变里讲的大于等于0，其实就是看收不收敛，如果能收敛的话取负的也没问题</p>
+<h3 id="_33">重要拉普拉斯变换<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+\begin{align}
+e^{-at}u(t)&amp;\overset{\mathcal{L}}\longrightarrow\frac 1 {s+a}(Re(s)&gt;-Re(a))\\
+-e^{-at}u(-t)&amp;\overset{\mathcal{L}}\longrightarrow\frac 1 {s+a}(Re(s)&lt;-Re(a))\\
+\end{align}
+\]</div>
+<p>乘了u(t)其实单边和双边LT都是一样的，不过像是sin(ωt)，没有乘的话，如果是单边的是有收敛域的，就是复变那里学的，如果是双边那是不收敛的。计算拉氏变换必须考虑收敛域。注意这里a可以是实数也可以是复数</p>
+<p>第一个公式的收敛于主要是看积分的时候正无穷那一项能不能变成0，不过更简单的看法就是什么样的<span class="arithmatex">\(e^{-\sigma t}\)</span>能把它压到0，因为就是相当于多乘了一个衰减因子。</p>
+<p>对于<span class="arithmatex">\(e^{-at}u(t)\)</span>，它的极点就是它恰好不收敛的那个地方，理论上来说是一条线，就是Re(s)=-a那根线，不过极点仅指那个点(-a, 0)，代数上简单理解就是这个分式的无定义点，也就是分母为0的解</p>
+<p>利用以上两个式子求<span class="arithmatex">\(e^{-b|t|}\)</span>的拉普拉斯变换，这里要注意形状的关系和参数的正负性。我们先假设b&gt;0，那么待求的式子就是一个从0两端往下的图象，现在要用这两个已有的拼出它。大于0的一侧比较简单，直接把第一个式子的a换成b即可，形状是一样的，比较麻烦的是t&lt;0的情况。如果我们对第二个式子仍然让a&gt;0，对应的图象应当是左边是往负无穷跑的，而不是预期的收敛到0，因此第二个a应该取负数，在b&gt;0的情况下，令a=-b带入第二个式子，就可以得到一个负的衰减到0的图象，然后再整体变成正的就行，对应的拉普拉斯变换为<span class="arithmatex">\(-\dfrac 1 {s-b}\)</span>，收敛域为Re(s) &lt; b。这样两个拼起来，拉普拉斯变换为<span class="arithmatex">\(\dfrac 1 {s+b}-\dfrac 1 {s-b}\)</span>，收敛域为-b &lt; Re(s) &lt; b。</p>
+<p>你要知道<span class="arithmatex">\(e^{-a|t|}=e^{-at}u(t)+e^{at}u(-t)\)</span>，然后分别带入上面公式就可以得到1/(s+a)-1/(s-a)了，收敛域|Re(s)|&lt;|a|</p>
+<p>然后反变换就比较麻烦了，要分类讨论，因为同一个1/(s+a)可以反变换成两种不同的形式，对应收敛域不同</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022005167.png" /></p>
+<h3 id="_34">收敛域性质<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h3>
+<p>拉普拉斯变换的收敛域是有性质的，X(s)的收敛域是竖的带状区域，前提是x(t)连续且不包含奇异信号。这个其实很好理解，因为拉普拉斯变换就是用竖着的一条一条的来作为基函数的</p>
+<p>另外就是满足绝对可积的时限信号（定义域有限）在整个s平面收敛</p>
+<p>右边信号的收敛域在最右边极点的右边</p>
+<p>如果把刚刚那道题改一下，改成因果信号x(t)，那答案就只有一个，因为因果信号一定是右边信号</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022005630.png" /></p>
+<p>左边信号的收敛域在最左边极点的左边</p>
+<p>双边信号收敛域带状，双边信号就是定义域从负无穷到正无穷，双边信号可以拆成一个左边信号加一个右边信号，那两个收敛域取交集就是一个带状的</p>
+<p>其实结合这几个性质再去看那几个例子就很容易记忆了</p>
+<p>稳定信号的收敛域包含jω轴</p>
+<p>这题有意思，只看收敛域</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022007951.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022007208.png" /></p>
+<p>我总结一下通过看零极点和收敛域来判断性质</p>
+<p>极点个数大于等于零点，且收敛域往右，则信号因果</p>
+<p>收敛域包含虚轴，则信号稳定</p>
+<p>因果稳定信号的极点个数大于零点，且极点都在左半平面</p>
+<p>一道比较有意思的题，让人想到高中题目，根分布问题</p>
+<p>系统方程<span class="arithmatex">\(\dfrac{ks}{s^2+(4-k)s+4}\)</span>，使得系统稳定的k的范围？（默认因果）</p>
+<p>等价于分母的两个根都在左半平面内。用求根公式，<span class="arithmatex">\(s_{1,2}=\dfrac {k-4\pm \sqrt{(4-k)^2-16}}{2}\)</span></p>
+<p>当根为实根，即(4-k)平方大于等于16，此时k≤0或k≥8。要使得两个根都在左半平面，则s1+s2&lt;0，s1s2&gt;0。由于s1s2=4，自动满足，只需要看s1+s2=k-4&lt;0，此时k&lt;4，与条件取交集得到k≤0</p>
+<p>当根为复根，即(4-k)平方小于16，此时0&lt;k&lt;8，此时只需要看根的实部(k-4)/2&lt;0，即k&lt;4，所以取交集得到0&lt;k&lt;4</p>
+<p>综上所述，k＜4</p>
+<h3 id="_35">常用拉普拉斯变换<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+\begin{align}
+L[u(t)]&amp;=\frac 1 s, Re(s)&gt;0\\
+L[e^{-at}u(t)]&amp;=\frac 1 {s+a}, Re(s)&gt;-Re(a)\\
+L[t^n\ u(t)]&amp;=\frac {n!} {s^{n+1}}, Re(s)&gt;0\\
+L[\sin t\ u(t)]&amp;=\frac 1 {s^2+1}, Re(s)&gt;0\\
+L[\sin \omega t \ u(t)]&amp;=\frac \omega {s^2+\omega^2}, Re(s)&gt;0\\
+L[\cos t\ u(t)]&amp;=\frac s {s^2+1}, Re(s)&gt;0\\
+L[\cos \omega t\ u(t)]&amp;=\frac s {s^2+\omega^2}, Re(s)&gt;0\\
+L[e^{j\omega t }\ u(t)]&amp;=\frac 1 {s-j\omega}=\frac s {s^2+\omega^2}+j\frac {\omega}{s^2+\omega^2}, Re(s)&gt;0\\
+L[e^{-at}\cos(\omega_0 t)u(t)]&amp;=\frac {s+a}{(s+a)^2+\omega_0^2}
+\end{align}
+\]</div>
+<p>注意此处不能用实偶对实偶来看，因为这里根本就不是实偶函数，它是单边的。区分sin和cos的最好的方法是记忆e^{jωt}，然后用欧拉公式对照一下就知道s的那个是cos的，而带j那一项是sin的</p>
+<h3 id="_36">性质<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h3>
+<p>线性性需要额外注意收敛域</p>
+<p>线性组合之后，在R1∩R2以内一定收敛，在一些特殊情况下，比如计算结果为0，那收敛域也有可能扩大</p>
+<p>时移性质</p>
+<div class="arithmatex">\[
+x(t-t_0)\overset{\mathcal{L}}{\longrightarrow}e^{-st_0}X(s), 收敛域不变
+\]</div>
+<p>这里需要和连续时间傅里叶变换对比一下，连续时间傅里叶变换用的是和<span class="arithmatex">\(e^{-j\omega t}\)</span>积分，所以t变成t-t0的时候多出来的是<span class="arithmatex">\(e^{-j\omega t_0}\)</span>而不是<span class="arithmatex">\(e^{-st_0}\)</span></p>
+<p>频移性质</p>
+<div class="arithmatex">\[
+e^{at}x(t)\overset{\mathcal{L}}{\longrightarrow}X(s-a),收敛域变为R+Re(a)
+\]</div>
+<p>我先说一下收敛域，把x(t)到X(s)的收敛域设为R，而频移性质会导致新的收敛域会移动a的实部，比如a=1那收敛域就右移1。举个具体的例子，<span class="arithmatex">\(e^{-t}u(t)\to \dfrac 1 {s+1}, u(t)\to \dfrac 1 {s}\)</span>，这里就是把s变成了s-1，于是时域乘以<span class="arithmatex">\(e^t\)</span>，而收敛域从Re(s)&gt;-1变成Re(s)&gt;0，右移了1</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022009139.png" /></p>
+<p>注意这个收敛域的变化，我觉得不应该把R当成集合而是应当当成σ轴上的那个值，毕竟收敛域都是带状的，所以只需要用实轴上交点的值来表达就行。那aR其实也就是把原来的点的值变成a倍。</p>
+<p>时域微分</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022009153.png" /></p>
+<p>把jω替换为s，收敛域可能扩大</p>
+<p>时域微分性质很好用，这意味着你只需要得到1/分母，就可以任意组合出其他的s/分母，s^2/分母等</p>
+<p>频域微分</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022010164.png" /></p>
+<p>其实还是和傅里叶变换一样的，把傅里叶变换那里的dω改成djω，配一下，把负号放到左边就和拉普拉斯变换一样了</p>
+<p>卷积性质</p>
+<div class="arithmatex">\[
+x_1(t)\ast x_2(t)\overset{\mathcal{L}}{\longrightarrow}X_1(s)X_2(s), 收敛域至少R_1\cap R_2
+\]</div>
+<p>初值和终值定理，注意这只针对因果信号</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022010399.png" /></p>
+<p>用复变那边的笔记来简单记录一下</p>
+<div class="arithmatex">\[
+\begin{align}
+对于L[f(t)]&amp;=F(s)\\
+线性L[\alpha_1f_1(t)+\alpha_2f_2(t)]&amp;=\alpha_1F_1(s)+\alpha_2F_2(s)\\
+时移L[f(t-t_0)]或L[u(t-t_0)f(t-t_0)]&amp;=e^{-st_0}F(s)\\
+频移L[e^{s_0t}f(t)]&amp;=F(s-s_0)\\
+尺度变换L[x(at)]&amp;=\frac 1 {|a|}X(\frac s a)\\
+象原函数微分L[f'(t)]&amp;=sF(s)\\
+象函数微分L[(-t)^nf(t)]&amp;=F^{(n)}(s)\\
+象原函数积分L[\int_0^tf(\tau)d\tau]&amp;=\frac 1 s F(s)\\
+初值f(0^+)&amp;=\lim\limits_{s\to \infty}sF(s)\\
+终值f(+\infty)&amp;=\lim\limits_{s\to 0}sF(s)(运用前先判断终值f(+\infty)是否存在)\\
+L[f(t)\ast g(t)]&amp;=F(s)G(s)
+\end{align}
+\]</div>
+<p>不过这里没有介绍收敛域的变化，需要特别指出其中收敛域和原来有不同的性质。</p>
+<p>线性性质收敛域可能在交集的基础上扩大</p>
+<p>频移性质会让收敛域移动</p>
+<p>尺度变换会让收敛域放缩，保持X括号内的范围不变</p>
+<p>象原函数积分本质上是用到卷积性质，和u(t)卷积，所以需要和Re(s)&gt;0做交集才是最终的收敛域</p>
+<p>时域微分可能会扩大收敛域</p>
+<p>卷积性质的收敛域可能在交集的基础上扩大</p>
+<p>其余的不改变收敛域</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022011421.png" /></p>
+<p>这道题在确定收敛域方面值得研究</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/20260702201144.png" /></p>
+<h3 id="_37">周期信号的拉普拉斯变换<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h3>
+<p>对于单边周期信号，就是t&gt;0部分是周期的，t&lt;0没有值，有这样的结论</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022032316.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022047881.png" /></p>
+<p>先求出一个周期的拉普拉斯变换，然后套公式，把一个周期的收敛域和Re(s)&gt;0做交集，像这里两个题目的一个周期内的拉普拉斯变换都是全s平面收敛的（第二个是因为这是时限信号），所以直接收敛域就是Re(s)&gt;0</p>
+<p>事实上用傅里叶变换做也可以，用s=jω换一下</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022048933.png" /></p>
+<h3 id="_38">解常微分方程<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h3>
+<h4 id="_39">常微分方程的三种形式<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h4>
+<p>时域</p>
+<div class="arithmatex">\[
+a_2\frac {d^2y(t)}{dt^2}+a_1\frac {dy(t)}{dt}+a_0y(t)=b_2\frac {d^2x(t)}{dt^2}+b_1\frac {dx(t)}{dt}+b_0x(t)
+\]</div>
+<p>经过拉普拉斯变换的频域</p>
+<div class="arithmatex">\[
+H(s)=\frac {b_2s^2+b_1s+b_0}{a_2s^2+a_1s+a_0}
+\]</div>
+<p>注意写出H(s)的分子是x那边的系数而不是y那边的，你应该想象把右边的x除到左边的y，然后把左边的系数除到右边这样才对</p>
+<p>H(s)可以叫系统函数，也有把它叫做传递函数的</p>
+<p>然后第三种形式叫系统框图，先说明这样一个关系</p>
+<div class="arithmatex">\[
+\begin{align}
+\text{if}\ &amp;x=a_2\omega''+a_1\omega'+a_0\omega, \\
+&amp;y=b_2\omega''+b_1\omega'+b_0\omega\\
+\text{then}\ &amp;a_2y''+a_1y'+a_0y=b_2x''+b_1x'+b_0x
+\end{align}
+\]</div>
+<p>这个要证明就把x, y都换成ω然后全部展开就行，不过没必要，这是很显然的，你注意到a或者b的下标和求导的阶数是相同的，那就意味着，比如展开后的ω''''，它的系数就是所有下标和为4的a, b的组合，在这里只有a2b2能做到，同理，对于ω'''，那它的系数就是a1b2+a2b1，其余同理</p>
+<p>这个关系是顺着说的，如果反过来就是你已经有了这个微分方程的关系，然后设了x是这个表达式，那么y就是那个表达式</p>
+<p>如果带反馈，H要绕一点解出来</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022049476.png" /></p>
+<p>我觉得应该用Y(s)=(X(s)-H2(s)Y(s))H1(s)这样更为直观</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022049568.png" /></p>
+<p>这个想背就背，不背的话自己推我觉得也能推出来</p>
+<p>一种通用的求微分方程系统框图的方法</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022049901.png" /></p>
+<p>这里用的是积分器来组合</p>
+<p>系统框图写出来就是这样，把相关的变量的关系呈现出来</p>
+<p>这种叫做直接Ⅱ型框图</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022050229.png" /></p>
+<p>加号是相加，中间那个是积分号，表达ω，ω'，ω''之间的关系，注意信号的流向，下面的ω'和ω都是中间往两边流，而ω''一直是从左往右。自己画的时候先画结构，再填系数，注意x, y分解成ω时ω的系数和x, y微分方程对应的不同，x, y的那个是a对应y，b对应x，但是x分解成ω，ω的系数是a的组合，而y是ω用b的组合</p>
+<p>左边是y的系数，从上到下对应于y从高到低的顺序，注意最高的那个要1/x，而下面的要加负号，而右边是x的从高到低系数，直接抄</p>
+<p>除此以外，系数为1可以不写，系数为0可以不画</p>
+<p>一种经典的考法就是考这三种形式的互化，我觉得搞清楚a和b究竟哪个对哪个就行</p>
+<p>中间的积分号有些时候也会写成1/s，因为根据拉普拉斯变换的时域积分性质相当于频域乘以1/s，这很好理解，用上卷积公式，就是和u(t)做一个卷积，对应频域就是乘以1/s，注意收敛域和Re(s)&gt;0取交集</p>
+<p>那解释一下为什么要这么麻烦搞这个系统框图，其实是因为这个框图就是电路图，电路好实现积分器和求和，所以用电路来实现微分方程就这样搞比较方便</p>
+<p>有些时候H(s)分子分母有相同项可以约掉，这样框图可以被简化</p>
+<p>还有叫做串联型和并联型的</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022051199.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022051462.png" /></p>
+<p>这两种会读就行，不要求画。但是直接II型框图是要会画的，你直接背系数就行</p>
+<h4 id="_40">解方程<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h4>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022052721.png" /></p>
+<p>第一类就直接写H和X，然后分式因式分解，不过最后这里我没看懂啊，怎么不考虑收敛域了。可能是因为这里都是微分运算，不改变收敛域，所以X的收敛域和Y的一样，所以就都用第一个表达式就行，因为Re(s)&gt;-1这种形式的收敛域只能往右，不能往左，所以用不到第二个式子</p>
+<p>第一类给的x(t)是最简单的那种，第二类给的会奇怪一些，讲第二类之前先给一个定理</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022052749.png" /></p>
+<div class="arithmatex">\[
+e^{s_0t}\ast h(t)\overset{\mathcal{L}}\longrightarrow H(s_0)e^{s_0t}
+\]</div>
+<p>这里利用了拉普拉斯变换的定义，把<span class="arithmatex">\(e^{s_0t}\)</span>分离出来之后剩下的可以看作拉普拉斯变换后带入了s0，这也是为什么要去s0在H(s)收敛域内才能这么搞</p>
+<p>线性代数里特征值和特征向量的关系可以类比，Aξ=λξ，而在这里，A是LTI系统，ξ是e^{st}，那么λ就是H(s)</p>
+<p>突然发现其实这个也就相当于前面的cos(ω0t)经过系统得到|H(ω0)|cos(ω0t+∠H(ω0))，就是对这个频率成分乘了这一个增益</p>
+<p>所以这种解法的本质就是，如果输入只是由若干分立的频率成分构成，就没有必要将其先经过拉普拉斯变换了，直接求相应的H(s0)然后相乘即可。不过注意这里的是只有对于整个时域都有定义的才能这么做，如果是带u(t)的那么它频率成分就不是单一的了</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022053516.png" /></p>
+<p>利用这个结论就可以做像这样的题，分成一个定义域R的和一个带u(t)的，分别做就行。在这里一个常数经过LTI系统仍然是常数是容易看出来的，因为它是常数那求导的项就都没了，最后得到i(t)=e(t)</p>
+<p>而2u(t)就用<span class="arithmatex">\(e^{at}u(t)\)</span>公式就行</p>
+<p>这题如果问你零输入相应和零状态响应，就要理解如果给了你整个时间的总输入要怎么理解。其实t&lt;0的输入带来的就是零输入（零输入是针对t&gt;0没有输入来说的），而t&gt;0对应的就是零状态</p>
+<p>注意对于t&lt;0的u(-t)不要用u(-t)，可以换成1-u(t)，这样就没必要考虑变量代换了</p>
+<h5 id="_41">单边拉普拉斯变换<a class="headerlink" href="#_41" title="Permanent link">&para;</a></h5>
+<p>第三类是有初始条件的，前面的解方程都是默认初始条件为0，求零状态响应，这里就要用单边拉普拉斯变换了，这个就是复变里学的了，单边就是从0开始积分到正无穷，就这个不同，单边拉氏变换的结果可以写成<span class="arithmatex">\(X_u(s)\)</span>来和双边的区分，这里u表示unilateral，是单边的意思</p>
+<p>对于单边拉氏变换来说，微分就不只是添一个s了</p>
+<div class="arithmatex">\[
+\frac {dx(t)}{dt}\overset{uL}{\longrightarrow}sX_u(s)-x(0^-)
+\]</div>
+<p>这里就带上了初值条件</p>
+<p>由于解常微分方程通常就二阶的，所以还需要知道求二次导之后的变换</p>
+<div class="arithmatex">\[
+\frac {d^2x(t)}{dt^2}\overset{uL}{\longrightarrow}s^2X_u(s)-sx(0^-)-x'(0^-)
+\]</div>
+<p>其实再用一次就得到了，更高阶的也类似可以得到</p>
+<p>零输入响应<span class="arithmatex">\(y_{zi}(t)\)</span>和零状态响应<span class="arithmatex">\(y_{zs}(t)\)</span>，这里的zi是zero-input，zs是zero-state</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022054808.png" /></p>
+<p>像这样有初值条件的题，就需要拆成零输入响应和零状态响应分别做</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022054202.png" /></p>
+<p>注意零输入指的是t&gt;0没有输入，但要考虑t&lt;0的输入</p>
+<p>举之前一道题的例子</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022055220.png" /></p>
+<p>回到刚刚那道题，直接对整体做单边拉普拉斯变换就可以把全响应给求出来，根据变换后每一项的来源可以分开零输入响应和零状态响应，就不用求两次了</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022055126.png" /></p>
+<p>逆变换例题</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022056612.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022057221.png" /></p>
+<p>我补充一个Insight，单位阶跃响应的各种求解方式</p>
+<p>法一：u(t)直接代入时域表达式直接求</p>
+<p>法二：求出单位冲激响应后变限积分或“变限求和”，但这需要先对系统函数做逆变换</p>
+<p>法三：直接把它当作一个输入，用频域的相乘再做逆变换</p>
+<h2 id="z">z变换<a class="headerlink" href="#z" title="Permanent link">&para;</a></h2>
+<h3 id="_42">定义<a class="headerlink" href="#_42" title="Permanent link">&para;</a></h3>
+<p>离散时间傅里叶变换</p>
+<div class="arithmatex">\[
+X(e^{j\omega})=\sum\limits_{n=-\infty}^{+\infty}x[n]e^{-j\omega n}
+\]</div>
+<p>按照连续时间傅里叶变换到拉普拉斯变换的逻辑，应当是把jω改成s，但是这里是直接把<span class="arithmatex">\(e^{j\omega}\)</span>换成了z，这也就是X括号里的东西体现的差异，这个东西不是乱加的，拉普拉斯变换和z变换才是最universal的那个。</p>
+<div class="arithmatex">\[
+X(z)=\sum\limits_{n=-\infty}^{+\infty}x[n]z^{-n}
+\]</div>
+<p>z可以写为<span class="arithmatex">\(re^{j\omega}\)</span>，这样也算实至名归对上了</p>
+<p>X(z)可以看作x[n]r^(-n)做离散时间傅里叶变换</p>
+<div class="arithmatex">\[
+X(z)=F[x[n]r^{-n}]=\sum\limits_{-\infty}^{+\infty}x[n]r^{-n}e^{-j\omega n}=\sum\limits_{n=-\infty}^{+\infty}x[n]z^{-n}
+\]</div>
+<p>这个是x[n]做离散时间傅里叶变换逆变换</p>
+<div class="arithmatex">\[
+x[n]=\frac 1 {2\pi}\int_{2\pi}X(e^{j\omega})e^{j\omega n}d\omega
+\]</div>
+<p>而z变换做逆变换其实还是就是把<span class="arithmatex">\(e^{j\omega}\)</span>替换成z</p>
+<div class="arithmatex">\[
+x[n]=\frac 1 {2\pi}\int_{2\pi}X(z)z^{n}d\omega
+\]</div>
+<p>由<span class="arithmatex">\(z=re^{j\omega}\)</span>，两边取微分得到<span class="arithmatex">\(dz=jre^{j\omega}d\omega=jzd\omega\)</span>，把这个带到逆变换就有</p>
+<div class="arithmatex">\[
+x[n]=\frac 1 {2\pi j}\int_{2\pi(对\omega)}X(z)z^{n-1}dz=\frac 1 {2\pi j}\oint X(z)z^{n-1}dz
+\]</div>
+<p>注意这里积分限原来是针对ω在2pi内积分，换成z相当于在半径为r的圆上积一圈。z变换的基函数是z^n，根据积分限得到就是用一个确定的r上的一周的z来表示x[n]</p>
+<h3 id="z_1">重要的z变换<a class="headerlink" href="#z_1" title="Permanent link">&para;</a></h3>
+<p>和拉普拉斯变换类似，在z变换这里也提出两个重要的</p>
+<div class="arithmatex">\[
+\begin{align}
+a^nu[n]&amp;\overset{z}{\longrightarrow}\frac 1 {1-az^{-1}}=\frac z {z-a}, |z|&gt;|a|\\
+-a^nu[-n-1]&amp;\overset{z}{\longrightarrow}\frac 1 {1-az^{-1}}=\frac z {z-a}, |z|&lt;|a|
+\end{align}
+\]</div>
+<p>虽然最开始写的是把z写成z-1的样子，但是我在后续做题的时候感觉还是都乘一个z比较容易看分解，或者你用H(z)/z分解之后再把z乘回去也行，怎么舒服怎么来</p>
+<p>注意u[-n-1]在0处为0，在负整数部分都是1</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022058995.png" /></p>
+<p>这题就是拉普拉斯变换那道题的翻版了，有意思的是此时不是靠正负号来区分，而是一个是b一个是1/b</p>
+<p>对于cos(ω0n)u[n]和sin的也是像拉普拉斯变换那样用重要公式搞出来，而不是用时移性质，这两个不用记忆，自己推就行</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022059838.png" /></p>
+<h3 id="z_2">常用z变换<a class="headerlink" href="#z_2" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+\begin{align}
+\delta[n]&amp;\overset{z}\longrightarrow 1, 全平面收敛\\
+u[n]&amp;\overset z \longrightarrow \frac 1 {1-\frac 1 z}, |z|&gt;1\\
+a^nu[n]&amp;\overset z \longrightarrow\frac 1 {1-a\frac 1 z}, |z|&gt;|a|\\
+更常用的a^{n-1}u[n-1]&amp;\overset z \longrightarrow \frac 1 {z-a}, |z|&gt;|a|\\
+\cos(\omega_0n)u[n]=\frac 1 2 (e^{j\omega_0n}+e^{-j\omega_0n})u[n]&amp;\overset z \longrightarrow \frac 1 2(\frac 1 {1-e^{j\omega_0}z^{-1}}+\frac 1 2(\frac 1 {1-e^{-j\omega_0}z^{-1}}), |z|&gt;1\\
+-a^nu[-n-1]&amp;\overset z \longrightarrow\frac 1 {1-a\frac 1 z}, |z|&lt;|a|
+\end{align}
+\]</div>
+<p><span class="arithmatex">\(\frac{z}{z^2+1}\)</span>对应<span class="arithmatex">\(\sin(\frac \pi 2 n)u[n]\)</span>，<span class="arithmatex">\(\frac{z^2}{z^2+1}\)</span>对应<span class="arithmatex">\(\cos(\frac \pi 2 n)\)</span></p>
+<p>务必注意，无论是s还是z变换，u的变换都不带δ，是很干净的。</p>
+<h3 id="_43">收敛域性质<a class="headerlink" href="#_43" title="Permanent link">&para;</a></h3>
+<p>有限长序列收敛域全平面</p>
+<p>右边序列收敛域在某圆外，左边序列收敛域在某圆内，双边序列收敛域是圆环</p>
+<p>因果序列也是右边序列，收敛域在某圆外，且极点数量大于零点数量</p>
+<p>稳定序列收敛域包含单位圆</p>
+<p>其实从s到z是经过<span class="arithmatex">\(z=e^{sT}\)</span>，一个保角映射，不过这里不展开</p>
+<h3 id="_44">性质<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h3>
+<p>线性性收敛域也是至少R1∩R2</p>
+<p>时移</p>
+<div class="arithmatex">\[
+x[n-n_0]\overset z \longrightarrow X(z)z^{-n_0}
+\]</div>
+<p>收敛域不变</p>
+<p>我觉得时移性质太好用了，做任何分式类的题目都应该多用时移性质，比如说一个分子是多项式分母也是多项式的X(z)，把分子一项一项拆开，就只剩下1/(分母)。只要把这个的x[n]求出来，那么z/(分母)对应的x_1[n]就只是x[n+1]，对于更高次也可以这样做。</p>
+<p>z域微分</p>
+<div class="arithmatex">\[
+nx[n]\overset z \longrightarrow -z\frac {dX(z)}{dz}
+\]</div>
+<p>收敛域不变</p>
+<p>对比离散时间傅里叶变换的频域微分性质</p>
+<div class="arithmatex">\[
+nx[n]\overset {\mathcal{F}}{\longrightarrow}j\frac {dX({e^{j\omega})}}{d\omega}
+\]</div>
+<p>从z域微分开始，把z换成<span class="arithmatex">\(e^{j\omega}\)</span>，然后把dz展开之后就行了，证明这个就抓住离散时间傅里叶变换是z变换的特殊情况就行</p>
+<p>只需要记忆<span class="arithmatex">\((n+1)a^n u[n]\overset{z}{\longrightarrow}\frac 1 {(1-az^{-1})^2}\)</span></p>
+<p>序列指数加权（调制）</p>
+<div class="arithmatex">\[
+z_0^nx[n]\overset z \longrightarrow X(\frac z {z_0})
+\]</div>
+<p>收敛域变为|z0|R</p>
+<p>这个本质上是对应DTFT的频移性质，在频移性质里e^{j(ω-ω0)}其实就是除以z0。但是频移性质不能套到这里，因为它不是直接的减</p>
+<p>时域翻转</p>
+<div class="arithmatex">\[x[-n]\overset z \longrightarrow X(\frac 1 z)\]</div>
+<p>收敛域1/R</p>
+<p>时域扩展</p>
+<div class="arithmatex">\[
+x_{(k)}[n]\overset z \longrightarrow X(z^k), R^{\frac 1 k}
+\]</div>
+<p>这个是离散情况特有的一个性质，<span class="arithmatex">\(x_{(k)}[n]\)</span>表示以0为中心，每个之间塞k-1个0，DTFT里也有</p>
+<p>卷积</p>
+<div class="arithmatex">\[
+x[n]\ast h[n]\overset z \longrightarrow X(z)H(z)
+\]</div>
+<p>收敛域至少R1∩R2</p>
+<p>注意z变换没有X(z-z0)的这种频移性质，离散时间傅里叶变换里的频移性质是</p>
+<div class="arithmatex">\[
+e^{j\omega_0n}x[n]\overset{\mathcal{F}}\longrightarrow X(e^{j(\omega-\omega_0)})
+\]</div>
+<p>这个没法把<span class="arithmatex">\(e^{j\omega_0}\)</span>变成z0来得到</p>
+<p>给一道很有挑战的题目</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022100417.png" /></p>
+<p>我原来想的分解方法是分子提一个z然后就直接配凑，但是这里没有，所以需要补，这里我想的是两侧乘以z，那这样zX(z)就可以进行分解了，不过我还是遇到了困难</p>
+<div class="arithmatex">\[
+z\frac {2z+4}{(z-1)(z-2)^2}=z\frac {8(z-1)-6(z-2)}{(z-1)(z-2)^2}=z(\frac 8 {(z-2)^2}-\frac 6 {(z-1)(z-2)})
+\]</div>
+<p>6那一项还可以继续拆成(z-1)-(z-2)，之后乘以z就容易求了，但是左边让我有些犯难，因为确实之前不熟悉z/(z-z0)^2反变换是什么。我觉得有必要搞清楚1/(z-z0)，1/(z-z0)^2，z/(z-z0)^2的反变换是什么才行，至于左边多乘的那个z，可以通过时移性质还回去，我暂且是这么想的</p>
+<p>初值定理和终值定理，注意只针对因果信号</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022101876.png" /></p>
+<p>注意这里和拉普拉斯变换那里形式不太一样。</p>
+<h3 id="_45">解差分方程<a class="headerlink" href="#_45" title="Permanent link">&para;</a></h3>
+<h4 id="_46">差分方程的三种形式<a class="headerlink" href="#_46" title="Permanent link">&para;</a></h4>
+<p>第一种是用x和y的时域表达，注意这里和微分方程的含义很不一样，因为离散的本质上是经过采样的，两个采样的相减表达的含义就没那么直接了</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022102590.png" /></p>
+<p>注意时移性质是多了一个<span class="arithmatex">\(z^{-n_0}\)</span></p>
+<p>其实就会发现z的幂和n接的东西是一样的，比如括号里是n-1那就是-1，非常直接</p>
+<p>第三种系统框图形式，也要先引入定理</p>
+<div class="arithmatex">\[
+\begin{align}
+\text{if}\ &amp;x[n]=a_2\omega[n-2]+a_1\omega[n-1]+a_0\omega[n], \\
+&amp;y[n]=b_2\omega[n-2]+b_1\omega[n-1]+b_0\omega[n]\\
+\text{then}\ &amp;a_2y[n-2]+a_1y[n-1]+a_0y[n]=b_2x[n-2]+b_1x[n-1]+b_0x[n]
+\end{align}
+\]</div>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022102229.png" /></p>
+<p>系统框图中间那一条变成了延时器，D是delay</p>
+<p>务必注意和拉普拉斯变换里框图的系数不一样。这里从上到下是1/a0，-a1，-a2，但是拉普拉斯变换那个，如果是积分器而不是微分器的话，从上到下是1/a2，-a1，-a0。哦不过其实如果你把y[n]写在最前面，把y[n-n0]写在最后，那其实形式也一样。你看经过延时器D，那后面系数都是一一匹配的。</p>
+<p>如果给的是n+2的，替换n也可以变成都是n-的样子</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022103976.png" /></p>
+<p>比如一开始虽然有n+2，但是替换n为n-2，方程仍然成立，转换成了我们喜欢的</p>
+<p>D可以换成<span class="arithmatex">\(z^{-1}\)</span>，因为延时变成n-1相当于z那里乘以<span class="arithmatex">\(z^{-1}\)</span></p>
+<h4 id="_47">解方程<a class="headerlink" href="#_47" title="Permanent link">&para;</a></h4>
+<p>第一类输入</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022104504.png" /></p>
+<p>没说你就默认按因果的那个展开</p>
+<p>第二类输入就是可以拆成常数+若干u[n]的，也是先介绍一个定理</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022105238.png" /></p>
+<div class="arithmatex">\[
+a^n\ast h[n]\overset{z}\longrightarrow H(a)a^n
+\]</div>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022104020.png" /></p>
+<p>然后也是和拉普拉斯变换那里类似有一个定理，注意稳定就是包含单位圆</p>
+<p>务必小心，此时收敛域是一个环，一部分要用u[n]的展开，另一部分要用-u[-n-1]展开</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022105698.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022106996.png" /></p>
+<p>于是就分开算就行了，没什么技术含量。如果改成求零输入响应和零状态响应，就要拆成两个输入</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022106859.png" /></p>
+<p>再来一个分解的例子</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022107832.png" /></p>
+<p>把输入视为两个a^n的频率成分，分别求出H(a)即可</p>
+<h5 id="z_3">单边z变换<a class="headerlink" href="#z_3" title="Permanent link">&para;</a></h5>
+<p>第三类，带初始条件的，就需要用单边的了</p>
+<div class="arithmatex">\[
+x[n]\overset{uz}\longrightarrow X_u(z)=\sum\limits_{n=0}^{+\infty}x[n]z^{-n}
+\]</div>
+<p>单边z变换的时移性质</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022108748.png" /></p>
+<p>观察特征。不难发现，第一项总是和x[n-n0]的-n0有一一对应的关系，而对于减的那些，后面的都是加，而且括号里的和z的幂之和都是相同的，比如x[n-1]，第一项有了z^(-1)，那括号里就只有z，而x[-1]由于z的幂是0，所以内部是-1，后面的类似。而加的呢，符合相同的特征，只是后面的都是负的</p>
+<p>如果要更加严谨地解释，看这个图就知道了</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022108475.png" /></p>
+<p>补的就是从0开始多出来的，然后其实还是套z变换定义公式</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022108948.png" /></p>
+<p>x[n-1]u[n]的双边和单边一样，此时u[n]截断了大于零的部分，而这和x[n-1]u[n-1]的双边是不一样的。</p>
+<p>x[n-1]u[n-1]和x[n]u[n]就差一个z倍，但是x[n-1]u[n]相比x[n]u[n]带了初值</p>
+<p>说实话如果要推我建议直接画图，你画图之后看的更明白，对于每一项是什么情况，直接用级数的公式写出来你就知道差了哪些了。</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022109461.png" /></p>
+<p>后面就是分解的事情</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022109358.png" /></p>
+<p>困难的题目</p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022109841.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022110165.png" /></p>
+<p><img alt="image.png" src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202607022110673.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../8051/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 微机原理及应用">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                微机原理及应用
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../BSP/" class="md-footer__link md-footer__link--next" aria-label="下一页: 生物医学信号处理">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                生物医学信号处理
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/skyeye-2025" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<skyeye2022@163.com>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M61.4 64C27.5 64 0 91.5 0 125.4c0 .9 0 1.7.1 2.6H0v256c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V128h-.1c0-.9.1-1.7.1-2.6 0-33.9-27.5-61.4-61.4-61.4zM464 192.3V384c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V192.3l154.8 117.4c31.4 23.9 74.9 23.9 106.4 0zM48 125.4c0-7.4 6-13.4 13.4-13.4h389.2c7.4 0 13.4 6 13.4 13.4 0 4.2-2 8.2-5.3 10.7L280.2 271.5c-14.3 10.8-34.1 10.8-48.4 0L53.3 136.1c-3.3-2.5-5.3-6.5-5.3-10.7"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://space.bilibili.com/441014286" target="_blank" rel="noopener" title="space.bilibili.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92c-26.4-.8-48.2-9.8-65.3-27.2S.7 396.5 0 368.2V169.8c.8-26 9.7-47.6 26.7-65.7C43.8 87.8 65.5 78.8 92 78h29.4L96 52.2c-5.7-5.7-8.6-13-8.6-21.8S90.3 14.3 96 8.6 109 0 117.9 0s16.1 2.9 21.9 8.6L213.1 78h88l74.5-69.4C381.7 2.9 389.2 0 398 0s16.1 2.9 21.9 8.6c5.7 5.7 8.6 13 8.6 21.8s-2.9 16.1-8.6 21.8L394.6 78h29.3c26.4.8 48 9.8 64.7 26.1m-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96c-9.6.4-17.4 3.7-23.6 9.8-6.1 6.1-9.4 13.9-9.8 23.5v194.4c0 9.2 3.3 17 9.8 23.5s14.4 9.8 23.6 9.8h320.4c9.2 0 17-3.3 23.3-9.8s9.7-14.3 10.1-23.5zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5s-17.5-3.2-23.6-9.5-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2s13.2-9.6 23.3-10c9.2.4 17 3.7 23.3 10m191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2s-14 9.5-23.6 9.5-17.4-3.2-23.6-9.5c-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2s14.1-9.6 23.3-10c9.2.4 17 3.7 23.3 10"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["announce.dismiss", "navigation.tracking", "navigation.tabs", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "navigation.expand", "navigation.indexes", "content.tabs.link", "content.tooltips", "content.code.copy", "content.action.edit", "content.action.view", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../javascripts/typewriter.js"></script>
+      
+        <script src="https://cdn.staticfile.org/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

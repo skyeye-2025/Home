@@ -1,0 +1,31 @@
+/* #typewriter-line-1::after,
+#typewriter-line-2::after, */
+#typewriter-line-3::after {
+    content: "|";
+    animation: blink 1s step-end infinite !important;
+    margin-left: 5px;
+    display: inline-block;
+    /* 确保伪元素正确显示 */
+    opacity: 1;
+    /* 初始透明度 */
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* 如果光标位置不对，可以添加以下调整 */
+/* #typewriter-line-1,
+#typewriter-line-2, */
+#typewriter-line-3 {
+    position: relative;
+    display: inline-block;
+}
