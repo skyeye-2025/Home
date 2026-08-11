@@ -40,6 +40,9 @@
     /* ========== 滚动容器 ========== */
     .sky-container {
         height: 100vh;
+        /* 降级方案 */
+        height: 100dvh;
+        /* 动态视口，自动适配浏览器 UI */
         width: 100vw;
         overflow-y: scroll;
         scroll-snap-type: y mandatory;
@@ -66,6 +69,9 @@
     /* ========== 每一屏 ========== */
     .sky-section {
         height: 100vh;
+        /* 降级方案 */
+        height: 100dvh;
+        /* 动态视口 */
         width: 100%;
         scroll-snap-align: start;
         scroll-snap-stop: always;
@@ -184,15 +190,16 @@
         }
     }
 
-    /* 底部描述和按钮（固定不随打字移动） */
     .welcome-footer {
         flex-shrink: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 1.5rem;
-        padding-bottom: 5rem;
-        /* 增加底部空间，避免与滚动提示重叠 */
+        padding-bottom: 4.5rem;
+        /* 从 2rem 改回较大值，让按钮上移 */
+        padding-bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px));
+        /* 适配全面屏 */
         width: 100%;
         pointer-events: auto;
     }
