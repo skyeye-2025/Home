@@ -20,9 +20,15 @@ nav:
         - Notebooks/professional/Nonlinear.md
         - Notebooks/professional/Amplifier.md
         - Notebooks/professional/SignalGeneratorAndPowerConverter.md
-      - Notebooks/professional/Digital.md
-      - Notebooks/professional/8051.md
-      - Notebooks/professional/SignalAndSystem.md
+      - 数字电路:
+        - Notebooks/professional/Digital.md
+        - Notebooks/professional/Digital-2.md
+      - 微机原理及应用:
+        - Notebooks/professional/8051.md
+        - Notebooks/professional/8051-2.md
+      - 信号与系统:
+        - Notebooks/professional/SignalAndSystem.md
+        - Notebooks/professional/SignalAndSystem-2.md
       - Notebooks/professional/BSP.md
       - 其他:
         - Notebooks/others/safe.md
@@ -38,7 +44,7 @@ nav:
 
 theme:
   name: material # 主题
-  # custom_dir: overrides
+  custom_dir: overrides
   palette:
     scheme: skyeye # 用的是extra.css里定义的skyeye scheme
 
@@ -101,8 +107,8 @@ extra:
       link: https://github.com/skyeye-2025
     - icon: fontawesome/regular/envelope #联系方式图标
       link: mailto:<skyeye2022@163.com> #邮件联系方式
-    - icon: fontawesome/brands/bilibili
-      link: https://space.bilibili.com/441014286
+    # - icon: fontawesome/brands/bilibili
+    #   link: https://space.bilibili.com/441014286
       
 markdown_extensions: #详见https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/ 和 https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/
   - abbr # 显示缩写，但是不太好用

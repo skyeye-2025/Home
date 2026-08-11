@@ -4,6 +4,7 @@ hide:
   - toc        # Hide table of contents
   - statistics # 隐藏文本量统计
   - footer     # 隐藏下面那个显示上一篇下一篇的footer
+template: home.html
 ---
 
 # 
