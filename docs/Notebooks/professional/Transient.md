@@ -545,3 +545,4 @@ $$
 
 这个题，KVL我列的时候没有出问题，但是写元件特性的时候我还是机械地写了iL=Cduc/dt，但是这里电流电压是非关联的，应该是iL=-Cduc/dt
 
+本页总阅读量<span id="busuanzi_page_pv"></span>次

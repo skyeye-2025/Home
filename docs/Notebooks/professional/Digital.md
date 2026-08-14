@@ -966,3 +966,5 @@ I板在奇校验模式，它的YOD输出作为控制II板属性的信号。如�
 从二进制ABC到格雷码WXY，W=A，X=A异或B，Y=B异或C
 
 我觉得熟悉常见真值表比较重要，还有就是连接了。
+
+本页总阅读量<span id="busuanzi_page_pv"></span>次

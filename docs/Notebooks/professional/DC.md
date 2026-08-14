@@ -774,3 +774,5 @@ I2=βI1+IA
 ![image.png](https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202510051439181.png)
 
 之后就直接用U2-hat ×IRL表示出功率，是一个二次函数，直接求极值。
+
+本页总阅读量<span id="busuanzi_page_pv"></span>次

@@ -491,3 +491,5 @@ V+都是从两个R3中间取电压12V，我解释一下这里说的电压跟随�
 ![image.png](https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202601041514791.png)
 
 这部分出题信息一般给的很完整，就根据KVL去算就行了
+
+本页总阅读量<span id="busuanzi_page_pv"></span>次
