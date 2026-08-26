@@ -150,7 +150,7 @@ $$
 \nabla\cdot \vec B&=0\\
 \nabla\times\vec H&=\vec j+\frac {\partial \vec D} {\partial t}\\
 真空光速c&=\frac 1 {\sqrt{\varepsilon_0\mu_0}}\\
-介质中光速v&=\frac 1 {\sqrt{\varepsilon\mu}}=\frac c {\varepsilon_r\mu_r}\\
+介质中光速v&=\frac 1 {\sqrt{\varepsilon\mu}}=\frac c {\sqrt{\varepsilon_r\mu_r}}\\
 \frac E H&=\frac {E_0} {H_0}=\frac {\sqrt \mu} {\sqrt \varepsilon}(E_0, H_0是最大值)\\
 最大值E_0&=\sqrt 2 E(有效值)\\
 \frac E B&=\frac E {\mu H}=\frac 1 {\sqrt{\varepsilon \mu}}=v\\
