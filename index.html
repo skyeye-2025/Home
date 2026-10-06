@@ -1,0 +1,1073 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="Notebooks/simplest/marx/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/202508141305660.webp">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Index - SKYEYE'S HOMEPAGE</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="stylesheets/typewriter.css">
+    
+      <link rel="stylesheet" href="stylesheets/flink.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="skyeye" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+<style>
+    /* ========== 全局重置（提高优先级） ========== */
+    :root {
+        --bg: #000000;
+        --bg-elevated: #0a0a0a;
+        --bg-card: #0d0d0d;
+        --accent: rgb(14, 202, 240);
+        --accent-dim: rgba(14, 202, 240, 0.12);
+        --accent-glow: rgba(14, 202, 240, 0.35);
+        --accent-bright: rgba(14, 202, 240, 0.6);
+        --text: #ffffff;
+        --text-secondary: #b0b0b0;
+        --text-muted: #444444;
+        --font: 'Outfit Thin', '未来圆SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+        --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+    }
+
+    /* 重置 MkDocs 对页面容器的干扰 */
+    .md-content,
+    .md-main__inner,
+    .md-grid {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .md-main {
+        background: var(--bg) !important;
+    }
+
+    /* ========== 滚动容器 ========== */
+    .sky-container {
+        height: 100vh;
+        /* 降级方案 */
+        height: 100dvh;
+        /* 动态视口，自动适配浏览器 UI */
+        width: 100vw;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
+        background: var(--bg);
+        font-family: var(--font);
+        color: var(--text);
+        position: relative;
+    }
+
+    .sky-container::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    .sky-container::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .sky-container::-webkit-scrollbar-thumb {
+        background: var(--accent);
+        border-radius: 3px;
+    }
+
+    /* ========== 每一屏 ========== */
+    .sky-section {
+        height: 100vh;
+        /* 降级方案 */
+        height: 100dvh;
+        /* 动态视口 */
+        width: 100%;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        box-sizing: border-box;
+        padding: 2rem;
+        opacity: 0;
+        transform: translateY(30px) scale(0.98);
+        transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
+    }
+
+    .sky-section.visible {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    .sky-section.fading {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.98);
+        transition: opacity 0.6s var(--ease-in-out), transform 0.6s var(--ease-in-out);
+    }
+
+    /* ========== 背景光晕 ========== */
+    .ambient-glow {
+        position: absolute;
+        border-radius: 50%;
+        background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+        pointer-events: none;
+        filter: blur(100px);
+    }
+
+    /* ========== 第一部分：欢迎（强化样式，覆盖 MkDocs） ========== */
+    .welcome-wrap {
+        flex-direction: column;
+        text-align: center;
+        z-index: 2;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* 让标题区域占剩余空间 */
+    }
+
+    /* 标题包裹器：占据所有剩余空间，并垂直居中内容 */
+    .welcome-title-wrapper {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 0;
+        /* 防止flex溢出 */
+    }
+
+    /* 标题本身（重置 h1 样式） */
+    .welcome-title {
+        font-family: Outfit Thin !important;
+        font-size: clamp(3.8rem, 6vw, 7rem) !important;
+        /* 缩小字号 */
+        font-weight: 900 !important;
+        line-height: 1.1 !important;
+        letter-spacing: -0.03em !important;
+        color: var(--text) !important;
+        /* 强制白色 */
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+        background: none !important;
+    }
+
+    .type-row {
+        display: block !important;
+        white-space: nowrap !important;
+    }
+
+    /* 第二行蓝色 */
+    .type-row.accent {
+        color: var(--accent) !important;
+    }
+
+    .type-cursor {
+        display: inline-block !important;
+        width: 5px !important;
+        height: 0.85em !important;
+        background: var(--accent) !important;
+        margin-left: 6px !important;
+        vertical-align: baseline !important;
+        animation: blink 1s step-end infinite;
+        border-radius: 2px !important;
+    }
+
+    .type-cursor.hidden {
+        display: none !important;
+    }
+
+    .type-cursor.done {
+        animation: none !important;
+        opacity: 0 !important;
+        transition: opacity 0.5s !important;
+    }
+
+    @keyframes blink {
+
+        0%,
+        100% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+    }
+
+    .welcome-footer {
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding-bottom: 4.5rem;
+        /* 从 2rem 改回较大值，让按钮上移 */
+        padding-bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px));
+        /* 适配全面屏 */
+        width: 100%;
+        pointer-events: auto;
+    }
+
+    .welcome-desc {
+        font-size: clamp(1rem, 2vw, 1.3rem) !important;
+        color: var(--text-secondary) !important;
+        font-weight: 300 !important;
+        letter-spacing: 0.08em !important;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all 0.8s var(--ease-out) 0.3s;
+        margin: 0 !important;
+    }
+
+    .sky-section.visible .welcome-desc {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+
+    .btn-row {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        opacity: 0;
+        transform: translateY(15px);
+        transition: all 0.8s var(--ease-out) 0.5s;
+    }
+
+    .sky-section.visible .btn-row {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+
+    .sky-btn {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 3rem;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-decoration: none;
+        border-radius: 100px;
+        transition: all 0.35s var(--ease-out);
+        cursor: pointer;
+        border: none;
+        font-family: var(--font);
+        overflow: hidden;
+        isolation: isolate;
+    }
+
+    .sky-btn::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 100px;
+        opacity: 0;
+        transition: opacity 0.35s;
+        z-index: -1;
+    }
+
+    .sky-btn-primary {
+        background: var(--accent);
+        color: #ffffff !important;
+        /* ← 修改为白色，并加 !important 确保覆盖 */
+        box-shadow: 0 0 0 0 var(--accent-glow);
+    }
+
+    .sky-btn-primary::before {
+        background: radial-gradient(circle at center, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    }
+
+    .sky-btn-primary:hover {
+        transform: translateY(-3px) scale(1.03);
+        box-shadow: 0 8px 30px var(--accent-glow), 0 0 60px var(--accent-bright);
+    }
+
+    .sky-btn-primary:hover::before {
+        opacity: 1;
+    }
+
+    .sky-btn-primary:active {
+        transform: translateY(-1px) scale(0.98);
+        transition-duration: 0.1s;
+    }
+
+    .sky-btn-ghost {
+        background: transparent;
+        color: var(--accent);
+        border: 2px solid var(--accent);
+        box-shadow: inset 0 0 0 0 var(--accent-dim);
+    }
+
+    .sky-btn-ghost::before {
+        background: var(--accent-dim);
+    }
+
+    .sky-btn-ghost:hover {
+        transform: translateY(-3px) scale(1.03);
+        box-shadow: inset 0 0 20px var(--accent-dim), 0 8px 30px rgba(14, 202, 240, 0.15);
+        border-color: rgba(14, 202, 240, 0.8);
+        color: #fff;
+    }
+
+    .sky-btn-ghost:active {
+        transform: translateY(-1px) scale(0.98);
+        transition-duration: 0.1s;
+    }
+
+    .scroll-prompt {
+        position: absolute;
+        bottom: 1.5rem;
+        /* 调低位置，与按钮拉开距离 */
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.6rem;
+        color: var(--text-muted);
+        font-size: 0.7rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        opacity: 0;
+        transition: opacity 1s var(--ease-out) 1s;
+    }
+
+    .sky-section.visible .scroll-prompt {
+        opacity: 1;
+    }
+
+    .scroll-prompt .mouse {
+        width: 22px;
+        height: 36px;
+        border: 2px solid var(--text-muted);
+        border-radius: 12px;
+        position: relative;
+    }
+
+    .scroll-prompt .mouse::after {
+        content: '';
+        position: absolute;
+        top: 6px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 3px;
+        height: 6px;
+        background: var(--accent);
+        border-radius: 2px;
+        animation: scrollWheel 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollWheel {
+
+        0%,
+        100% {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        50% {
+            opacity: 0.3;
+            transform: translateX(-50%) translateY(8px);
+        }
+    }
+
+    /* ========== 第二部分：推荐阅读（全屏居中） ========== */
+    .reading-wrap {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        box-sizing: border-box;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.8s var(--ease-out) 0.1s;
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    .sky-section.visible .section-header {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .section-tag {
+        display: inline-block;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.25em;
+        color: var(--accent);
+        margin-bottom: 1rem;
+        font-weight: 600;
+        padding: 0.4rem 1rem;
+        border: 1px solid rgba(14, 202, 240, 0.25);
+        border-radius: 100px;
+    }
+
+    .section-heading {
+        font-family: 未来圆SC, sans-serif;
+        font-size: clamp(2rem, 8vw, 3rem);
+        font-weight: 1000 !important;
+        color: rgb(14, 202, 240);
+        color: var(--text);
+        letter-spacing: -0.02em;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    .card {
+        background: var(--bg-card);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+        padding: 2.5rem;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.5s var(--ease-out);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    .sky-section.visible .card:nth-child(1) {
+        transition-delay: 0.2s;
+    }
+
+    .sky-section.visible .card:nth-child(2) {
+        transition-delay: 0.35s;
+    }
+
+    .sky-section.visible .card:nth-child(3) {
+        transition-delay: 0.5s;
+    }
+
+    .sky-section.visible .card {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .card::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, transparent, var(--accent), transparent);
+        transform: scaleX(0);
+        transition: transform 0.6s var(--ease-out);
+    }
+
+    .card:hover::after {
+        transform: scaleX(1);
+    }
+
+    .card:hover {
+        border-color: rgba(14, 202, 240, 0.2);
+        transform: translateY(-8px);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 50px rgba(14, 202, 240, 0.06);
+    }
+
+    .card-tag {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: var(--accent);
+        margin-bottom: 1.2rem;
+        font-weight: 700;
+    }
+
+    .card-title {
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        line-height: 1.35;
+        color: var(--text);
+    }
+
+    .card-desc {
+        font-size: 0.92rem;
+        color: var(--text-secondary);
+        line-height: 1.8;
+        flex-grow: 1;
+    }
+
+    .card-link {
+        margin-top: 2rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.85rem;
+        color: var(--accent);
+        font-weight: 600;
+        transition: gap 0.3s var(--ease-out);
+    }
+
+    .card:hover .card-link {
+        gap: 0.9rem;
+    }
+
+    /* ========== 第三部分：关于我（全屏居中） ========== */
+    .about-wrap {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        box-sizing: border-box;
+        gap: 5rem;
+    }
+
+    .about-visual {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        opacity: 0;
+        transform: translateX(-30px);
+        transition: all 0.9s var(--ease-out) 0.1s;
+    }
+
+    .sky-section.visible .about-visual {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .logo-ring {
+        width: 220px;
+        height: 220px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo-ring::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 30px;
+        border: 2px solid var(--accent);
+        box-shadow: 0 0 40px var(--accent-glow), inset 0 0 40px var(--accent-dim);
+        animation: breathe 4s ease-in-out infinite;
+    }
+
+    @keyframes breathe {
+
+        0%,
+        100% {
+            box-shadow: 0 0 30px var(--accent-glow), inset 0 0 30px var(--accent-dim);
+        }
+
+        50% {
+            box-shadow: 0 0 60px var(--accent-bright), inset 0 0 50px var(--accent-dim);
+        }
+    }
+
+    .logo-inner {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30px;
+        /* 与环的圆角一致 */
+        overflow: hidden;
+        /* 确保图片不溢出圆角 */
+        z-index: 2;
+    }
+
+    .logo-inner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* 裁剪填充，保持比例；若需完整显示可用 contain */
+        display: block;
+    }
+
+    .about-text {
+        text-align: center;
+        opacity: 0;
+        transform: translateX(30px);
+        transition: all 0.9s var(--ease-out) 0.25s;
+        max-width: 600px;
+    }
+
+    .sky-section.visible .about-text {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .about-text h2 {
+        font-family: var(--font);
+        font-size: clamp(2rem, 3.5vw, 2.8rem);
+        font-weight: 800;
+        margin-bottom: 0.3rem;
+        letter-spacing: -0.02em;
+    }
+
+    .about-text .role {
+        font-size: 1rem;
+        color: var(--accent);
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        margin-bottom: 1.8rem;
+        text-transform: uppercase;
+    }
+
+    .about-text p {
+        font-size: 1.05rem;
+        color: var(--text-secondary);
+        line-height: 2;
+        margin-bottom: 1.2rem;
+    }
+
+    .about-text strong {
+        color: var(--text);
+        font-weight: 600;
+    }
+
+    .social-row {
+        margin-top: 2.5rem;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .social-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.7rem 1.6rem;
+        border-radius: 100px;
+        border: 1.5px solid rgba(14, 202, 240, 0.25);
+        color: var(--accent);
+        text-decoration: none;
+        font-size: 0.88rem;
+        font-weight: 500;
+        transition: all 0.3s var(--ease-out);
+        background: transparent;
+    }
+
+    .social-btn:hover {
+        background: var(--accent-dim);
+        border-color: var(--accent);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 20px rgba(14, 202, 240, 0.15);
+    }
+
+    /* 导航点 */
+    .nav-dots {
+        position: fixed;
+        right: 2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        z-index: 100;
+    }
+
+    .nav-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.15);
+        border: none;
+        cursor: pointer;
+        transition: all 0.4s var(--ease-out);
+        padding: 0;
+    }
+
+    .nav-dot:hover {
+        background: rgba(14, 202, 240, 0.5);
+    }
+
+    .nav-dot.active {
+        background: var(--accent);
+        box-shadow: 0 0 12px var(--accent-glow);
+        transform: scale(1.3);
+    }
+
+    /* 响应式 */
+    @media (max-width: 900px) {
+        .cards {
+            grid-template-columns: 1fr;
+        }
+
+        .about-wrap {
+            flex-direction: column;
+            text-align: center;
+            gap: 3rem;
+        }
+
+        .logo-ring {
+            width: 160px;
+            height: 160px;
+        }
+
+        .nav-dots {
+            display: none;
+        }
+    }
+</style>
+
+<div class="sky-container" id="skyContainer">
+
+    <!-- 导航点 -->
+    <div class="nav-dots">
+        <button class="nav-dot active" data-target="welcome" aria-label="首页"></button>
+        <button class="nav-dot" data-target="reading" aria-label="推荐阅读"></button>
+        <button class="nav-dot" data-target="about" aria-label="关于我"></button>
+    </div>
+
+    <!-- ========== 第一部分：欢迎 ========== -->
+    <section class="sky-section welcome-wrap" id="welcome">
+        <div class="ambient-glow" style="width:700px;height:700px;top:-250px;left:-200px;opacity:0.25;"></div>
+
+        <!-- 标题包裹器：垂直居中 -->
+        <div class="welcome-title-wrapper">
+            <h1 class="welcome-title">
+                <div class="type-row"><span id="t1"></span><span class="type-cursor" id="c1"></span></div>
+                <div class="type-row accent"><span id="t2"></span><span class="type-cursor hidden" id="c2"></span></div>
+                <div class="type-row"><span id="t3"></span><span class="type-cursor hidden" id="c3"></span></div>
+            </h1>
+        </div>
+
+        <!-- 底部固定 -->
+        <div class="welcome-footer">
+            <div class="btn-row">
+                <a href="https://skyeye-2025.github.io/Home/Notebooks/simplest/marx/"
+                    class="sky-btn sky-btn-primary">阅读笔记</a>
+                <a href="#about" class="sky-btn sky-btn-ghost">关于我</a>
+            </div>
+        </div>
+
+        <div class="scroll-prompt">
+            <div class="mouse"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- ========== 第二部分：推荐阅读 ========== -->
+    <section class="sky-section reading-wrap" id="reading">
+        <div class="ambient-glow"
+            style="width:500px;height:500px;top:50%;left:50%;transform:translate(-50%,-50%);opacity:0.15;"></div>
+
+        <div class="section-header">
+            <h2 class="section-heading">推荐阅读</h2>
+        </div>
+
+        <div class="cards">
+            <a href="https://skyeye-2025.github.io/Home/Notebooks/simplest/marx/" class="card">
+                <div class="card-tag">笔记</div>
+                <div class="card-title">最简马原</div>
+                <div class="card-desc">第一篇发布的笔记<br>在CC98阅读量过万<br>高被引</div>
+                <div class="card-link">
+                    阅读全文
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </div>
+            </a>
+
+            <a href="https://skyeye-2025.github.io/Home/Notebooks/professional/DC/" class="card">
+                <div class="card-tag">笔记</div>
+                <div class="card-title">电路和模电笔记</div>
+                <div class="card-desc">付出精力最大的一份笔记<br>放大电路部分是精华</div>
+                <div class="card-link">
+                    阅读全文
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </div>
+            </a>
+
+            <a href="https://skyeye-2025.github.io/Home/Notebooks/professional/SignalAndSystem/" class="card">
+                <div class="card-tag">笔记</div>
+                <div class="card-title">信号与系统笔记</div>
+                <div class="card-desc">最新发布的笔记之一<br>对笔记质量有充分的自信</div>
+                <div class="card-link">
+                    阅读全文
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ========== 第三部分：关于我 ========== -->
+    <section class="sky-section about-wrap" id="about">
+        <div class="ambient-glow" style="width:600px;height:600px;bottom:-200px;right:-150px;opacity:0.2;"></div>
+
+        <div class="about-visual">
+            <div class="logo-ring">
+                <div class="logo-inner">
+                    <img src="https://skyeyesandox-1374084537.cos.ap-shanghai.myqcloud.com/logo.jpg" alt="Logo">
+                </div>
+            </div>
+        </div>
+
+        <div class="about-text">
+            <h2>Skyeye</h2>
+            <div class="role">大学生 / 创作者 / 舟批</div>
+            <p>
+                本人大学本科在读，喜欢计算机科学，经济学，心理学和设计，是Brony，车万，柚子厨和舟批。
+            </p>
+            <p>
+                不定时更新笔记，部分发布在CC98。
+            </p>
+            <p>
+                欢迎来找我交换友链！
+            </p>
+            <div class="social-row">
+                <a href="https://github.com/skyeye-2025" class="social-btn" target="_blank">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>
+                    GitHub
+                </a>
+                <a href="mailto:skyeye2022@163.com" class="social-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                    Email
+                </a>
+                <a href="https://skyeye-2025.github.io/Home/link/" class="social-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                    </svg>
+                    友链
+                </a>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<script>
+    // ========== 三行打字机效果 ==========
+    const lines = [
+        { el: document.getElementById('t1'), cursor: document.getElementById('c1'), text: 'WELCOME TO' },
+        { el: document.getElementById('t2'), cursor: document.getElementById('c2'), text: "SKYEYE'S" },
+        { el: document.getElementById('t3'), cursor: document.getElementById('c3'), text: 'HOMEPAGE' }
+    ];
+    let lineIdx = 0;
+    let charIdx = 0;
+    const typeSpeed = 130;
+    const linePause = 400;
+
+    function typeNext() {
+        if (lineIdx >= lines.length) return;
+        const line = lines[lineIdx];
+        line.cursor.classList.remove('hidden');
+
+        if (charIdx < line.text.length) {
+            line.el.textContent += line.text[charIdx];
+            charIdx++;
+            setTimeout(typeNext, typeSpeed);
+        } else {
+            line.cursor.classList.add('done');
+            lineIdx++;
+            charIdx = 0;
+            if (lineIdx < lines.length) {
+                setTimeout(typeNext, linePause);
+            }
+        }
+    }
+
+    // ========== Intersection Observer 滚动动画 ==========
+    const sections = document.querySelectorAll('.sky-section');
+    const dots = document.querySelectorAll('.nav-dot');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const section = entry.target;
+            if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+                section.classList.add('visible');
+                section.classList.remove('fading');
+                const id = section.id;
+                dots.forEach(d => {
+                    d.classList.toggle('active', d.dataset.target === id);
+                });
+            } else if (!entry.isIntersecting) {
+                section.classList.remove('visible');
+                section.classList.add('fading');
+            }
+        });
+    }, { threshold: [0.5] });
+
+    sections.forEach(s => observer.observe(s));
+
+    // ========== 导航点点击 ==========
+    dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            const target = document.getElementById(dot.dataset.target);
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    // ========== 锚点平滑滚动 ==========
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            e.preventDefault();
+            const t = document.querySelector(a.getAttribute('href'));
+            if (t) t.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    // ========== 启动 ==========
+    window.addEventListener('DOMContentLoaded', () => {
+        setTimeout(typeNext, 600);
+    });
+</script>
+
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["announce.dismiss", "navigation.tracking", "navigation.tabs", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "navigation.expand", "navigation.indexes", "content.tabs.link", "content.tooltips", "content.code.copy", "content.action.edit", "content.action.view", "content.code.annotate"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="javascripts/typewriter.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js"></script>
+      
+    
+  </body>
+</html>
