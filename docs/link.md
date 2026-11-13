@@ -50,4 +50,17 @@ hide:
     </a>
 </div>
 
+<div class="flink-list-item">
+    <a href="bfyes.github.io" target="_blank">
+        <div class="flink-item-icon">
+            <img src="https://avatars.githubusercontent.com/bfyes?size=160" alt="BillFeng">
+        </div>
+        <!-- 新增文字容器 -->
+        <div class="flink-item-text">
+            <div class="flink-item-name heti-skip">BillFeng 的文档站</div>
+            <div class="flink-item-desc">信息安全同学</div>
+        </div>
+    </a>
+</div>
+
 </div>
