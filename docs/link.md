@@ -51,7 +51,7 @@ hide:
 </div>
 
 <div class="flink-list-item">
-    <a href="bfyes.github.io" target="_blank">
+    <a href="https://bfyes.github.io" target="_blank">
         <div class="flink-item-icon">
             <img src="https://avatars.githubusercontent.com/bfyes?size=160" alt="BillFeng">
         </div>
